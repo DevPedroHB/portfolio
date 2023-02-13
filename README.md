@@ -42,6 +42,7 @@ Here are the packages used in this project.
 - next-seo -> Used to optimize the SEO of applications developed with the Next.js framework.
 - phosphor-react -> Library with various icon providers for react.
 - @radix-ui -> Used to provide pre-built components for React applications.
+- next-themes -> Used to implement dynamic themes in the application.
 
 ## 💻 Getting started
 
@@ -76,6 +77,7 @@ npm run lint
 Here are the main features of the project.
 
 - Responsive web layout.
+- Light or dark theme.
 - About me section, including personal and professional information
 - Display of previous projects and work
 - Possibility to get in touch
