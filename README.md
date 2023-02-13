@@ -1,38 +1,100 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">My Portfolio</h1>
 
-## Getting Started
+<p align="center">
+  This is my personal portfolio, where I showcase my projects and professional skills. It includes information about my experience, past projects and work, as well as a brief summary of who I am and what I offer.
+</p>
 
-First, run the development server:
+<p align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-services">Services</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-packages">Packages</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-features">Features</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-links">Links</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#-versioning">Versioning</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
+
+## 🚀 Technologies
+
+Here are the technologies used in this project.
+
+- TypeScript 4.9.5
+- React 18.2.0
+- NextJS 13.1.6
+- Stitches 1.2.8
+
+## 📋 Services
+
+Here are the services used in this project.
+
+- [GitHub](https://github.com/)
+- [Netlify](https://www.netlify.com/)
+
+## 📦 Packages
+
+Here are the packages used in this project.
+
+- next-seo -> Used to optimize the SEO of applications developed with the Next.js framework.
+- phosphor-react -> Library with various icon providers for react.
+- @radix-ui -> Used to provide pre-built components for React applications.
+
+## 💻 Getting started
+
+Here are the commands and steps on how to start the project.
+
+### Dependency
+
+- NodeJS
+- NPM (Package manager of your choice)
+
+### Steps
 
 ```bash
+# install the dependencies using a package manager, the one used in the project was NPM.
+npm install
+
+# To start the project on your machine using NPM.
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+# To build the project using NPM.
+npm run build
+
+# To run the project in production using NPM.
+npm run start
+
+# To format code using configured eslint.
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Here are the main features of the project.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Responsive web layout.
+- About me section, including personal and professional information
+- Display of previous projects and work
+- Possibility to get in touch
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📎 Links
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Deploy on [Netlify](https://www.netlify.com/): Coming soon.
+- Repository: https://github.com/DevPedroHB/portfolio
 
-## Learn More
+## 🔰 Versioning
 
-To learn more about Next.js, take a look at the following resources:
+Here are the versions of the parts of the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Web -> 1.0.0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## :memo: License
 
-## Deploy on Vercel
+This project is licensed under the MIT license.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with ♥ by Pedro Henrique 🚀 [Never stop learning!](https://github.com/DevPedroHB)
