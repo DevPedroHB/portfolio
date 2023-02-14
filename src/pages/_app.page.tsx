@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { globalStyles } from "@/styles/global";
 import { darkTheme } from "@/styles/themes/dark";
 import { ThemeProvider } from "next-themes";
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <Header />
       <Component {...pageProps} />
+      <ScrollToTop />
       <Footer />
     </ThemeProvider>
   );
