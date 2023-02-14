@@ -43,6 +43,7 @@ Here are the packages used in this project.
 - phosphor-react -> Library with various icon providers for react.
 - @radix-ui -> Used to provide pre-built components for React applications.
 - next-themes -> Used to implement dynamic themes in the application.
+- react-scroll -> Used for application scroll handling.
 
 ## 💻 Getting started
 
@@ -84,7 +85,7 @@ Here are the main features of the project.
 
 ## 📎 Links
 
-- Deploy on [Netlify](https://www.netlify.com/): Coming soon.
+- Deploy on [Netlify](https://www.netlify.com/): https://portfolio-pedrohb.netlify.app
 - Repository: https://github.com/DevPedroHB/portfolio
 
 ## 🔰 Versioning
