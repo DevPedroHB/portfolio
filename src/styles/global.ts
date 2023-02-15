@@ -47,7 +47,7 @@ export const globalStyles = globalCss({
 
   "body, input, textarea, button": {
     fontFamily: "$poppins",
-    fontWeight: "$font-normal",
+    fontWeight: "$font-medium",
     fontSize: "$text-base",
   },
 
@@ -55,6 +55,11 @@ export const globalStyles = globalCss({
     color: "inherit",
     textDecoration: "none",
     cursor: "pointer",
+    transition: "color .2s",
+
+    "&:hover": {
+      color: "$violet10",
+    },
   },
 
   button: {

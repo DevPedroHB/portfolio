@@ -1,4 +1,4 @@
-import { mauve, mauveA, violet, violetA } from "@radix-ui/colors";
+import { mauve, mauveA, violet, violetA, whiteA } from "@radix-ui/colors";
 import { createStitches } from "@stitches/react";
 
 export const {
@@ -17,6 +17,7 @@ export const {
       ...mauveA,
       ...violet,
       ...violetA,
+      ...whiteA,
     },
     fonts: {
       poppins: "Poppins, sans-serif",
@@ -28,6 +29,8 @@ export const {
       "text-lg": "1.125rem", // 18px
       "text-xl": "1.25rem", // 20px
       "text-2xl": "1.5rem", // 24px
+      "text-3xl": "1.875rem", // 30px
+      "text-4xl": "2.25rem", // 36px
     },
     fontWeights: {
       "font-normal": 400,

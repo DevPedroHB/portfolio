@@ -1,11 +1,9 @@
 import { styled } from "@/styles";
-import Link from "next/link";
 
 export const HeaderContainer = styled("header", {
   width: "100%",
   position: "fixed",
   backgroundColor: "$mauve1",
-  fontWeight: "$font-medium",
 
   button: {
     backgroundColor: "transparent",
@@ -48,14 +46,6 @@ export const Nav = styled("nav", {
 
   "@bp2": {
     height: "3rem",
-  },
-});
-
-export const NavLogo = styled(Link, {
-  transition: "color .2s",
-
-  "&:hover": {
-    color: "$violet10",
   },
 });
 
@@ -110,11 +100,6 @@ export const NavList = styled("ul", {
 
 export const NavItem = styled("li", {
   fontSize: "$text-sm",
-  transition: "color .2s",
-
-  "&:hover": {
-    color: "$violet10",
-  },
 
   a: {
     "&.active": {

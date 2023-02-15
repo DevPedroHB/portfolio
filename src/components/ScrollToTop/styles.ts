@@ -21,7 +21,7 @@ export const ScrollToTopContainer = styled("button", {
   variants: {
     scroll: {
       true: {
-        bottom: "$12",
+        bottom: "$20",
       },
     },
   },

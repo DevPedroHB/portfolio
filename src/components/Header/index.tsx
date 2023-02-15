@@ -1,4 +1,5 @@
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import {
   Briefcase,
   FileText,
@@ -12,14 +13,13 @@ import {
   X,
 } from "phosphor-react";
 import { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
 import {
   HeaderContainer,
   Nav,
   NavBtns,
   NavItem,
   NavList,
-  NavLogo,
   NavMenu,
 } from "./styles";
 
@@ -58,44 +58,44 @@ export function Header() {
   return (
     <HeaderContainer scrollNav={scrollNav}>
       <Nav>
-        <NavLogo href="/">PedroHB</NavLogo>
+        <Link href="/">PedroHB</Link>
         <NavMenu navToggle={navToggle}>
           <NavList>
             <NavItem>
-              <Link activeClass="active" to="hero" spy={true}>
+              <LinkScroll activeClass="active" to="hero" spy={true}>
                 <House />
                 Home
-              </Link>
+              </LinkScroll>
             </NavItem>
             <NavItem>
-              <Link activeClass="active" to="about" spy={true}>
+              <LinkScroll activeClass="active" to="about" spy={true}>
                 <User />
-                About
-              </Link>
+                Sobre
+              </LinkScroll>
             </NavItem>
             <NavItem>
-              <Link activeClass="active" to="skills" spy={true}>
+              <LinkScroll activeClass="active" to="skills" spy={true}>
                 <FileText />
-                Skills
-              </Link>
+                Habilidades
+              </LinkScroll>
             </NavItem>
             <NavItem>
-              <Link activeClass="active" to="services" spy={true}>
+              <LinkScroll activeClass="active" to="services" spy={true}>
                 <Briefcase />
-                Services
-              </Link>
+                Serviços
+              </LinkScroll>
             </NavItem>
             <NavItem>
-              <Link activeClass="active" to="portfolio" spy={true}>
+              <LinkScroll activeClass="active" to="portfolio" spy={true}>
                 <ImageIcon />
                 Portfólio
-              </Link>
+              </LinkScroll>
             </NavItem>
             <NavItem>
-              <Link activeClass="active" to="contact" spy={true}>
+              <LinkScroll activeClass="active" to="contact" spy={true}>
                 <PaperPlaneRight />
-                Contactme
-              </Link>
+                Contacte-me
+              </LinkScroll>
             </NavItem>
           </NavList>
           <button onClick={handleToggleNav}>
