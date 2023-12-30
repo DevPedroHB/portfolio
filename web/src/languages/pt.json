@@ -1,0 +1,76 @@
+{
+  "footer": {
+    "copy": "Todos os direitos reservados",
+    "links": {
+      "contact": "Contate-me",
+      "portfolio": "Portfólio",
+      "services": "Serviços"
+    },
+    "sub-title": "Desenvolvedor Fullstack",
+    "title": "PedroHB"
+  },
+  "home": {
+    "about": {
+      "button": "Baixar CV",
+      "companies-worked": "Empresas trabalhadas",
+      "description": "Minha introdução",
+      "experience": "Anos de experiência",
+      "projects": "Projetos concluídos",
+      "text": "Desenvolvedor web, com amplo conhecimento e anos de experiência, trabalhando em tecnologias web e design de Ui / Ux, entregando trabalho de qualidade.",
+      "title": "Sobre Mim"
+    },
+    "contact": {
+      "description": "Entre em contato",
+      "title": "Contate-me"
+    },
+    "hero": {
+      "button": "Contate-me",
+      "description": "Experiência de alto nível em design e desenvolvimento web, produzindo trabalho de qualidade.",
+      "scroll-down": "Rolar para baixo",
+      "sub-title": "Desenvolvedor Fullstack",
+      "title": "Oi, eu sou Pedro"
+    },
+    "new-project": {
+      "button": "Contate-me",
+      "description": "Entre em contato agora e ganhe um desconto de 30% no seu novo projeto.",
+      "title": "Você tem um novo projeto"
+    },
+    "portfolio": {
+      "description": "Trabalho mais recente",
+      "title": "Portfólio"
+    },
+    "qualification": {
+      "description": "Minha jornada pessoal",
+      "title": "Qualificação"
+    },
+    "services": {
+      "description": "O que eu ofereço",
+      "title": "Serviços"
+    },
+    "skills": {
+      "description": "Meu nível técnico",
+      "title": "Habilidades"
+    },
+    "testimonial": {
+      "description": "O que meus clientes dizem",
+      "title": "Depoimento"
+    }
+  },
+  "metadata": {
+    "description": "Sinta-se à vontade para explorar os projetos, serviços e links disponíveis, e não hesite em entrar em contato comigo para colaborações ou outras oportunidades. Estou sempre interessado em novos desafios e oportunidades de aprendizado.",
+    "titles": {
+      "home": "Início"
+    }
+  },
+  "navbar": {
+    "links": {
+      "about": "Sobre",
+      "contact": "Contate-me",
+      "home": "Início",
+      "portfolio": "Portfólio",
+      "services": "Serviços",
+      "skills": "Habilidades"
+    },
+    "title": "PedroHB"
+  }
+}

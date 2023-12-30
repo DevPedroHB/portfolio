@@ -1,0 +1,76 @@
+{
+  "footer": {
+    "copy": "All right reserved",
+    "links": {
+      "contact": "Contact me",
+      "portfolio": "Portfolio",
+      "services": "Services"
+    },
+    "sub-title": "Fullstack developer",
+    "title": "PedroHB"
+  },
+  "home": {
+    "about": {
+      "button": "Download CV",
+      "companies-worked": "Companies worked",
+      "description": "My introduction",
+      "experience": "Years experience",
+      "projects": "Completed project",
+      "text": "Web developer, with extensive knowledge and years of experience, working in web technologies and Ui / Ux design, delivering quality work.",
+      "title": "About Me"
+    },
+    "contact": {
+      "description": "Get in touch",
+      "title": "Contact Me"
+    },
+    "hero": {
+      "button": "Contact Me",
+      "description": "High level experience in web design and development knowledge, producing quality work.",
+      "scroll-down": "Scroll down",
+      "sub-title": "Fullstack developer",
+      "title": "Hi, I'am Pedro"
+    },
+    "new-project": {
+      "button": "Contact Me",
+      "description": "Contact me now and get a 30% discount on your new project.",
+      "title": "You have a new project"
+    },
+    "portfolio": {
+      "description": "Most recent work",
+      "title": "Portfolio"
+    },
+    "qualification": {
+      "description": "My personal journey",
+      "title": "Qualification"
+    },
+    "services": {
+      "description": "What i offer",
+      "title": "Services"
+    },
+    "skills": {
+      "description": "My technical level",
+      "title": "Skills"
+    },
+    "testimonial": {
+      "description": "My client saying",
+      "title": "Testimonial"
+    }
+  },
+  "metadata": {
+    "description": "Feel free to explore the projects, services and links available, and don't hesitate to contact me for collaborations or other opportunities. I am always interested in new challenges and learning opportunities.",
+    "titles": {
+      "home": "Home"
+    }
+  },
+  "navbar": {
+    "links": {
+      "about": "About",
+      "contact": "Contact me",
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "services": "Services",
+      "skills": "Skills"
+    },
+    "title": "PedroHB"
+  }
+}

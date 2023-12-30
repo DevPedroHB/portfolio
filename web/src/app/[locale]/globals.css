@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .active-link {
+    @apply text-violet-10 dark:text-violetdark-10;
+  }
+}
