@@ -15,10 +15,6 @@ const config: Config = {
       height: {
         nav: "4.5rem",
         "nav-responsive": "3rem",
-        "toggle-menu": "1.1rem",
-      },
-      width: {
-        "toggle-menu": "1.1rem",
       },
       maxWidth: {
         nav: "60.5rem",
@@ -26,12 +22,20 @@ const config: Config = {
       },
       padding: {
         "nav-menu": "2rem 1.5rem 4rem",
+        section: "6rem 0 2rem",
+        "section-responsive": "2rem 0 4rem",
       },
       boxShadow: {
         nav: "0 -1px 4px rgba(0, 0, 0, .15)",
       },
-      borderRadius: {
-        nav: "1.5rem 1.5rem 0 0",
+      gridTemplateColumns: {
+        hero: "max-content 1fr 1fr",
+        "hero-responsive": ".25fr 3fr",
+        content: "max-content",
+      },
+      gridColumn: {
+        initial: "initial",
+        "1/3": "1/3",
       },
     },
   },

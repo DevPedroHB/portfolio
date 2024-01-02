@@ -33,7 +33,7 @@ export function LinkScroll({
   ...props
 }: ILinkScroll) {
   return (
-    <Link {...props} className={linkScroll({ variant, className })} spy={true}>
+    <Link className={linkScroll({ variant, className })} spy={true} {...props}>
       {children}
     </Link>
   );
