@@ -1,11 +1,14 @@
+import { Section } from "@/components/ui/section";
 import { useTranslations } from "next-intl";
 
 export function Testimonial() {
   const t = useTranslations("home.testimonial");
 
   return (
-    <section id="testimonial" className="grid min-h-screen place-items-center">
-      {t("title")}
-    </section>
+    <Section.Root id="testimonial">
+      <Section.Title>{t("title")}</Section.Title>
+      <Section.Subtitle>{t("subtitle")}</Section.Subtitle>
+      <Section.Container></Section.Container>
+    </Section.Root>
   );
 }

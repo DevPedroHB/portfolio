@@ -13,14 +13,14 @@
     "about": {
       "button": "Download CV",
       "companies-worked": "Companies worked",
-      "description": "My introduction",
       "experience": "Years experience",
       "projects": "Completed project",
-      "text": "Web developer, with extensive knowledge and years of experience, working in web technologies and Ui / Ux design, delivering quality work.",
+      "subtitle": "My introduction",
+      "text": "Experienced web developer with a wealth of knowledge, specializing in web technologies and committed to delivering high-quality work.",
       "title": "About Me"
     },
     "contact": {
-      "description": "Get in touch",
+      "subtitle": "Get in touch",
       "title": "Contact Me"
     },
     "hero": {
@@ -36,23 +36,33 @@
       "title": "You have a new project"
     },
     "portfolio": {
-      "description": "Most recent work",
+      "subtitle": "Most recent work",
       "title": "Portfolio"
     },
     "qualification": {
-      "description": "My personal journey",
+      "subtitle": "My personal journey",
       "title": "Qualification"
     },
     "services": {
-      "description": "What i offer",
+      "subtitle": "What i offer",
       "title": "Services"
     },
     "skills": {
-      "description": "My technical level",
-      "title": "Skills"
+      "skills": {
+        "backend": {
+          "subtitle": "More than 2 years",
+          "title": "Backend developer"
+        },
+        "frontend": {
+          "subtitle": "More than 4 years",
+          "title": "Frontend developer"
+        }
+      },
+      "subtitle": "Meu nível técnico",
+      "title": "Habilidades"
     },
     "testimonial": {
-      "description": "My client saying",
+      "subtitle": "My client saying",
       "title": "Testimonial"
     }
   },
