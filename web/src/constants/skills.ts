@@ -32,7 +32,7 @@ export const skills: ISkill[] = [
       },
       {
         name: "NextJS",
-        level: 85,
+        level: 80,
       },
     ],
   },
@@ -41,8 +41,16 @@ export const skills: ISkill[] = [
     icon: Server,
     technologies: [
       {
-        name: "NodeJS",
+        name: "TypeScript",
         level: 85,
+      },
+      {
+        name: "NodeJS",
+        level: 80,
+      },
+      {
+        name: "NestJS",
+        level: 70,
       },
     ],
   },

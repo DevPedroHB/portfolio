@@ -15,6 +15,7 @@ const config: Config = {
       height: {
         nav: "4.5rem",
         "nav-responsive": "3rem",
+        "progress-bar": ".3125rem",
       },
       maxWidth: {
         nav: "60.5rem",
@@ -24,6 +25,7 @@ const config: Config = {
         "nav-menu": "2rem 1.5rem 4rem",
         section: "6rem 0 2rem",
         "section-responsive": "2rem 0 4rem",
+        "skills-list": "2.7rem",
       },
       boxShadow: {
         nav: "0 -1px 4px rgba(0, 0, 0, .15)",
@@ -36,9 +38,6 @@ const config: Config = {
       gridColumn: {
         initial: "initial",
         "1/3": "1/3",
-      },
-      gap: {
-        "4.5": "1.5rem",
       },
       width: {
         "about-img": "21.875rem",

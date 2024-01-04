@@ -1,4 +1,5 @@
 import { Accordion } from "@/components/ui/accordion";
+import { ProgressBar } from "@/components/ui/progress-bar";
 import { Section } from "@/components/ui/section";
 import { skills } from "@/constants/skills";
 import { ChevronDown } from "lucide-react";
@@ -28,15 +29,17 @@ export function Skills() {
                   </div>
                   <ChevronDown className="h-6 w-6 text-violet-9 transition-all group-data-[state=open]:rotate-180" />
                 </Accordion.Trigger>
-                <Accordion.Content className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden">
+                <Accordion.Content className="pl-skills-list mb-10 grid gap-6 overflow-hidden data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
                   {skill.technologies.map((technology) => {
                     return (
                       <div key={technology.name}>
-                        <div>
-                          <h3>{technology.name}</h3>
-                          <span>{technology.level}%</span>
+                        <div className="mb-2 flex justify-between">
+                          <h3 className="font-medium">{technology.name}</h3>
+                          <span className="text-mauve-dim">
+                            {technology.level}%
+                          </span>
                         </div>
-                        <div>Progressbar</div>
+                        <ProgressBar value={technology.level} />
                       </div>
                     );
                   })}

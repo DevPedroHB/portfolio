@@ -1,5 +1,5 @@
 import { HomeBlob } from "@/components/home-blob";
-import { LinkScroll } from "@/components/link-scroll";
+import { LinkScroll } from "@/components/ui/link-scroll";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
 import { Link } from "@/navigation";

@@ -10,7 +10,7 @@ export function SectionContainer({
 }: ISectionContainer) {
   return (
     <div
-      className={twMerge("gap-4.5 mx-auto grid max-w-app lg:gap-20", className)}
+      className={twMerge("mx-auto grid max-w-app gap-6 lg:gap-20", className)}
       {...props}
     >
       {children}

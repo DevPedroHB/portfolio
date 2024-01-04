@@ -1,7 +1,7 @@
 import { Link } from "@/navigation";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { LinkScroll } from "./link-scroll";
+import { LinkScroll } from "./ui/link-scroll";
 
 export function Footer() {
   const t = useTranslations("footer");

@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { ChangeLanguage } from "./change-language";
-import { LinkScroll } from "./link-scroll";
+import { LinkScroll } from "./ui/link-scroll";
 import { ToggleTheme } from "./toggle-theme";
 
 export function Navbar() {
