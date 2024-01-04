@@ -40,6 +40,14 @@
       "title": "Portfólio"
     },
     "qualification": {
+      "qualifications": {
+        "education": {
+          "title": "Educação"
+        },
+        "work": {
+          "title": "Trabalhos"
+        }
+      },
       "subtitle": "Minha jornada pessoal",
       "title": "Qualificação"
     },

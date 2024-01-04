@@ -40,6 +40,14 @@
       "title": "Portfolio"
     },
     "qualification": {
+      "qualifications": {
+        "education": {
+          "title": "Education"
+        },
+        "work": {
+          "title": "Work"
+        }
+      },
       "subtitle": "My personal journey",
       "title": "Qualification"
     },

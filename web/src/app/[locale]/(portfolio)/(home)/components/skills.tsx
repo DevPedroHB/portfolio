@@ -27,7 +27,10 @@ export function Skills() {
                       {t(`skills.${skill.id}.subtitle`)}
                     </span>
                   </div>
-                  <ChevronDown className="h-6 w-6 text-violet-9 transition-all group-data-[state=open]:rotate-180" />
+                  <ChevronDown
+                    strokeWidth={2.5}
+                    className="h-6 w-6 text-violet-9 transition-all group-data-[state=open]:rotate-180"
+                  />
                 </Accordion.Trigger>
                 <Accordion.Content className="pl-skills-list mb-10 grid gap-6 overflow-hidden data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
                   {skill.technologies.map((technology) => {

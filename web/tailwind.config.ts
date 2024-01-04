@@ -34,6 +34,8 @@ const config: Config = {
         hero: "max-content 1fr 1fr",
         "hero-responsive": ".25fr 3fr",
         content: "max-content",
+        qualifications: ".6fr",
+        "qualification-data": "1fr max-content 1fr",
       },
       gridColumn: {
         initial: "initial",
@@ -41,6 +43,10 @@ const config: Config = {
       },
       width: {
         "about-img": "21.875rem",
+      },
+      translate: {
+        "line-x": "6px",
+        "line-y": "-7px",
       },
       keyframes: {
         slideDown: {
