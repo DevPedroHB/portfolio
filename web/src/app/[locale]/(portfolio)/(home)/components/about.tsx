@@ -14,7 +14,7 @@ export function About() {
         <img
           src="https://github.com/DevPedroHB.png"
           alt="PedroHB"
-          className="h-[272px] w-[350px] self-center justify-self-center rounded-lg object-cover object-top"
+          className="lg:h-[17rem] lg:w-[21.875rem] self-center justify-self-center rounded-lg object-cover object-top w-[12.5rem] h-[9.875rem]"
         />
         <div>
           <p className="text-mauve-dim mb-10 text-center lg:text-start">

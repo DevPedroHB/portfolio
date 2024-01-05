@@ -53,7 +53,8 @@ export const qualifications: IQualification[] = [
       },
       {
         title: "Soldado com qualificação militar em Comunicações",
-        subtitle: "Exército Brasileiro",
+        subtitle:
+          "Exército Brasileiro - 2⁰ Grupo de Artilharia de Campanha Leve",
         time: "2021 - 2022",
       },
     ],

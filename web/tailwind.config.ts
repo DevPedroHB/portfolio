@@ -26,9 +26,12 @@ const config: Config = {
         section: "6rem 0 2rem",
         "section-responsive": "2rem 0 4rem",
         "skills-list": "2.7rem",
+        "service-card": "6rem 1rem 2rem 2.5rem",
       },
       boxShadow: {
         nav: "0 -1px 4px rgba(0, 0, 0, .15)",
+        "service-card": "0 2px 4px rgb(0, 0, 0, .15)",
+        "service-card-hover": "0 4px 8px rgb(0, 0, 0, .15)",
       },
       gridTemplateColumns: {
         hero: "max-content 1fr 1fr",
@@ -36,6 +39,7 @@ const config: Config = {
         content: "max-content",
         qualifications: ".6fr",
         "qualification-data": "1fr max-content 1fr",
+        services: "repeat(auto-fit, minmax(8.75rem, 1fr))",
       },
       gridColumn: {
         initial: "initial",
@@ -69,10 +73,32 @@ const config: Config = {
             opacity: "0",
           },
         },
+        dialogOverlayShow: {
+          from: {
+            opacity: "0",
+          },
+          to: {
+            opacity: "1",
+          },
+        },
+        dialogContentShow: {
+          from: {
+            opacity: "0",
+            transform: "scale(0)",
+          },
+          to: {
+            opacity: " 1",
+            transform: "scale(1)",
+          },
+        },
       },
       animation: {
         slideDown: "slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)",
         slideUp: "slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)",
+        dialogOverlayShow:
+          "dialogOverlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        dialogContentShow:
+          "dialogContentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
       },
     },
   },

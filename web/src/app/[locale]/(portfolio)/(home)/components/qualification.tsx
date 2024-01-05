@@ -34,14 +34,14 @@ export function Qualification() {
               <Tabs.Content
                 key={qualification.id}
                 value={qualification.id}
-                className="grid-cols-qualifications grid justify-center"
+                className="grid grid-cols-1 justify-center"
               >
                 {qualification.qualifications.map((q, i) => {
                   if (i % 2 === 0) {
                     return (
                       <div
                         key={q.title}
-                        className="grid-cols-qualification-data grid gap-6"
+                        className="grid grid-cols-qualification-data gap-2 lg:gap-6"
                       >
                         <div>
                           <h3 className="font-medium">{q.title}</h3>
@@ -55,7 +55,7 @@ export function Qualification() {
                         </div>
                         <div>
                           <span className="bg-violet-solid inline-block h-[13px] w-[13px] rounded-full transition-colors" />
-                          <span className="translate-x-line-x translate-y-line-y bg-violet-solid block h-full w-px transition-colors" />
+                          <span className="bg-violet-solid block h-full w-px translate-x-line-x translate-y-line-y transition-colors" />
                         </div>
                       </div>
                     );
@@ -63,12 +63,12 @@ export function Qualification() {
                     return (
                       <div
                         key={q.title}
-                        className="grid-cols-qualification-data grid gap-6"
+                        className="grid grid-cols-qualification-data gap-6"
                       >
                         <div />
                         <div>
                           <span className="bg-violet-solid inline-block h-[13px] w-[13px] rounded-full transition-colors" />
-                          <span className="translate-x-line-x translate-y-line-y bg-violet-solid block h-full w-px transition-colors" />
+                          <span className="bg-violet-solid block h-full w-px translate-x-line-x translate-y-line-y transition-colors" />
                         </div>
                         <div>
                           <h3 className="font-medium" title={q.description}>

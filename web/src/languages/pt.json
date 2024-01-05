@@ -52,6 +52,41 @@
       "title": "Qualificação"
     },
     "services": {
+      "services": [
+        {
+          "button": "Ver Mais",
+          "icon": "Code2",
+          "info": [
+            "Desenvolvo a interface do usuário.",
+            "Desenvolvimento de páginas web.",
+            "Crio interações de elementos de UX.",
+            "Posiciono a marca da sua empresa."
+          ],
+          "title": "Desenvolvedor de API"
+        },
+        {
+          "button": "Ver Mais",
+          "icon": "Code",
+          "info": [
+            "Desenvolvo a interface do usuário.",
+            "Desenvolvimento de páginas web.",
+            "Crio interações de elementos de UX.",
+            "Posiciono a marca da sua empresa."
+          ],
+          "title": "Desenvolvedor Backend"
+        },
+        {
+          "button": "Ver Mais",
+          "icon": "PanelsLeftBottom",
+          "info": [
+            "Desenvolvo a interface do usuário.",
+            "Desenvolvimento de páginas web.",
+            "Crio interações de elementos de UX.",
+            "Posiciono a marca da sua empresa."
+          ],
+          "title": "Desenvolvedor Frontend"
+        }
+      ],
       "subtitle": "O que eu ofereço",
       "title": "Serviços"
     },

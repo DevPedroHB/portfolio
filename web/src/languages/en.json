@@ -52,6 +52,41 @@
       "title": "Qualification"
     },
     "services": {
+      "services": [
+        {
+          "button": "View More",
+          "icon": "Code2",
+          "info": [
+            "I develop the user interface.",
+            "Web page development.",
+            "I create ux element interactions.",
+            "I position your company brand."
+          ],
+          "title": "API Developer"
+        },
+        {
+          "button": "View More",
+          "icon": "Code",
+          "info": [
+            "I develop the user interface.",
+            "Web page development.",
+            "I create ux element interactions.",
+            "I position your company brand."
+          ],
+          "title": "Backend Developer"
+        },
+        {
+          "button": "View More",
+          "icon": "PanelsLeftBottom",
+          "info": [
+            "I develop the user interface.",
+            "Web page development.",
+            "I create ux element interactions.",
+            "I position your company brand."
+          ],
+          "title": "Frontend Developer"
+        }
+      ],
       "subtitle": "What i offer",
       "title": "Services"
     },
