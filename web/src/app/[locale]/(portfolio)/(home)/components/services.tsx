@@ -29,11 +29,8 @@ export function Services() {
           }
 
           return (
-            <Dialog.Root>
-              <div
-                key={service.title}
-                className="bg-mauve-app relative rounded p-service-card shadow-service-card transition-shadow hover:shadow-service-card-hover"
-              >
+            <Dialog.Root key={service.title}>
+              <div className="bg-mauve-app relative rounded p-service-card shadow-service-card transition-shadow hover:shadow-service-card-hover">
                 <div>
                   <IconComponent className="mb-4 block h-8 w-8 text-violet-9 dark:text-violetdark-9" />
                   <h3 className="mb-4 text-xl font-medium">{service.title}</h3>
@@ -52,7 +49,7 @@ export function Services() {
                   <ul className="space-y-4">
                     {service.info.map((info) => {
                       return (
-                        <li className="flex items-center gap-1">
+                        <li key={info} className="flex items-center gap-1">
                           <Lucide.CheckCircle className="h-4 w-4 text-violet-9 dark:text-violetdark-9" />
                           <p className="text-mauve-dim">{info}</p>
                         </li>
