@@ -12,9 +12,20 @@
   "home": {
     "about": {
       "button": "Baixar CV",
-      "companies-worked": "Empresas trabalhadas",
-      "experience": "Anos de experiência",
-      "projects": "Projetos concluídos",
+      "info": [
+        {
+          "value": 5,
+          "label": "Anos de experiência"
+        },
+        {
+          "value": 10,
+          "label": "Projetos concluídos"
+        },
+        {
+          "value": 2,
+          "label": "Empresas trabalhadas"
+        }
+      ],
       "subtitle": "Minha introdução",
       "text": "Desenvolvedor web experiente com vasto conhecimento, especializado em tecnologias web e comprometido em entregar trabalho de alta qualidade.",
       "title": "Sobre Mim"
@@ -40,14 +51,52 @@
       "title": "Portfólio"
     },
     "qualification": {
-      "qualifications": {
-        "education": {
+      "qualifications": [
+        {
+          "icon": "GraduationCap",
+          "id": "education",
+          "items": [
+            {
+              "subtitle": "C.E.P.M - Centro de Educação Pré Militar",
+              "time": "2016 - 2018",
+              "title": "Preparatório Militar"
+            },
+            {
+              "subtitle": "Instituto Avanza de Educação Profissional",
+              "time": "2018 - 2019",
+              "title": "Gestão Empresarial, Recursos Humanos, Marketing, Logística"
+            },
+            {
+              "subtitle": "FIEC - Fundação Indaiatubana de Educação e Cultura",
+              "time": "2018 - 2019",
+              "title": "Técnico em Informática"
+            }
+          ],
           "title": "Educação"
         },
-        "work": {
+        {
+          "icon": "Briefcase",
+          "id": "work",
+          "items": [
+            {
+              "subtitle": "FIEC - Fundação Indaiatubana de Educação e Cultura",
+              "time": "2020 - 2020",
+              "title": "Estagiário de TI"
+            },
+            {
+              "subtitle": "FIEC - Fundação Indaiatubana de Educação e Cultura",
+              "time": "2020 - 2021",
+              "title": "Desenvolvedor Web FullStack"
+            },
+            {
+              "subtitle": "Exército Brasileiro - 2⁰ Grupo de Artilharia de Campanha Leve",
+              "time": "2021 - 2022",
+              "title": "Soldado com qualificação militar em Comunicações"
+            }
+          ],
           "title": "Trabalhos"
         }
-      },
+      ],
       "subtitle": "Minha jornada pessoal",
       "title": "Qualificação"
     },
@@ -55,14 +104,14 @@
       "services": [
         {
           "button": "Ver Mais",
-          "icon": "Code2",
+          "icon": "PanelsLeftBottom",
           "info": [
             "Desenvolvo a interface do usuário.",
             "Desenvolvimento de páginas web.",
             "Crio interações de elementos de UX.",
             "Posiciono a marca da sua empresa."
           ],
-          "title": "Desenvolvedor de API"
+          "title": "Desenvolvedor Frontend"
         },
         {
           "button": "Ver Mais",
@@ -77,30 +126,66 @@
         },
         {
           "button": "Ver Mais",
-          "icon": "PanelsLeftBottom",
+          "icon": "Code2",
           "info": [
             "Desenvolvo a interface do usuário.",
             "Desenvolvimento de páginas web.",
             "Crio interações de elementos de UX.",
             "Posiciono a marca da sua empresa."
           ],
-          "title": "Desenvolvedor Frontend"
+          "title": "Desenvolvedor de API"
         }
       ],
       "subtitle": "O que eu ofereço",
       "title": "Serviços"
     },
     "skills": {
-      "skills": {
-        "backend": {
+      "skills": [
+        {
+          "icon": "Braces",
+          "id": "frontend",
           "subtitle": "Mais de 2 anos",
-          "title": "Desenvolvedor Backend"
-        },
-        "frontend": {
-          "subtitle": "Mais de 2 anos",
+          "technologies": [
+            {
+              "level": 90,
+              "name": "HTML"
+            },
+            {
+              "level": 80,
+              "name": "CSS"
+            },
+            {
+              "level": 85,
+              "name": "ReactJS"
+            },
+            {
+              "level": 80,
+              "name": "NextJS"
+            }
+          ],
           "title": "Desenvolvedor Frontend"
+        },
+        {
+          "icon": "Server",
+          "id": "backend",
+          "subtitle": "Mais de 2 anos",
+          "technologies": [
+            {
+              "level": 85,
+              "name": "TypeScript"
+            },
+            {
+              "level": 80,
+              "name": "NodeJS"
+            },
+            {
+              "level": 70,
+              "name": "NestJS"
+            }
+          ],
+          "title": "Desenvolvedor Backend"
         }
-      },
+      ],
       "subtitle": "Meu nível técnico",
       "title": "Habilidades"
     },
@@ -116,14 +201,38 @@
     }
   },
   "navbar": {
-    "links": {
-      "about": "Sobre",
-      "contact": "Contate-me",
-      "home": "Início",
-      "portfolio": "Portfólio",
-      "services": "Serviços",
-      "skills": "Habilidades"
-    },
+    "links": [
+      {
+        "icon": "Home",
+        "label": "Início",
+        "path": "home"
+      },
+      {
+        "icon": "User2",
+        "label": "Sobre",
+        "path": "about"
+      },
+      {
+        "icon": "FileText",
+        "label": "Habilidades",
+        "path": "skills"
+      },
+      {
+        "icon": "Briefcase",
+        "label": "Serviços",
+        "path": "services"
+      },
+      {
+        "icon": "Image",
+        "label": "Portfólio",
+        "path": "portfolio"
+      },
+      {
+        "icon": "SendHorizontal",
+        "label": "Contate-me",
+        "path": "contact"
+      }
+    ],
     "title": "PedroHB"
   }
 }

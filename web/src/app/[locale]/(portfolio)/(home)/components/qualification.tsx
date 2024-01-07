@@ -2,12 +2,25 @@
 
 import { Section } from "@/components/ui/section";
 import { Tabs } from "@/components/ui/tabs";
-import { qualifications } from "@/constants/qualifications";
-import { CalendarDays } from "lucide-react";
+import * as Lucide from "lucide-react";
 import { useTranslations } from "next-intl";
+
+type TQualificationItem = {
+  title: string;
+  subtitle: string;
+  time: string;
+};
+
+interface IQualification {
+  id: string;
+  title: string;
+  icon: keyof typeof Lucide;
+  items: TQualificationItem[];
+}
 
 export function Qualification() {
   const t = useTranslations("home.qualification");
+  const qualifications: IQualification[] = t.raw("qualifications");
 
   return (
     <Section.Root id="qualification">
@@ -17,14 +30,26 @@ export function Qualification() {
         <Section.Container className="gap-0 lg:gap-0">
           <Tabs.List className="mb-8 flex justify-evenly lg:justify-center">
             {qualifications.map((qualification) => {
+              const IconComponent = Lucide[
+                qualification.icon
+              ] as Lucide.LucideIcon;
+
+              if (!IconComponent) {
+                console.error(
+                  `Icon component not found for key: ${qualification.icon}`,
+                );
+
+                return null;
+              }
+
               return (
                 <Tabs.Trigger
                   key={qualification.id}
                   value={qualification.id}
                   className="text-mauve-dim mx-4 flex items-center gap-1 text-xl font-medium transition-colors data-[state=active]:text-violet-9 hover:text-violet-9 dark:data-[state=active]:text-violetdark-9 dark:hover:text-violetdark-9"
                 >
-                  <qualification.icon className="h-[1.8rem] w-[1.8rem]" />
-                  {t(`qualifications.${qualification.id}.title`)}
+                  <IconComponent className="h-[1.8rem] w-[1.8rem]" />
+                  {qualification.title}
                 </Tabs.Trigger>
               );
             })}
@@ -36,21 +61,21 @@ export function Qualification() {
                 value={qualification.id}
                 className="grid grid-cols-1 justify-center"
               >
-                {qualification.qualifications.map((q, i) => {
+                {qualification.items.map((item, i) => {
                   if (i % 2 === 0) {
                     return (
                       <div
-                        key={q.title}
+                        key={item.title}
                         className="grid grid-cols-qualification-data gap-2 lg:gap-6"
                       >
                         <div>
-                          <h3 className="font-medium">{q.title}</h3>
+                          <h3 className="font-medium">{item.title}</h3>
                           <span className="text-mauve-dim mb-4 block text-sm">
-                            {q.subtitle}
+                            {item.subtitle}
                           </span>
                           <div className="text-mauve-dim flex items-center gap-1 text-xs">
-                            <CalendarDays className="h-[.813rem] w-[.813rem]" />
-                            {q.time}
+                            <Lucide.CalendarDays className="h-[.813rem] w-[.813rem]" />
+                            {item.time}
                           </div>
                         </div>
                         <div>
@@ -62,7 +87,7 @@ export function Qualification() {
                   } else {
                     return (
                       <div
-                        key={q.title}
+                        key={item.title}
                         className="grid grid-cols-qualification-data gap-6"
                       >
                         <div />
@@ -71,15 +96,13 @@ export function Qualification() {
                           <span className="bg-violet-solid block h-full w-px translate-x-line-x translate-y-line-y transition-colors" />
                         </div>
                         <div>
-                          <h3 className="font-medium" title={q.description}>
-                            {q.title}
-                          </h3>
+                          <h3 className="font-medium">{item.title}</h3>
                           <span className="text-mauve-dim mb-4 block text-sm">
-                            {q.subtitle}
+                            {item.subtitle}
                           </span>
                           <div className="text-mauve-dim flex items-center gap-1 text-xs">
-                            <CalendarDays className="h-[.813rem] w-[.813rem]" />
-                            {q.time}
+                            <Lucide.CalendarDays className="h-[.813rem] w-[.813rem]" />
+                            {item.time}
                           </div>
                         </div>
                       </div>

@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/section";
 import * as Lucide from "lucide-react";
 import { useTranslations } from "next-intl";
 
-interface IServices {
+interface IService {
   title: string;
   icon: keyof typeof Lucide;
   button: string;
@@ -12,7 +12,7 @@ interface IServices {
 
 export function Services() {
   const t = useTranslations("home.services");
-  const services: IServices[] = t.raw("services");
+  const services: IService[] = t.raw("services");
 
   return (
     <Section.Root id="services">

@@ -1,19 +1,25 @@
 "use client";
 
-import { navLinks } from "@/constants/nav-links";
 import { Link } from "@/navigation";
-import { LayoutGrid, X } from "lucide-react";
+import * as Lucide from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { ChangeLanguage } from "./change-language";
-import { LinkScroll } from "./ui/link-scroll";
 import { ToggleTheme } from "./toggle-theme";
+import { LinkScroll } from "./ui/link-scroll";
+
+interface ILink {
+  label: string;
+  icon: keyof typeof Lucide;
+  path: string;
+}
 
 export function Navbar() {
   const [toggle, setToggle] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const t = useTranslations("navbar");
+  const links: ILink[] = t.raw("links");
 
   function handleToggle() {
     setToggle((prev) => !prev);
@@ -61,17 +67,25 @@ export function Navbar() {
               "lg:flex lg:items-center lg:gap-8",
             )}
           >
-            {navLinks.map((link) => {
+            {links.map((link) => {
+              const IconComponent = Lucide[link.icon] as Lucide.LucideIcon;
+
+              if (!IconComponent) {
+                console.error(`Icon component not found for key: ${link.icon}`);
+
+                return null;
+              }
+
               return (
-                <li key={link.id}>
+                <li key={link.label}>
                   <LinkScroll
                     to={link.path}
                     onClick={handleToggle}
                     variant="nav"
                     activeClass="active-link"
                   >
-                    <link.icon className="h-5 w-5 lg:hidden" />
-                    {t(`links.${link.id}`)}
+                    <IconComponent className="h-5 w-5 lg:hidden" />
+                    {link.label}
                   </LinkScroll>
                 </li>
               );
@@ -86,9 +100,9 @@ export function Navbar() {
             onClick={handleToggle}
           >
             {toggle ? (
-              <X className="h-5 w-5" />
+              <Lucide.X className="h-5 w-5" />
             ) : (
-              <LayoutGrid className="h-5 w-5" />
+              <Lucide.LayoutGrid className="h-5 w-5" />
             )}
           </button>
         </div>
