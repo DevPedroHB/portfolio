@@ -10,6 +10,9 @@ import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import "./globals.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const poppins = Poppins({
   display: "swap",

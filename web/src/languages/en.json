@@ -48,7 +48,27 @@
     },
     "portfolio": {
       "subtitle": "Most recent work",
-      "title": "Portfolio"
+      "title": "Portfolio",
+      "projects": [
+        {
+          "image": "/images/project-1.jpg",
+          "title": "Modern Website",
+          "description": "Website adaptable to all devices, with ui components and animated interactions.",
+          "button": "Demo"
+        },
+        {
+          "image": "/images/project-2.jpg",
+          "title": "Brand Design",
+          "description": "Website adaptable to all devices, with ui components and animated interactions.",
+          "button": "Demo"
+        },
+        {
+          "image": "/images/project-3.jpg",
+          "title": "Online Store",
+          "description": "Website adaptable to all devices, with ui components and animated interactions.",
+          "button": "Demo"
+        }
+      ]
     },
     "qualification": {
       "qualifications": [
@@ -205,7 +225,7 @@
       {
         "icon": "Home",
         "label": "Home",
-        "path": "home"
+        "path": "hero"
       },
       {
         "icon": "User2",

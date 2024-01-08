@@ -47,8 +47,28 @@
       "title": "Você tem um novo projeto"
     },
     "portfolio": {
-      "subtitle": "Trabalho mais recente",
-      "title": "Portfólio"
+      "subtitle": "Trabalhos mais recentes",
+      "title": "Portfólio",
+      "projects": [
+        {
+          "image": "/images/project-1.jpg",
+          "title": "Website Moderno",
+          "description": "Site adaptável a todos os dispositivos, com componentes de UI e interações animadas.",
+          "button": "Demo"
+        },
+        {
+          "image": "/images/project-2.jpg",
+          "title": "Design de Marca",
+          "description": "Site adaptável a todos os dispositivos, com componentes de UI e interações animadas.",
+          "button": "Demo"
+        },
+        {
+          "image": "/images/project-3.jpg",
+          "title": "Loja Online",
+          "description": "Site adaptável a todos os dispositivos, com componentes de UI e interações animadas.",
+          "button": "Demo"
+        }
+      ]
     },
     "qualification": {
       "qualifications": [
@@ -205,7 +225,7 @@
       {
         "icon": "Home",
         "label": "Início",
-        "path": "home"
+        "path": "hero"
       },
       {
         "icon": "User2",

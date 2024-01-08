@@ -2,7 +2,7 @@ import { ComponentProps } from "react";
 import { VariantProps, tv } from "tailwind-variants";
 
 const button = tv({
-  base: "flex gap-2 items-center transition-colors p-4 rounded-lg font-medium",
+  base: "flex gap-2 items-center transition-colors p-4 rounded-lg font-medium group leading-none",
   variants: {
     variant: {
       primary: "bg-violet-solid",
