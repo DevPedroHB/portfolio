@@ -25,8 +25,8 @@ export function Portfolio() {
       <Section.Container className="block">
         <Swiper
           className="mx-auto max-w-app gap-6 lg:gap-20"
-          cssMode={true}
-          loop={true}
+          cssMode
+          loop
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
@@ -36,8 +36,8 @@ export function Portfolio() {
             clickable: true,
           }}
           modules={[Navigation, Pagination]}
-          mousewheel={true}
-          keyboard={true}
+          mousewheel
+          keyboard
         >
           {projects.map((project) => {
             return (

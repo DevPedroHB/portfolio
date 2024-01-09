@@ -23,8 +23,8 @@ const config: Config = {
       },
       padding: {
         "nav-menu": "2rem 1.5rem 4rem",
-        section: "6rem 0 2rem",
-        "section-responsive": "2rem 0 4rem",
+        section: "6rem 1rem 2rem",
+        "section-responsive": "2rem 1rem 4rem",
         "skills-list": "2.7rem",
         "service-card": "6rem 1rem 2rem 2.5rem",
       },
@@ -40,6 +40,7 @@ const config: Config = {
         qualifications: ".6fr",
         "qualification-data": "1fr max-content 1fr",
         services: "repeat(auto-fit, minmax(8.75rem, 1fr))",
+        "new-project": "1fr max-content",
       },
       gridColumn: {
         initial: "initial",

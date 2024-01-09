@@ -211,7 +211,24 @@
     },
     "testimonial": {
       "subtitle": "O que meus clientes dizem",
-      "title": "Depoimento"
+      "title": "Depoimento",
+      "testimonials": [
+        {
+          "name": "Sara Smith",
+          "type": "Cliente",
+          "content": "Fiquei com uma boa impressão, executei meu projeto com toda a qualidade possível e atenção, com suporte 24 horas por dia."
+        },
+        {
+          "name": "Matt Robinson",
+          "type": "Cliente",
+          "content": "Fiquei com uma boa impressão, executei meu projeto com toda a qualidade possível e atenção, com suporte 24 horas por dia."
+        },
+        {
+          "name": "Raul Harris",
+          "type": "Cliente",
+          "content": "Fiquei com uma boa impressão, executei meu projeto com toda a qualidade possível e atenção, com suporte 24 horas por dia."
+        }
+      ]
     }
   },
   "metadata": {

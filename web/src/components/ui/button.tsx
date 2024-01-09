@@ -6,6 +6,8 @@ const button = tv({
   variants: {
     variant: {
       primary: "bg-violet-solid",
+      secondary:
+        "bg-mauve-1 text-violet-9 dark:text-violetdark-9 hover:bg-mauve-3",
     },
   },
   defaultVariants: {

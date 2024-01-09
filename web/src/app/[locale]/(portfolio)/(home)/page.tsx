@@ -29,7 +29,7 @@ export async function generateMetadata({
 
 export default function Home() {
   return (
-    <main className="px-4">
+    <main>
       <Hero />
       <About />
       <Skills />
