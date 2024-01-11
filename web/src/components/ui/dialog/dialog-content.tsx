@@ -13,10 +13,17 @@ export function DialogContent({
 }: IDialogContent) {
   return (
     <Dialog.Portal>
-      <Dialog.Overlay className="data-[state=open]:animate-dialogOverlayShow fixed inset-0 z-40 grid place-items-center bg-blacka-6 p-4">
+      <Dialog.Overlay
+        className={twMerge(
+          "fixed inset-0 z-50 grid place-items-center overflow-auto bg-blacka-6 p-4 scrollbar scrollbar-track-mauve-2 scrollbar-thumb-violet-9 scrollbar-thumb-rounded-full scrollbar-w-1 scrollbar-h-1",
+          "hover:scrollbar-thumb-violet-10",
+          "dark:scrollbar-track-mauvedark-2 dark:scrollbar-thumb-violetdark-9 dark:hover:scrollbar-thumb-violetdark-10",
+          "data-[state=open]:animate-dialogOverlayShow",
+        )}
+      >
         <Dialog.Content
           className={twMerge(
-            "data-[state=open]:animate-dialogContentShow relative",
+            "relative data-[state=open]:animate-dialogContentShow",
             className,
           )}
           {...props}

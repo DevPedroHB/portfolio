@@ -42,16 +42,16 @@ export function Services() {
                     strokeWidth={2.5}
                   />
                 </Dialog.Trigger>
-                <Dialog.Content className="bg-mauve-app w-full max-w-[450px] rounded-lg p-6">
+                <Dialog.Content className="bg-mauve-app w-full max-w-app rounded-lg p-6">
                   <Dialog.Title className="mb-6 text-xl font-medium">
                     {service.title}
                   </Dialog.Title>
                   <ul className="space-y-4">
                     {service.info.map((info) => {
                       return (
-                        <li key={info} className="flex items-center gap-1">
-                          <Lucide.CheckCircle className="h-4 w-4 text-violet-9 dark:text-violetdark-9" />
-                          <p className="text-mauve-dim">{info}</p>
+                        <li key={info} className="flex gap-1">
+                          <Lucide.CheckCircle className="mt-1 h-4 w-4 text-violet-9 dark:text-violetdark-9" />
+                          <p className="text-mauve-dim flex-1">{info}</p>
                         </li>
                       );
                     })}

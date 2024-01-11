@@ -67,7 +67,7 @@
     },
     "new-project": {
       "button": "Contact Me",
-      "description": "Contact me now and get a 30% discount on your new project.",
+      "description": "Contact me now and get a 10% discount on your new project.",
       "title": "You have a new project"
     },
     "portfolio": {
@@ -150,10 +150,15 @@
           "button": "View More",
           "icon": "PanelsLeftBottom",
           "info": [
-            "I develop the user interface.",
-            "Web page development.",
-            "I create ux element interactions.",
-            "I position your company brand."
+            "I create the structure, style, and interactive behavior of the user interface using the latest technologies.",
+            "Ensure the user interface is responsive, effectively adapting to different screen sizes and devices, providing a consistent experience.",
+            "Collaborate with backend developers to integrate the user interface with services and data provided by servers, often through APIs (Application Programming Interfaces).",
+            "Optimize code to ensure fast loading of the user interface, minimizing page load times and improving the user experience.",
+            "Perform unit and integration testing to ensure the quality and stability of the frontend code.",
+            "Use version control systems like Git to manage source code and collaborate efficiently with other developers.",
+            "Work in conjunction with designers to implement attractive and functional designs and layouts.",
+            "Ensure the user interface is accessible to users with different abilities, following accessibility guidelines.",
+            "Perform updates and bug fixes, ensuring the user interface remains functional and compatible with technological changes."
           ],
           "title": "Frontend Developer"
         },
@@ -161,10 +166,16 @@
           "button": "View More",
           "icon": "Code",
           "info": [
-            "I develop the user interface.",
-            "Web page development.",
-            "I create ux element interactions.",
-            "I position your company brand."
+            "I focus on building server-side business logic, processing client requests, interacting with the database, and providing data and resources to the frontend.",
+            "Design, create, and maintain databases that store application data, including SQL queries, performance optimization, and data integrity assurance.",
+            "Develop and maintain APIs that allow communication between the frontend and backend, crucial for integrating different parts of a system.",
+            "Implement authentication systems to ensure users are who they claim to be, and authorization to control access to specific resources based on permissions.",
+            "Ensure the security of the application against threats such as SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF), and other cyber attacks.",
+            "Optimize server performance by identifying and resolving bottlenecks, improving code efficiency, and implementing caching strategies.",
+            "Monitor and maintain system integrity, identifying and fixing bugs, performance issues, or other failures.",
+            "Integrate third-party services, such as payment systems, external APIs, and other components necessary for the application's operation.",
+            "Design the system to be scalable, ensuring it can handle an increase in the number of users and workload.",
+            "Create clear and comprehensive documentation for code, APIs, and processes, facilitating understanding and maintenance by other team members."
           ],
           "title": "Backend Developer"
         },
@@ -172,12 +183,34 @@
           "button": "View More",
           "icon": "Code2",
           "info": [
-            "I develop the user interface.",
-            "Web page development.",
-            "I create ux element interactions.",
-            "I position your company brand."
+            "Front-end, back-end, and data structure development, providing a comprehensive and integrated view for creating complete solutions.",
+            "Front-end Development:",
+            "- I create the structure, style, and interactive behavior of the user interface using the latest technologies.",
+            "- Ensure the user interface is responsive, effectively adapting to different screen sizes and devices, providing a consistent experience.",
+            "Back-end Development:",
+            "- Design and implement business logic and data handling, using server-side programming languages such as Node.js.",
+            "- Interact with databases, such as MySQL, PostgreSQL, MongoDB, etc.",
+            "Database Development:",
+            "- Design and optimize database schemas.",
+            "- Write SQL queries and manage data access, using ORMs (Object-Relational Mapping) when applicable.",
+            "API (Application Programming Interface) Development:",
+            "- Create and maintain APIs for communication between the front-end and back-end, using protocols like REST.",
+            "Server and Infrastructure Management:",
+            "- Configure and manage web servers.",
+            "- Use automation and provisioning tools, such as Docker, Kubernetes, etc.",
+            "Security:",
+            "- Implement security practices in code, communications, and server settings.",
+            "- Conduct security audits and address vulnerabilities.",
+            "Version Control:",
+            "- Use version control systems like Git to track changes in code.",
+            "Testing:",
+            "- Write automated tests to ensure code robustness.",
+            "- Perform unit, integration, and system testing.",
+            "Collaboration and Communication:",
+            "- Work in a team and collaborate with other developers, designers, and professionals from other areas.",
+            "- Participate in meetings to discuss requirements and plan development."
           ],
-          "title": "API Developer"
+          "title": "Fullstack Developer"
         }
       ],
       "subtitle": "What i offer",
@@ -188,7 +221,7 @@
         {
           "icon": "Braces",
           "id": "frontend",
-          "subtitle": "More than 2 years",
+          "subtitle": "More than 5 years",
           "technologies": [
             {
               "level": 90,
@@ -212,7 +245,7 @@
         {
           "icon": "Server",
           "id": "backend",
-          "subtitle": "More than 2 years",
+          "subtitle": "More than 5 years",
           "technologies": [
             {
               "level": 85,
@@ -228,6 +261,34 @@
             }
           ],
           "title": "Backend developer"
+        },
+        {
+          "icon": "Database",
+          "id": "database",
+          "subtitle": "More than 5 years",
+          "technologies": [
+            {
+              "level": 70,
+              "name": "PostgreSQL"
+            },
+            {
+              "level": 70,
+              "name": "MySQL"
+            },
+            {
+              "level": 70,
+              "name": "SQLite"
+            },
+            {
+              "level": 50,
+              "name": "Redis"
+            },
+            {
+              "level": 40,
+              "name": "MongoDB"
+            }
+          ],
+          "title": "Database developer"
         }
       ],
       "subtitle": "My technical level",

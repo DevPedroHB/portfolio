@@ -46,7 +46,7 @@ export function Contact() {
             );
           })}
         </div>
-        <Form.Root className="max-w-contact-form">
+        <Form.Root className="lg:max-w-contact-form">
           <Form.Wrapper className="lg:grid-cols-2">
             <Input id="name" type="text" label={t("form.name")} />
             <Input id="email" type="email" label={t("form.email")} />

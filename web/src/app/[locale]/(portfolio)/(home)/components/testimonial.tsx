@@ -3,7 +3,7 @@
 import { Avatar } from "@/components/ui/avatar";
 import { Rating } from "@/components/ui/rating";
 import { Section } from "@/components/ui/section";
-import { faker } from "@faker-js/faker";
+import { faker } from "@/lib/faker";
 import { useTranslations } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -49,9 +49,9 @@ export function Testimonial() {
                         src={faker.image.avatar()}
                         alt={`Avatar ${testimonial.name}`}
                       />
-                      <div>
-                        <h3 className="text-xl font-medium">
-                          {testimonial.name}
+                      <div className="flex-1">
+                        <h3 className="line-clamp-1 text-xl font-medium">
+                          {faker.person.fullName()}
                         </h3>
                         <span className="text-mauve-dim text-sm">
                           {testimonial.type}
@@ -61,7 +61,7 @@ export function Testimonial() {
                     <Rating rating={faker.number.int({ min: 2, max: 5 })} />
                   </div>
                   <p className="text-mauve-dim mb-10 line-clamp-4">
-                    {testimonial.content}
+                    {faker.lorem.text()}
                   </p>
                 </div>
               </SwiperSlide>

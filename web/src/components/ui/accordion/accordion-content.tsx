@@ -11,7 +11,13 @@ export function AccordionContent({
   ...props
 }: IAccordionContent) {
   return (
-    <Accordion.Content className={twMerge("", className)} {...props}>
+    <Accordion.Content
+      className={twMerge(
+        "data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown",
+        className,
+      )}
+      {...props}
+    >
       {children}
     </Accordion.Content>
   );

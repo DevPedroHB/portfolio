@@ -67,7 +67,7 @@
     },
     "new-project": {
       "button": "Contate-me",
-      "description": "Entre em contato agora e ganhe um desconto de 30% no seu novo projeto.",
+      "description": "Entre em contato agora e ganhe um desconto de 10% no seu novo projeto.",
       "title": "Você tem um novo projeto"
     },
     "portfolio": {
@@ -150,10 +150,15 @@
           "button": "Ver Mais",
           "icon": "PanelsLeftBottom",
           "info": [
-            "Desenvolvo a interface do usuário.",
-            "Desenvolvimento de páginas web.",
-            "Crio interações de elementos de UX.",
-            "Posiciono a marca da sua empresa."
+            "Eu crio a estrutura, estilo e comportamento interativo da interface do usuário usando as tecnologias mais recentes.",
+            "Garanto que a interface do usuário seja responsiva, adaptando-se eficazmente a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência consistente.",
+            "Colaboro com desenvolvedores backend para integrar a interface do usuário com os serviços e dados fornecidos pelos servidores, geralmente por meio de APIs (Interfaces de Programação de Aplicações).",
+            "Otimizo o código para garantir um carregamento rápido da interface do usuário, minimizando o tempo de carregamento da página e melhorando a experiência do usuário.",
+            "Realizo testes unitários e de integração para garantir a qualidade e estabilidade do código frontend.",
+            "Utilizo sistemas de controle de versão, como Git, para gerenciar o código fonte e colaborar eficientemente com outros desenvolvedores.",
+            "Trabalho em conjunto com designers para implementar designs e layouts atraentes e funcionais.",
+            "Garanto que a interface do usuário seja acessível a usuários com diferentes habilidades, seguindo as diretrizes de acessibilidade.",
+            "Realizo atualizações e correções de bugs, além de garantir que a interface do usuário permaneça funcional e compatível com as mudanças tecnológicas."
           ],
           "title": "Desenvolvedor Frontend"
         },
@@ -161,10 +166,16 @@
           "button": "Ver Mais",
           "icon": "Code",
           "info": [
-            "Desenvolvo a interface do usuário.",
-            "Desenvolvimento de páginas web.",
-            "Crio interações de elementos de UX.",
-            "Posiciono a marca da sua empresa."
+            "Crio a lógica de negócios do lado do servidor, processando solicitações do cliente, interagindo com o banco de dados e fornecendo dados e recursos ao frontend.",
+            "Projeto, crio e mantenho bancos de dados que armazenam dados da aplicação, incluindo consultas SQL, otimização de desempenho e garantia de integridade dos dados.",
+            "Desenvolvo e mantenho APIs que permitem a comunicação entre o frontend e o backend, sendo fundamentais para a integração de diferentes partes de um sistema.",
+            "Implemento sistemas de autenticação para garantir que os usuários sejam quem afirmam ser, e autorização para controlar o acesso a recursos específicos com base em permissões.",
+            "Garanto a segurança da aplicação contra ameaças como injeção de SQL, cross-site scripting (XSS), cross-site request forgery (CSRF) e outros ataques cibernéticos.",
+            "Otimizo o desempenho do servidor, identificando e resolvendo gargalos, melhorando a eficiência do código e implementando estratégias de cache.",
+            "Monitoro e mantenho a integridade do sistema, identificando e corrigindo bugs, problemas de desempenho ou outras falhas.",
+            "Integro serviços de terceiros, como sistemas de pagamento, APIs externas e outros componentes necessários para o funcionamento da aplicação.",
+            "Projeto o sistema para ser escalável, garantindo que ele possa lidar com um aumento no número de usuários e carga de trabalho.",
+            "Crio documentação clara e abrangente para o código, APIs e processos, facilitando a compreensão e a manutenção por outros membros da equipe."
           ],
           "title": "Desenvolvedor Backend"
         },
@@ -172,12 +183,34 @@
           "button": "Ver Mais",
           "icon": "Code2",
           "info": [
-            "Desenvolvo a interface do usuário.",
-            "Desenvolvimento de páginas web.",
-            "Crio interações de elementos de UX.",
-            "Posiciono a marca da sua empresa."
+            "Desenvolvimento Front-end, Back-end e estrutura de dados, proporcionando uma visão abrangente e integrada para a criação de soluções completas.",
+            "Desenvolvimento Front-end:",
+            "- Crio a estrutura, estilo e comportamento interativo da interface do usuário usando as tecnologias mais recentes.",
+            "- Garanto que a interface do usuário seja responsiva, adaptando-se eficazmente a diferentes tamanhos de tela e dispositivos, proporcionando uma experiência consistente.",
+            "Desenvolvimento Back-end:",
+            "- Projeto e implemento a lógica de negócios e a manipulação de dados, utilizando linguagens de programação do lado do servidor, como Node.js.",
+            "- Interajo com bancos de dados, como MySQL, PostgreSQL, MongoDB, etc.",
+            "Desenvolvimento de Banco de Dados:",
+            "- Projeto e otimizo esquemas de banco de dados.",
+            "- Escrevo consultas SQL e gerencio o acesso aos dados, utilizando ORMs (Object-Relational Mapping) quando aplicável.",
+            "Desenvolvimento de API (Interface de Programação de Aplicações):",
+            "- Crio e mantenho APIs para comunicação entre o front-end e o back-end, utilizando protocolos como REST.",
+            "Gerenciamento de Servidores e Infraestrutura:",
+            "- Configuro e gerencio servidores web.",
+            "- Utilizo ferramentas de automação e provisionamento, como Docker, Kubernetes, etc.",
+            "Segurança:",
+            "- Implemento práticas de segurança no código, nas comunicações e nas configurações do servidor.",
+            "- Realizo auditorias de segurança e corrijo vulnerabilidades.",
+            "Controle de Versão:",
+            "- Utilizo sistemas de controle de versão, como Git, para rastrear alterações no código.",
+            "Testes:",
+            "- Escrevo testes automatizados para garantir a robustez do código.",
+            "- Realizo testes de unidade, integração e sistema.",
+            "Colaboração e Comunicação:",
+            "- Trabalho em equipe e colaboro com outros desenvolvedores, designers e profissionais de outras áreas.",
+            "- Participo de reuniões para discutir requisitos e planejar o desenvolvimento."
           ],
-          "title": "Desenvolvedor de API"
+          "title": "Desenvolvedor Fullstack"
         }
       ],
       "subtitle": "O que eu ofereço",
@@ -188,7 +221,7 @@
         {
           "icon": "Braces",
           "id": "frontend",
-          "subtitle": "Mais de 2 anos",
+          "subtitle": "Mais de 5 anos",
           "technologies": [
             {
               "level": 90,
@@ -212,7 +245,7 @@
         {
           "icon": "Server",
           "id": "backend",
-          "subtitle": "Mais de 2 anos",
+          "subtitle": "Mais de 5 anos",
           "technologies": [
             {
               "level": 85,
@@ -228,6 +261,34 @@
             }
           ],
           "title": "Desenvolvedor Backend"
+        },
+        {
+          "icon": "Database",
+          "id": "database",
+          "subtitle": "Mais de 5 anos",
+          "technologies": [
+            {
+              "level": 70,
+              "name": "PostgreSQL"
+            },
+            {
+              "level": 70,
+              "name": "MySQL"
+            },
+            {
+              "level": 70,
+              "name": "SQLite"
+            },
+            {
+              "level": 50,
+              "name": "Redis"
+            },
+            {
+              "level": 40,
+              "name": "MongoDB"
+            }
+          ],
+          "title": "Desenvolvedor de Banco de Dados"
         }
       ],
       "subtitle": "Meu nível técnico",

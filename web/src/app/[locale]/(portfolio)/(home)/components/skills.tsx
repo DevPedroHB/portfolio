@@ -26,7 +26,7 @@ export function Skills() {
       <Section.Title>{t("title")}</Section.Title>
       <Section.Subtitle>{t("subtitle")}</Section.Subtitle>
       <Accordion.Root type="single" defaultValue={skills[0].id} collapsible>
-        <Section.Container className="lg:grid-cols-2">
+        <Section.Container className="lg:grid-cols-2 lg:gap-y-0">
           {skills.map((skill) => {
             const IconComponent = Lucide[skill.icon] as Lucide.LucideIcon;
 
@@ -51,7 +51,7 @@ export function Skills() {
                     className="h-6 w-6 text-violet-9 transition-all group-data-[state=open]:rotate-180"
                   />
                 </Accordion.Trigger>
-                <Accordion.Content className="mb-10 grid gap-6 overflow-hidden pl-skills-list data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown">
+                <Accordion.Content className="mb-10 space-y-6 overflow-hidden pl-skills-list">
                   {skill.technologies.map((technology) => {
                     return (
                       <div key={technology.name}>
