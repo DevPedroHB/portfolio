@@ -32,7 +32,31 @@
     },
     "contact": {
       "subtitle": "Entre em contato",
-      "title": "Contate-me"
+      "title": "Contate-me",
+      "contacts": [
+        {
+          "icon": "Phone",
+          "label": "Ligue para mim",
+          "value": "+55 (19) 9 9199-4368"
+        },
+        {
+          "icon": "Mail",
+          "label": "Email",
+          "value": "pedroh.bergamo20@gmail.com"
+        },
+        {
+          "icon": "MapPin",
+          "label": "Localização",
+          "value": "R. Vitantônio Scisci, 235 - Jardim Juscelino Kubitschek, Indaiatuba - SP"
+        }
+      ],
+      "form": {
+        "name": "Nome",
+        "email": "Email",
+        "project": "Projeto",
+        "message": "Mensagem",
+        "button": "Enviar Mensagem"
+      }
     },
     "hero": {
       "button": "Contate-me",

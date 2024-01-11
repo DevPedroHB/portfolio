@@ -19,6 +19,7 @@ export function Rating({ rating, children, className, ...props }: IRating) {
       {Array.from({ length: 5 }).map((_, i) => {
         return (
           <Star
+            key={`star-${i}`}
             className={twMerge(
               "h-3.5 w-3.5",
               rating > i && "fill-violet-9 dark:fill-violetdark-9",

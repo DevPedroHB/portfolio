@@ -20,6 +20,7 @@ const config: Config = {
       maxWidth: {
         nav: "60.5rem",
         app: "48rem",
+        "contact-form": "28.75rem",
       },
       padding: {
         "nav-menu": "2rem 1.5rem 4rem",
@@ -27,6 +28,7 @@ const config: Config = {
         "section-responsive": "2rem 1rem 4rem",
         "skills-list": "2.7rem",
         "service-card": "6rem 1rem 2rem 2.5rem",
+        input: ".75rem 1rem .75rem",
       },
       boxShadow: {
         nav: "0 -1px 4px rgba(0, 0, 0, .15)",
