@@ -2,6 +2,7 @@
 
 import { themes } from "@/constants/themes";
 import { SunMoon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 import {
@@ -14,7 +15,8 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-export function ToggleTheme() {
+export function ChangeTheme() {
+  const t = useTranslations("themes");
   const { theme, setTheme } = useTheme();
 
   return (
@@ -25,13 +27,13 @@ export function ToggleTheme() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuLabel>Tema</DropdownMenuLabel>
+        <DropdownMenuLabel>{t("label")}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
           {themes.map((theme) => {
             return (
-              <DropdownMenuRadioItem key={theme.id} value={theme.id}>
-                {theme.label}
+              <DropdownMenuRadioItem key={theme} value={theme}>
+                {t(theme)}
               </DropdownMenuRadioItem>
             );
           })}

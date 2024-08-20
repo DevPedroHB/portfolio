@@ -1,6 +1,8 @@
 import { cn } from "@/functions/cn";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
@@ -11,22 +13,28 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | PedroHB",
-    default: "PedroHB",
-  },
-  description:
-    "Sinta-se à vontade para explorar os projetos, serviços e links disponíveis, e não hesite em entrar em contato comigo para colaborações ou outras oportunidades. Estou sempre interessado em novos desafios e oportunidades de aprendizado.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
+
+  return {
+    title: {
+      template: "%s | PedroHB",
+      default: "PedroHB",
+    },
+    description: t("description"),
+  };
+}
 
 interface IRootLayout {
   children: ReactNode;
 }
 
-export default function RootLayout({ children }: Readonly<IRootLayout>) {
+export default async function RootLayout({ children }: Readonly<IRootLayout>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html lang="pt-br" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen scroll-smooth bg-background font-sans antialiased",
@@ -34,7 +42,9 @@ export default function RootLayout({ children }: Readonly<IRootLayout>) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
         </ThemeProvider>
       </body>
     </html>

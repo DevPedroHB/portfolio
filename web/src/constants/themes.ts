@@ -1,19 +1,3 @@
-interface ITheme {
-  id: string;
-  label: string;
-}
+export const themes = ["light", "dark", "system"] as const;
 
-export const themes: ITheme[] = [
-  {
-    id: "light",
-    label: "Claro",
-  },
-  {
-    id: "dark",
-    label: "Escuro",
-  },
-  {
-    id: "system",
-    label: "Sistema",
-  },
-];
+export type Themes = (typeof themes)[number];
