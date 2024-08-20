@@ -1,114 +1,84 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
-const config: Config = {
-  darkMode: "class",
+const config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
-        sans: "var(--font-poppins)",
+        sans: ["var(--font-poppins)", ...fontFamily.sans],
       },
-      height: {
-        nav: "4.5rem",
-        "nav-responsive": "3rem",
-        "progress-bar": ".3125rem",
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
-      maxWidth: {
-        nav: "60.5rem",
-        app: "48rem",
-        "contact-form": "28.75rem",
-      },
-      padding: {
-        "nav-menu": "2rem 1.5rem 4rem",
-        section: "6rem 1rem 2rem",
-        "section-responsive": "2rem 1rem 4rem",
-        "skills-list": "2.7rem",
-        "service-card": "6rem 1rem 2rem 2.5rem",
-        input: ".75rem 1rem .75rem",
-      },
-      boxShadow: {
-        nav: "0 -1px 4px rgba(0, 0, 0, .15)",
-        "service-card": "0 2px 4px rgb(0, 0, 0, .15)",
-        "service-card-hover": "0 4px 8px rgb(0, 0, 0, .15)",
-      },
-      gridTemplateColumns: {
-        hero: "max-content 1fr 1fr",
-        "hero-responsive": ".25fr 3fr",
-        content: "max-content",
-        qualifications: ".6fr",
-        "qualification-data": "1fr max-content 1fr",
-        services: "repeat(auto-fit, minmax(8.75rem, 1fr))",
-        "new-project": "1fr max-content",
-      },
-      gridColumn: {
-        initial: "initial",
-        "1/3": "1/3",
-      },
-      width: {
-        "about-img": "21.875rem",
-      },
-      translate: {
-        "line-x": "6px",
-        "line-y": "-7px",
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        slideDown: {
-          from: {
-            height: "0",
-            opacity: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-            opacity: "1",
-          },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
-        slideUp: {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-            opacity: "1",
-          },
-          to: {
-            height: "0",
-            opacity: "0",
-          },
-        },
-        dialogOverlayShow: {
-          from: {
-            opacity: "0",
-          },
-          to: {
-            opacity: "1",
-          },
-        },
-        dialogContentShow: {
-          from: {
-            opacity: "0",
-            transform: "scale(0)",
-          },
-          to: {
-            opacity: " 1",
-            transform: "scale(1)",
-          },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
-        slideDown: "slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-        slideUp: "slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)",
-        dialogOverlayShow:
-          "dialogOverlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-        dialogContentShow:
-          "dialogContentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [
-    require("tailwindcss-radix-colors"),
-    require("tailwind-scrollbar")({ nocompatible: true }),
-  ],
-};
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
 
 export default config;
