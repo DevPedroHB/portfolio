@@ -34,12 +34,13 @@ export default async function RootLayout({ children }: Readonly<IRootLayout>) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className="scroll-smooth antialiased"
+      suppressHydrationWarning
+    >
       <body
-        className={cn(
-          "min-h-screen scroll-smooth bg-background font-sans antialiased",
-          poppins.variable,
-        )}
+        className={cn("min-h-screen bg-background font-sans", poppins.variable)}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>

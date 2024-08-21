@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/navbar";
 import type { ReactNode } from "react";
 
 interface IPortfolioLayout {
@@ -7,5 +8,10 @@ interface IPortfolioLayout {
 export default function PortfolioLayout({
   children,
 }: Readonly<IPortfolioLayout>) {
-  return <>{children}</>;
+  return (
+    <>
+      <Navbar />
+      {children}
+    </>
+  );
 }

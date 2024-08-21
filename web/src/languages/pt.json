@@ -14,6 +14,41 @@
       "home": "Início"
     }
   },
+  "navbar": {
+    "links": [
+      {
+        "icon": "Home",
+        "label": "Início",
+        "path": "hero"
+      },
+      {
+        "icon": "User2",
+        "label": "Sobre",
+        "path": "about"
+      },
+      {
+        "icon": "FileText",
+        "label": "Habilidades",
+        "path": "skills"
+      },
+      {
+        "icon": "Briefcase",
+        "label": "Serviços",
+        "path": "services"
+      },
+      {
+        "icon": "Image",
+        "label": "Portfólio",
+        "path": "portfolio"
+      },
+      {
+        "icon": "SendHorizontal",
+        "label": "Contate-me",
+        "path": "contact"
+      }
+    ],
+    "title": "PedroHB"
+  },
   "themes": {
     "dark": "Escuro",
     "label": "Temas",

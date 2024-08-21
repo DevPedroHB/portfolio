@@ -4,7 +4,6 @@ import { themes } from "@/constants/themes";
 import { SunMoon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -21,10 +20,8 @@ export function ChangeTheme() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button type="button" variant="default" size="icon">
-          <SunMoon className="size-5" />
-        </Button>
+      <DropdownMenuTrigger>
+        <SunMoon className="size-5 transition-all hover:text-primary" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>{t("label")}</DropdownMenuLabel>

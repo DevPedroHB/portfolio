@@ -4,7 +4,6 @@ import { locales, type Locales } from "@/constants/locales";
 import { setUserLocale } from "@/functions/user-locale";
 import { Languages } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
-import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,10 +24,8 @@ export function ChangeLocale() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button type="button" variant="default" size="icon">
-          <Languages className="size-5" />
-        </Button>
+      <DropdownMenuTrigger>
+        <Languages className="size-5 transition-all hover:text-primary" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuLabel>{t("label")}</DropdownMenuLabel>
