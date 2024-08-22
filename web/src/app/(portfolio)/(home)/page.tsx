@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Home() {
   return (
-    <main>
+    <main className="mx-auto max-w-[calc(48rem+3rem)] px-6">
       <Hero />
       <About />
       <Skills />

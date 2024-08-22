@@ -19,8 +19,15 @@
     "title": "PedroHB"
   },
   "home": {
-    "description": "Welcome to my portfolio!",
-    "title": "Home"
+    "sections": {
+      "hero": {
+        "contact-button": "Contact me",
+        "description": "High level experience in web design and development knowledge, producing quality work.",
+        "scroll-down-button": "Scroll down",
+        "subtitle": "Software engineer",
+        "title": "Hi, I'am Pedro"
+      }
+    }
   },
   "locales": {
     "en": "English",

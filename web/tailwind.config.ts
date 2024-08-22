@@ -25,6 +25,10 @@ const config = {
       boxShadow: {
         nav: "0 -1px 4px rgba(0, 0, 0, .15)",
       },
+      gridTemplateColumns: {
+        "hero-responsive": ".5fr .3fr",
+        hero: "max-content 1fr 1fr",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

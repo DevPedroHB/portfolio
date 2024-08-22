@@ -19,8 +19,15 @@
     "title": "PedroHB"
   },
   "home": {
-    "description": "Bem-vindo ao meu portfólio!",
-    "title": "Página inicial"
+    "sections": {
+      "hero": {
+        "contact-button": "Contate-me",
+        "description": "Experiência de alto nível em design e desenvolvimento web, produzindo trabalho de qualidade.",
+        "scroll-down-button": "Role para baixo",
+        "subtitle": "Engenheiro de software",
+        "title": "Olá, eu sou Pedro"
+      }
+    }
   },
   "locales": {
     "en": "Inglês",
