@@ -36,11 +36,14 @@ export default async function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
     <html
       lang={locale}
-      className="scroll-smooth antialiased"
+      className="scrollbar-thin scrollbar-thumb-primary scrollbar-track-secondary scrollbar-thumb-rounded-full scroll-smooth"
       suppressHydrationWarning
     >
       <body
-        className={cn("min-h-screen bg-background font-sans", poppins.variable)}
+        className={cn(
+          "min-h-screen bg-background font-sans antialiased",
+          poppins.variable,
+        )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>
