@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import type { ReactNode } from "react";
 
@@ -12,6 +13,7 @@ export default function PortfolioLayout({
     <>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,23 @@
 {
+  "footer": {
+    "copyright": "Copyright © {year}, All rights reserved to {site}",
+    "links": [
+      {
+        "label": "Services",
+        "path": "services"
+      },
+      {
+        "label": "Portfolio",
+        "path": "portfolio"
+      },
+      {
+        "label": "Contact me",
+        "path": "contact"
+      }
+    ],
+    "subtitle": "Software engineer",
+    "title": "PedroHB"
+  },
   "home": {
     "description": "Welcome to my portfolio!",
     "title": "Home"

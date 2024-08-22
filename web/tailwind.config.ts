@@ -22,6 +22,9 @@ const config = {
       fontFamily: {
         sans: ["var(--font-poppins)", ...fontFamily.sans],
       },
+      boxShadow: {
+        nav: "0 -1px 4px rgba(0, 0, 0, .15)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

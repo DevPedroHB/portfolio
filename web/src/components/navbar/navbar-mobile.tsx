@@ -3,13 +3,14 @@
 import * as Lucide from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import type { INavbarLink } from ".";
+import { ScrollLink } from "../scroll-link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { NavbarLink, type TNavbarLink } from "./navbar-link";
 
 export function NavbarMobile() {
   const [open, setOpen] = useState(false);
   const t = useTranslations("navbar");
-  const links: TNavbarLink[] = t.raw("links");
+  const links: INavbarLink[] = t.raw("links");
 
   function handleOpenChange() {
     setOpen(false);
@@ -28,7 +29,7 @@ export function NavbarMobile() {
           const Icon = Lucide[link.icon] as Lucide.LucideIcon;
 
           return (
-            <NavbarLink
+            <ScrollLink
               key={link.path}
               variant="responsive"
               to={link.path}
@@ -36,7 +37,7 @@ export function NavbarMobile() {
             >
               <Icon className="size-5 md:hidden" />
               {link.label}
-            </NavbarLink>
+            </ScrollLink>
           );
         })}
       </SheetContent>
