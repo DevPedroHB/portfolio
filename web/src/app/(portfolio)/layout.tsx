@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import type { ReactNode } from "react";
 
 interface IPortfolioLayout {
@@ -13,6 +14,7 @@ export default function PortfolioLayout({
     <>
       <Navbar />
       {children}
+      <ScrollToTop />
       <Footer />
     </>
   );
