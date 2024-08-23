@@ -20,9 +20,29 @@
   },
   "home": {
     "sections": {
+      "about": {
+        "description": "Sou um engenheiro de software apaixonado e dedicado a criar sistemas envolventes e fáceis de usar. Tenho sólida experiência em desenvolvimento e estou sempre em busca de novas oportunidades para colaborar, aprender e expandir minhas habilidades.",
+        "download-cv-button": "Baixar CV",
+        "info": [
+          {
+            "name": "Anos de experiência",
+            "title": "06+"
+          },
+          {
+            "name": "Projetos concluídos",
+            "title": "20+"
+          },
+          {
+            "name": "Empresas trabalhadas",
+            "title": "05+"
+          }
+        ],
+        "subtitle": "Minha introdução",
+        "title": "Sobre mim"
+      },
       "hero": {
         "contact-button": "Contate-me",
-        "description": "Experiência de alto nível em design e desenvolvimento web, produzindo trabalho de qualidade.",
+        "description": "Desenvolvedor dedicado a criar soluções intuitivas e envolventes, com sólida experiência e paixão pela inovação.",
         "scroll-down-button": "Role para baixo",
         "subtitle": "Engenheiro de software",
         "title": "Olá, eu sou Pedro"

@@ -36,7 +36,7 @@ export default async function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
     <html
       lang={locale}
-      className="scrollbar-thin scrollbar-thumb-primary scrollbar-track-secondary scrollbar-thumb-rounded-full scroll-smooth"
+      className="scroll-smooth scrollbar-thin scrollbar-track-muted scrollbar-thumb-primary scrollbar-thumb-rounded-full"
       suppressHydrationWarning
     >
       <body

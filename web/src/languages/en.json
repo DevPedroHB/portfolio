@@ -20,9 +20,29 @@
   },
   "home": {
     "sections": {
+      "about": {
+        "description": "I'm a passionate software engineer dedicated to creating engaging and user-friendly systems. I have solid experience in development and am always looking for new opportunities to collaborate, learn, and expand my skills.",
+        "download-cv-button": "Download CV",
+        "info": [
+          {
+            "name": "Years experience",
+            "title": "06+"
+          },
+          {
+            "name": "Completed project",
+            "title": "20+"
+          },
+          {
+            "name": "Companies worked",
+            "title": "05+"
+          }
+        ],
+        "subtitle": "My introduction",
+        "title": "About me"
+      },
       "hero": {
         "contact-button": "Contact me",
-        "description": "High level experience in web design and development knowledge, producing quality work.",
+        "description": "Developer dedicated to creating intuitive and engaging solutions, with solid experience and a passion for innovation.",
         "scroll-down-button": "Scroll down",
         "subtitle": "Software engineer",
         "title": "Hi, I'am Pedro"
