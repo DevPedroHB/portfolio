@@ -95,10 +95,33 @@
     ],
     "title": "PedroHB"
   },
-  "themes": {
-    "dark": "Escuro",
-    "label": "Temas",
-    "light": "Claro",
-    "system": "Sistema"
+  "theme": {
+    "colors": {
+      "amber": "Âmbar",
+      "blue": "Azul",
+      "cyan": "Ciano",
+      "emerald": "Esmeralda",
+      "fuchsia": "Fúchsia",
+      "green": "Verde",
+      "indigo": "Índigo",
+      "label": "Cores",
+      "lime": "Limão",
+      "orange": "Laranja",
+      "pink": "Rosa",
+      "purple": "Púrpura",
+      "red": "Vermelho",
+      "rose": "Rosa",
+      "sky": "Céu",
+      "teal": "Turquesa",
+      "violet": "Violeta",
+      "yellow": "Amarelo"
+    },
+    "label": "Tema",
+    "themes": {
+      "dark": "Escuro",
+      "label": "Temas",
+      "light": "Claro",
+      "system": "Sistema"
+    }
   }
 }
