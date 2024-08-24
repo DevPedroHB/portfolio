@@ -1,9 +1,11 @@
 "use client";
 
-import { colors, themes } from "@/constants/theme";
+import { colors, themes, type Colors, type Themes } from "@/constants/theme";
+import { useColorThemeStore } from "@/stores/use-color-theme-store";
 import { SunMoon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
+import { useCallback, useEffect } from "react";
 import tailwindcssColors from "tailwindcss/colors";
 import {
   DropdownMenu,
@@ -21,14 +23,28 @@ import {
 } from "./ui/dropdown-menu";
 import { ScrollArea } from "./ui/scroll-area";
 
-interface IThemes {
-  value: string;
-  label: string;
-}
-
 export function ChangeTheme() {
   const t = useTranslations("theme");
   const { theme, setTheme } = useTheme();
+  const { color, setColor } = useColorThemeStore();
+
+  const handleChangeColorTheme = useCallback(
+    (colorSelected: string) => {
+      setColor(
+        theme === "system" ? "dark" : (theme as Exclude<Themes, "system">),
+        {
+          primary: colorSelected as Colors,
+        },
+      );
+    },
+    [setColor, theme],
+  );
+
+  useEffect(() => {
+    if (color) {
+      handleChangeColorTheme(color);
+    }
+  }, [color, handleChangeColorTheme]);
 
   return (
     <DropdownMenu>
@@ -60,7 +76,10 @@ export function ChangeTheme() {
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <ScrollArea className="h-96 w-fit" type="scroll">
-                  <DropdownMenuRadioGroup>
+                  <DropdownMenuRadioGroup
+                    value={color || "violet"}
+                    onValueChange={handleChangeColorTheme}
+                  >
                     {colors.map((color) => {
                       return (
                         <DropdownMenuRadioItem
