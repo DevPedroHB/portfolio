@@ -8,22 +8,22 @@ import { Services } from "./components/services";
 import { Skills } from "./components/skills";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("metadata");
+	const t = await getTranslations("metadata");
 
-  return {
-    title: t("titles.home"),
-  };
+	return {
+		title: t("titles.home"),
+	};
 }
 
 export default function Home() {
-  return (
-    <main className="mx-auto max-w-[calc(48rem+3rem)] px-6">
-      <Hero />
-      <About />
-      <Skills />
-      <Services />
-      <Portfolio />
-      <Contact />
-    </main>
-  );
+	return (
+		<main className="mx-auto max-w-[calc(48rem+3rem)] px-6">
+			<Hero />
+			<About />
+			<Skills />
+			<Services />
+			<Portfolio />
+			<Contact />
+		</main>
+	);
 }

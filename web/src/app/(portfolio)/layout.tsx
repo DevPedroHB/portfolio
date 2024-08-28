@@ -4,18 +4,18 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import type { ReactNode } from "react";
 
 interface IPortfolioLayout {
-  children: ReactNode;
+	children: ReactNode;
 }
 
 export default function PortfolioLayout({
-  children,
+	children,
 }: Readonly<IPortfolioLayout>) {
-  return (
-    <>
-      <Navbar />
-      {children}
-      <ScrollToTop />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			{children}
+			<ScrollToTop />
+			<Footer />
+		</>
+	);
 }
