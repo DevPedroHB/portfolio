@@ -3,8 +3,8 @@
 		"copyright": "Copyright © {year}, Todos os direitos reservados à {site}",
 		"links": [
 			{
-				"label": "Serviços",
-				"path": "services"
+				"label": "Qualificação",
+				"path": "qualification"
 			},
 			{
 				"label": "Portfólio",
@@ -46,6 +46,14 @@
 				"scroll-down-button": "Role para baixo",
 				"subtitle": "Engenheiro de software",
 				"title": "Olá, eu sou Pedro"
+			},
+			"qualification": {
+				"subtitle": "Minha jornada pessoal",
+				"tabs": {
+					"education": "Educação",
+					"work": "Trabalho"
+				},
+				"title": "Qualificação"
 			},
 			"skills": {
 				"accordions": {

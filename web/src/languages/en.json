@@ -3,8 +3,8 @@
 		"copyright": "Copyright © {year}, All rights reserved to {site}",
 		"links": [
 			{
-				"label": "Services",
-				"path": "services"
+				"label": "Qualification",
+				"path": "qualification"
 			},
 			{
 				"label": "Portfolio",
@@ -46,6 +46,14 @@
 				"scroll-down-button": "Scroll down",
 				"subtitle": "Software engineer",
 				"title": "Hi, I'am Pedro"
+			},
+			"qualification": {
+				"subtitle": "My personal journey",
+				"tabs": {
+					"education": "Education",
+					"work": "Work"
+				},
+				"title": "Qualification"
 			},
 			"skills": {
 				"accordions": {

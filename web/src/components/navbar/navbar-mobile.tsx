@@ -1,14 +1,14 @@
 "use client";
 
+import { useToggle } from "@uidotdev/usehooks";
 import * as Lucide from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 import type { INavbarLink } from ".";
 import { ScrollLink } from "../scroll-link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export function NavbarMobile() {
-	const [open, setOpen] = useState(false);
+	const [open, setOpen] = useToggle(false);
 	const t = useTranslations("navbar");
 	const links: INavbarLink[] = t.raw("links");
 

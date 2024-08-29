@@ -29,6 +29,7 @@ const config = {
 				"hero-responsive": ".5fr .3fr",
 				hero: "max-content 1fr 1fr",
 				skills: "repeat(auto-fit, minmax(20rem, 1fr))",
+				qualification: "1fr max-content 1fr",
 			},
 			colors: {
 				border: "hsl(var(--border))",
