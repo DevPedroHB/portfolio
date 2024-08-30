@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Link, type LinkProps } from "react-scroll";
 import { type VariantProps, tv } from "tailwind-variants";
 
@@ -36,10 +36,12 @@ interface IScrollLink
 
 export function ScrollLink({ className, variant, ...rest }: IScrollLink) {
 	const router = useRouter();
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
 	const { root, active } = scrollLink({ variant });
 
 	function handleActive(to: string) {
-		router.replace(`/#${to}`, {
+		router.replace(`${pathname}?${searchParams}#${to}`, {
 			scroll: false,
 		});
 	}

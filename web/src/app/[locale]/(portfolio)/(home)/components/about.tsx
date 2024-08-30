@@ -1,20 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { getScopedI18n } from "@/locales/server";
 import { differenceInYears } from "date-fns";
 import { Download } from "lucide-react";
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-interface IInfo {
-	name: string;
-	title: string;
-}
-
 export async function About() {
-	const t = await getTranslations("home.sections.about");
+	const t = await getScopedI18n("home.sections.about");
 	const currentYear = new Date();
 	const pastYear = new Date(2018, 0, 1);
 	const yearsDiff = differenceInYears(currentYear, pastYear);
-	const info: IInfo[] = t.raw("info");
 
 	return (
 		<section id="about" className="pb-16 pt-8 md:pb-8 md:pt-24">
@@ -37,21 +31,26 @@ export async function About() {
 						{t("description")}
 					</p>
 					<div className="flex justify-evenly md:justify-between">
-						{info.map((i, index) => {
-							return (
-								<div key={i.name} className="flex flex-col text-center">
-									<span className="text-2xl font-semibold">
-										{t(`info.${index}.title`, { years: yearsDiff }).padStart(
-											3,
-											"0",
-										)}
-									</span>
-									<span className="text-sm text-muted-foreground">
-										{i.name}
-									</span>
-								</div>
-							);
-						})}
+						<div className="flex flex-col text-center">
+							<span className="text-2xl font-semibold">
+								{yearsDiff.toString().padStart(2, "0")}+
+							</span>
+							<span className="text-sm text-muted-foreground">
+								{t("info.years-experience")}
+							</span>
+						</div>
+						<div className="flex flex-col text-center">
+							<span className="text-2xl font-semibold">20+</span>
+							<span className="text-sm text-muted-foreground">
+								{t("info.completed-project")}
+							</span>
+						</div>
+						<div className="flex flex-col text-center">
+							<span className="text-2xl font-semibold">05+</span>
+							<span className="text-sm text-muted-foreground">
+								{t("info.companies-worked")}
+							</span>
+						</div>
 					</div>
 					<div className="flex justify-center md:justify-start">
 						<Button type="button" asChild>

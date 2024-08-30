@@ -1,9 +1,12 @@
 "use client";
 
 import { type Locales, locales } from "@/constants/locales";
-import { setUserLocale } from "@/functions/user-locale";
+import {
+	useChangeLocale,
+	useCurrentLocale,
+	useScopedI18n,
+} from "@/locales/client";
 import { Languages } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -15,11 +18,12 @@ import {
 } from "./ui/dropdown-menu";
 
 export function ChangeLocale() {
-	const locale = useLocale();
-	const t = useTranslations("locales");
+	const t = useScopedI18n("locales");
+	const locale = useCurrentLocale();
+	const setLocale = useChangeLocale({ preserveSearchParams: true });
 
 	function handleChangeLocale(locale: string) {
-		setUserLocale(locale as Locales);
+		setLocale(locale as Locales);
 	}
 
 	return (

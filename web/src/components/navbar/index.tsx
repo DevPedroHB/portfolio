@@ -1,8 +1,9 @@
 "use client";
 
+import { navbarLinks } from "@/constants/links";
+import { useScopedI18n } from "@/locales/client";
 import { useWindowScroll } from "@uidotdev/usehooks";
 import type * as Lucide from "lucide-react";
-import { useTranslations } from "next-intl";
 import NextLink from "next/link";
 import { ChangeLocale } from "../change-locale";
 import { ChangeTheme } from "../change-theme";
@@ -16,14 +17,13 @@ export interface INavbarLink {
 }
 
 export function Navbar() {
-	const t = useTranslations("navbar");
-	const links: INavbarLink[] = t.raw("links");
+	const t = useScopedI18n("navbar");
 	const [scroll] = useWindowScroll();
 
 	return (
 		<header
 			data-scroll={scroll.y && scroll.y > 0}
-			className="data-[scroll=true]:shadow-nav fixed inset-x-0 bottom-0 z-10 h-12 rounded-none bg-background px-6 md:top-0 md:h-[4.5rem]"
+			className="data-[scroll=true]:shadow-nav fixed inset-x-0 bottom-0 z-10 h-12 rounded-none bg-transparent backdrop-blur px-6 md:top-0 md:h-[4.5rem]"
 		>
 			<nav className="mx-auto flex h-full max-w-[60.5rem] items-center justify-between gap-4 p-0">
 				<NextLink
@@ -33,10 +33,10 @@ export function Navbar() {
 					{t("title")}
 				</NextLink>
 				<div className="hidden flex-1 justify-end gap-8 md:flex">
-					{links.map((link) => {
+					{navbarLinks.map((link) => {
 						return (
 							<ScrollLink key={link.path} to={link.path}>
-								{link.label}
+								{t(`links.${link.path}`)}
 							</ScrollLink>
 						);
 					})}

@@ -1,14 +1,14 @@
 import { ScrollLink } from "@/components/scroll-link";
 import { Button } from "@/components/ui/button";
-import { socialLinks } from "@/constants/social-links";
-import * as RadixIcons from "@radix-ui/react-icons";
+import { socialLinks } from "@/constants/links";
+import { getScopedI18n } from "@/locales/server";
+import * as ReactSimpleIcons from "@icons-pack/react-simple-icons";
 import { ArrowDown, Mouse, SendHorizontal } from "lucide-react";
-import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 import { HeroBlob } from "./hero-blob";
 
 export async function Hero() {
-	const t = await getTranslations("home.sections.hero");
+	const t = await getScopedI18n("home.sections.hero");
 
 	return (
 		<section id="hero" className="pb-16 pt-8 md:pb-8 md:pt-24">
@@ -16,7 +16,9 @@ export async function Hero() {
 				<div className="grid-cols-hero-responsive sm:grid-cols-hero grid items-center gap-6 pt-14 md:gap-8 md:pt-[5.5rem]">
 					<div className="flex flex-col gap-4 lg:-translate-x-24">
 						{socialLinks.map((link) => {
-							const Icon = RadixIcons[link.icon];
+							const Icon = ReactSimpleIcons[
+								link.icon
+							] as ReactSimpleIcons.IconType;
 
 							return (
 								<Link

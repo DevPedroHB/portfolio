@@ -1,10 +1,10 @@
 import { Accordion } from "@/components/ui/accordion";
 import { skills } from "@/constants/skills";
-import { getTranslations } from "next-intl/server";
+import { getScopedI18n } from "@/locales/server";
 import { SkillAccordion } from "./skill-accordion";
 
 export async function Skills() {
-	const t = await getTranslations("home.sections.skills");
+	const t = await getScopedI18n("home.sections.skills");
 
 	return (
 		<section id="skills" className="pb-16 pt-8 md:pb-8 md:pt-24">

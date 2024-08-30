@@ -1,17 +1,11 @@
-import { socialLinks } from "@/constants/social-links";
-import * as RadixIcons from "@radix-ui/react-icons";
-import { getTranslations } from "next-intl/server";
+import { footerLinks, socialLinks } from "@/constants/links";
+import { getScopedI18n } from "@/locales/server";
+import * as ReactSimpleIcons from "@icons-pack/react-simple-icons";
 import Link from "next/link";
 import { ScrollLink } from "./scroll-link";
 
-interface IFooterLink {
-	label: string;
-	path: string;
-}
-
 export async function Footer() {
-	const t = await getTranslations("footer");
-	const links: IFooterLink[] = t.raw("links");
+	const t = await getScopedI18n("footer");
 
 	return (
 		<footer className="bg-primary px-6 pb-14 pt-12 text-primary-foreground">
@@ -21,22 +15,24 @@ export async function Footer() {
 					<p className="text-sm">{t("subtitle")}</p>
 				</div>
 				<div className="flex flex-1 gap-8 md:justify-center">
-					{links.map((link) => {
+					{footerLinks.map((link) => {
 						return (
 							<ScrollLink
-								key={link.path}
-								to={link.path}
+								key={link}
+								to={link}
 								variant="footer"
 								className="h-fit"
 							>
-								{link.label}
+								{t(`links.${link}`)}
 							</ScrollLink>
 						);
 					})}
 				</div>
 				<div className="flex justify-end gap-6">
 					{socialLinks.map((link) => {
-						const Icon = RadixIcons[link.icon];
+						const Icon = ReactSimpleIcons[
+							link.icon
+						] as ReactSimpleIcons.IconType;
 
 						return (
 							<Link

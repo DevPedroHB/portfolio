@@ -1,15 +1,17 @@
+import { getScopedI18n } from "@/locales/server";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { About } from "./components/about";
 import { Contact } from "./components/contact";
 import { Hero } from "./components/hero";
+import { NewProject } from "./components/new-project";
 import { Portfolio } from "./components/portfolio";
 import { Qualification } from "./components/qualification";
 import { Services } from "./components/services";
 import { Skills } from "./components/skills";
+import { Testimonial } from "./components/testimonial";
 
 export async function generateMetadata(): Promise<Metadata> {
-	const t = await getTranslations("metadata");
+	const t = await getScopedI18n("metadata");
 
 	return {
 		title: t("titles.home"),
@@ -25,6 +27,8 @@ export default function Home() {
 			<Qualification />
 			<Services />
 			<Portfolio />
+			<NewProject />
+			<Testimonial />
 			<Contact />
 		</main>
 	);

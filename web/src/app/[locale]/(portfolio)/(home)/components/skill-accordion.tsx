@@ -5,19 +5,17 @@ import {
 } from "@/components/ui/accordion";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import type { ISkill } from "@/constants/skills";
+import { getScopedI18n } from "@/locales/server";
 import * as ReactSimpleIcons from "@icons-pack/react-simple-icons";
 import { differenceInYears } from "date-fns";
 import * as Lucide from "lucide-react";
-import { getTranslations } from "next-intl/server";
 
 interface ISkillAccordion {
 	skill: ISkill;
 }
 
 export async function SkillAccordion({ skill }: ISkillAccordion) {
-	const t = await getTranslations(
-		`home.sections.skills.accordions.${skill.id}`,
-	);
+	const t = await getScopedI18n(`home.sections.skills.accordions.${skill.id}`);
 	const Icon = Lucide[skill.icon] as Lucide.LucideIcon;
 	const currentYear = new Date();
 	const pastYear = new Date(2018, 0, 1);

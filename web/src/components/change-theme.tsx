@@ -1,9 +1,9 @@
 "use client";
 
 import { type Colors, type Themes, colors, themes } from "@/constants/theme";
+import { useScopedI18n } from "@/locales/client";
 import { useColorThemeStore } from "@/stores/use-color-theme-store";
 import { SunMoon } from "lucide-react";
-import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect } from "react";
 import tailwindcssColors from "tailwindcss/colors";
@@ -24,7 +24,7 @@ import {
 import { ScrollArea } from "./ui/scroll-area";
 
 export function ChangeTheme() {
-	const t = useTranslations("theme");
+	const t = useScopedI18n("theme");
 	const { theme, setTheme } = useTheme();
 	const { color, setColor } = useColorThemeStore();
 

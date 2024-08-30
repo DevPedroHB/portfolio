@@ -1,5 +1,5 @@
+import { COLOR_THEME_KEY } from "@/constants/storage-keys";
 import type { Colors, Themes } from "@/constants/theme";
-import { formatKeyStorage } from "@/functions/format-key-storage";
 import chroma from "chroma-js";
 import twColors from "tailwindcss/colors";
 import { create } from "zustand";
@@ -61,7 +61,7 @@ export const useColorThemeStore = create<IColorThemeStore>()(
 			},
 		})),
 		{
-			name: formatKeyStorage("color-theme"),
+			name: COLOR_THEME_KEY,
 		},
 	),
 );

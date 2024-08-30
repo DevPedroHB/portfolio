@@ -2,8 +2,8 @@
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { qualifications } from "@/constants/qualifications";
+import { useScopedI18n } from "@/locales/client";
 import * as Lucide from "lucide-react";
-import { useTranslations } from "next-intl";
 import { parseAsString, useQueryState } from "nuqs";
 import type { ReactNode } from "react";
 
@@ -12,7 +12,7 @@ interface IQualificationTabs {
 }
 
 export function QualificationTabs({ children }: IQualificationTabs) {
-	const t = useTranslations("home.sections.qualification.tabs");
+	const t = useScopedI18n("home.sections.qualification.tabs");
 	const [qualification, setQualification] = useQueryState(
 		"qualification",
 		parseAsString.withDefault(qualifications[0].id),

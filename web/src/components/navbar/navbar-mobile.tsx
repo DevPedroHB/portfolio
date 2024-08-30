@@ -1,16 +1,15 @@
 "use client";
 
+import { navbarLinks } from "@/constants/links";
+import { useScopedI18n } from "@/locales/client";
 import { useToggle } from "@uidotdev/usehooks";
 import * as Lucide from "lucide-react";
-import { useTranslations } from "next-intl";
-import type { INavbarLink } from ".";
 import { ScrollLink } from "../scroll-link";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 
 export function NavbarMobile() {
 	const [open, setOpen] = useToggle(false);
-	const t = useTranslations("navbar");
-	const links: INavbarLink[] = t.raw("links");
+	const t = useScopedI18n("navbar");
 
 	function handleOpenChange() {
 		setOpen(false);
@@ -25,7 +24,7 @@ export function NavbarMobile() {
 				side="bottom"
 				className="grid grid-cols-3 gap-8 rounded-t-xl px-6 py-8"
 			>
-				{links.map((link) => {
+				{navbarLinks.map((link) => {
 					const Icon = Lucide[link.icon] as Lucide.LucideIcon;
 
 					return (
@@ -36,7 +35,7 @@ export function NavbarMobile() {
 							onClick={handleOpenChange}
 						>
 							<Icon className="size-5 md:hidden" />
-							{link.label}
+							{t(`links.${link.path}`)}
 						</ScrollLink>
 					);
 				})}

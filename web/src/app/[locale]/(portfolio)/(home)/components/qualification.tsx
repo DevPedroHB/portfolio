@@ -1,12 +1,12 @@
 import { TabsContent } from "@/components/ui/tabs";
 import { qualifications } from "@/constants/qualifications";
+import { getScopedI18n } from "@/locales/server";
 import { getYear } from "date-fns";
 import { Calendar } from "lucide-react";
-import { getTranslations } from "next-intl/server";
 import { QualificationTabs } from "./qualification-tabs";
 
 export async function Qualification() {
-	const t = await getTranslations("home.sections.qualification");
+	const t = await getScopedI18n("home.sections.qualification");
 
 	return (
 		<section id="qualification" className="pb-16 pt-8 md:pb-8 md:pt-24">

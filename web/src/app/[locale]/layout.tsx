@@ -1,9 +1,10 @@
+import type { Locales } from "@/constants/locales";
+import { THEME_KEY } from "@/constants/storage-keys";
 import { cn } from "@/functions/cn";
-import { formatKeyStorage } from "@/functions/format-key-storage";
+import { I18nProviderClient } from "@/locales/client";
+import { getScopedI18n } from "@/locales/server";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
-import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import type { ReactNode } from "react";
 import "./globals.css";
@@ -15,7 +16,7 @@ const poppins = Poppins({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-	const t = await getTranslations("metadata");
+	const t = await getScopedI18n("metadata");
 
 	return {
 		title: {
@@ -27,13 +28,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 interface IRootLayout {
+	params: {
+		locale: Locales;
+	};
 	children: ReactNode;
 }
 
-export default async function RootLayout({ children }: Readonly<IRootLayout>) {
-	const locale = await getLocale();
-	const messages = await getMessages();
-
+export default async function RootLayout({
+	params: { locale },
+	children,
+}: Readonly<IRootLayout>) {
 	return (
 		<html
 			lang={locale}
@@ -49,12 +53,10 @@ export default async function RootLayout({ children }: Readonly<IRootLayout>) {
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
-					storageKey={formatKeyStorage("theme")}
+					storageKey={THEME_KEY}
 					enableSystem
 				>
-					<NextIntlClientProvider messages={messages}>
-						{children}
-					</NextIntlClientProvider>
+					<I18nProviderClient locale={locale}>{children}</I18nProviderClient>
 				</ThemeProvider>
 			</body>
 		</html>
