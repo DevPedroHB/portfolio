@@ -4,6 +4,7 @@ export default {
 			"Feel free to explore the projects, services and links available, and don't hesitate to contact me for collaborations or other opportunities. I'm always interested in new challenges and learning opportunities.",
 		titles: {
 			home: "Home",
+			profile: "{name}'s profile",
 		},
 	},
 	navbar: {
@@ -25,6 +26,7 @@ export default {
 				colors: "Colors",
 				"sign-in": "Sign in",
 				"sign-out": "Sign out",
+				profile: "Profile",
 			},
 			locales: {
 				en: "English",
@@ -85,6 +87,10 @@ export default {
 				"Logging out will end your session. You can log in again at any time.",
 			"cancel-button": "Cancel",
 			"sign-out-button": "Sign out",
+		},
+		"user-hover-card": {
+			name: "No name",
+			info: "{role} since {createdAt}",
 		},
 	},
 	home: {
@@ -165,5 +171,21 @@ export default {
 				subtitle: "Get in touch",
 			},
 		},
+	},
+	roles: {
+		OWNER: "Owner",
+		CLIENT: "Client",
+		MEMBER: "Member",
+	},
+	settings: {
+		title: "Edit profile",
+		description:
+			"Make changes to your profile here. Click save when you're done.",
+		tabs: {
+			profile: {
+				label: "Profile",
+			},
+		},
+		"save-button": "Save changes",
 	},
 } as const;

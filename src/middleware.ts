@@ -8,9 +8,9 @@ const I18nMiddleware = createI18nMiddleware({
 	defaultLocale: locales[0],
 });
 
-export async function middleware(request: NextRequest) {
+export default auth(function middleware(request: NextRequest) {
 	return I18nMiddleware(request);
-}
+});
 
 export const config = {
 	matcher: ["/((?!api|static|.*\\..*|_next|favicon.ico|robots.txt).*)"],

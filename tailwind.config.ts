@@ -30,6 +30,7 @@ const config = {
 				hero: "max-content 1fr 1fr",
 				skills: "repeat(auto-fit, minmax(20rem, 1fr))",
 				qualification: "1fr max-content 1fr",
+				profile: "16rem 1fr",
 			},
 			colors: {
 				border: "hsl(var(--border))",

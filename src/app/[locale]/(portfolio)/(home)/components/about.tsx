@@ -1,14 +1,21 @@
+import { getAbout } from "@/actions/abouts/get-about";
 import { Button } from "@/components/ui/button";
-import { getScopedI18n } from "@/locales/server";
+import { getCurrentLocale, getScopedI18n } from "@/locales/server";
 import { differenceInYears } from "date-fns";
 import { Download } from "lucide-react";
 import Image from "next/image";
 
 export async function About() {
+	const code = getCurrentLocale();
+	const about = await getAbout(code);
+
+	if (!about) {
+		return;
+	}
+
 	const t = await getScopedI18n("home.sections.about");
 	const currentYear = new Date();
-	const pastYear = new Date(2018, 0, 1);
-	const yearsDiff = differenceInYears(currentYear, pastYear);
+	const yearsDiff = differenceInYears(currentYear, about.startedAt);
 
 	return (
 		<section id="about" className="pb-16 pt-8 md:pb-8 md:pt-24">
@@ -28,7 +35,7 @@ export async function About() {
 				</div>
 				<div className="flex-1 space-y-10">
 					<p className="text-center text-muted-foreground md:text-start">
-						{t("description")}
+						{about.content}
 					</p>
 					<div className="flex justify-evenly md:justify-between">
 						<div className="flex flex-col text-center">
@@ -40,13 +47,17 @@ export async function About() {
 							</span>
 						</div>
 						<div className="flex flex-col text-center">
-							<span className="text-2xl font-semibold">20+</span>
+							<span className="text-2xl font-semibold">
+								{about.completedProjects}+
+							</span>
 							<span className="text-sm text-muted-foreground">
 								{t("info.completed-project")}
 							</span>
 						</div>
 						<div className="flex flex-col text-center">
-							<span className="text-2xl font-semibold">05+</span>
+							<span className="text-2xl font-semibold">
+								{about.companiesWorked}+
+							</span>
 							<span className="text-sm text-muted-foreground">
 								{t("info.companies-worked")}
 							</span>

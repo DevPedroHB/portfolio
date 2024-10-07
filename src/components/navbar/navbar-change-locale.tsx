@@ -6,7 +6,6 @@ import {
 	useCurrentLocale,
 	useScopedI18n,
 } from "@/locales/client";
-import { Languages } from "lucide-react";
 import {
 	DropdownMenuPortal,
 	DropdownMenuRadioGroup,
@@ -28,7 +27,6 @@ export function NavbarChangeLocale() {
 	return (
 		<DropdownMenuSub>
 			<DropdownMenuSubTrigger className="gap-1">
-				<Languages className="size-4" />
 				{t("labels.locales")}
 			</DropdownMenuSubTrigger>
 			<DropdownMenuPortal>

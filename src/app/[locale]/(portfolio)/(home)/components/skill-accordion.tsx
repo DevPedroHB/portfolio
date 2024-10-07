@@ -3,7 +3,6 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import type { ISkill } from "@/constants/skills";
 import { getScopedI18n } from "@/locales/server";
 import * as ReactSimpleIcons from "@icons-pack/react-simple-icons";
@@ -33,13 +32,11 @@ export async function SkillAccordion({ skill }: ISkillAccordion) {
 				</div>
 			</AccordionTrigger>
 			<AccordionContent className="mb-10 flex flex-wrap gap-4 p-0">
-				<TooltipProvider>
-					{skill.stacks.map((stack) => {
-						const Stack = ReactSimpleIcons[stack] as ReactSimpleIcons.IconType;
+				{skill.stacks.map((stack) => {
+					const Stack = ReactSimpleIcons[stack] as ReactSimpleIcons.IconType;
 
-						return <Stack key={stack} color="default" className="size-8" />;
-					})}
-				</TooltipProvider>
+					return <Stack key={stack} color="default" className="size-8" />;
+				})}
 			</AccordionContent>
 		</AccordionItem>
 	);

@@ -1,6 +1,5 @@
 "use client";
 
-import { signOutAction } from "@/actions/users/sign-out-action";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -15,15 +14,23 @@ import {
 import { useScopedI18n } from "@/locales/client";
 import type * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
 import { LogOut, X } from "lucide-react";
+import { signOut } from "next-auth/react";
 
-interface ISingOutDialog extends AlertDialogPrimitive.AlertDialogTriggerProps {}
+interface ISingOutDialog extends AlertDialogPrimitive.AlertDialogTriggerProps {
+	open?: boolean;
+	onOpenChange?: (open: boolean) => void;
+}
 
-export function SingOutDialog(props: ISingOutDialog) {
+export function SingOutDialog({ open, onOpenChange, ...rest }: ISingOutDialog) {
 	const t = useScopedI18n("components.sign-out");
 
+	async function handleSignOut() {
+		await signOut();
+	}
+
 	return (
-		<AlertDialog>
-			<AlertDialogTrigger {...props} />
+		<AlertDialog open={open} onOpenChange={onOpenChange}>
+			<AlertDialogTrigger {...rest} />
 			<AlertDialogContent className="max-w-xs">
 				<AlertDialogHeader>
 					<AlertDialogTitle>{t("title")}</AlertDialogTitle>
@@ -37,7 +44,7 @@ export function SingOutDialog(props: ISingOutDialog) {
 					<AlertDialogAction
 						type="button"
 						variant="destructive"
-						onClick={() => signOutAction()}
+						onClick={() => handleSignOut()}
 						className="flex-1"
 					>
 						{t("sign-out-button")}

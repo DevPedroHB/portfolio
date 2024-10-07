@@ -19,13 +19,16 @@ model User {
   email         String    @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
+  birthdate     DateTime?
   role          Roles     @default(MEMBER)
   createdAt     DateTime  @default(now()) @map("created_at")
   updatedAt     DateTime  @updatedAt @map("updated_at")
 
-  accounts      Account[]
-  sessions      Session[]
-  Authenticator Authenticator[]
+  accounts       Account[]
+  sessions       Session[]
+  authenticators Authenticator[]
+  socialNetworks SocialNetwork[]
+  userAbouts     UserAbout[]
 
   @@map("users")
 }
@@ -86,4 +89,67 @@ model Authenticator {
 
   @@id([userId, credentialID])
   @@map("authenticators")
+}
+
+model Icon {
+  id       Int      @id @default(autoincrement())
+  title    String
+  category String[]
+  route    Json
+  wordmark Json?
+  url      String
+
+  socialNetworks SocialNetwork[]
+
+  @@map("icons")
+}
+
+model SocialNetwork {
+  id     String @id @default(cuid())
+  url    String
+  userId String @map("user_id")
+  iconId Int    @map("icon_id")
+
+  user User @relation(fields: [userId], references: [id])
+  icon Icon @relation(fields: [iconId], references: [id])
+
+  @@map("social_networks")
+}
+
+model Language {
+  id   String @id @default(cuid())
+  code String @unique
+  name String
+
+  userAbouts UserAbout[]
+  abouts     About[]
+
+  @@map("languages")
+}
+
+model UserAbout {
+  id         String  @id @default(cuid())
+  profession String?
+  aboutMe    String? @map("about_me")
+  userId     String  @map("user_id")
+  languageId String  @map("language_id")
+
+  user     User     @relation(fields: [userId], references: [id])
+  language Language @relation(fields: [languageId], references: [id])
+
+  @@unique([userId, languageId])
+  @@map("user_abouts")
+}
+
+model About {
+  id                String   @id @default(cuid())
+  content           String?
+  startedAt         DateTime @map("started_at")
+  completedProjects Int      @default(0) @map("completed_projects")
+  companiesWorked   Int      @default(0) @map("companies_worked")
+  languageId        String   @unique @map("language_id")
+
+  language Language @relation(fields: [languageId], references: [id])
+
+  @@map("abouts")
 }

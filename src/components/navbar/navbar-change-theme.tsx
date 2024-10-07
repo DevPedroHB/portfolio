@@ -3,7 +3,6 @@
 import { type Colors, type Themes, colors, themes } from "@/constants/theme";
 import { useScopedI18n } from "@/locales/client";
 import { useColorThemeStore } from "@/stores/use-color-theme-store";
-import { SunMoon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useCallback, useEffect } from "react";
 import tailwindcssColors from "tailwindcss/colors";
@@ -44,7 +43,6 @@ export function NavbarChangeTheme() {
 	return (
 		<DropdownMenuSub>
 			<DropdownMenuSubTrigger className="gap-1">
-				<SunMoon className="size-4" />
 				{t("labels.theme")}
 			</DropdownMenuSubTrigger>
 			<DropdownMenuPortal>

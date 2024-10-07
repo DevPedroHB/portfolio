@@ -4,6 +4,7 @@ import { THEME_KEY } from "@/constants/storage-keys";
 import { cn } from "@/functions/cn";
 import { I18nProviderClient } from "@/locales/client";
 import { getScopedI18n } from "@/locales/server";
+import { ReactQueryProvider } from "@/providers/react-query-provider";
 import { SessionProvider } from "@/providers/session-provider";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
@@ -60,8 +61,10 @@ export default async function RootLayout({
 						enableSystem
 					>
 						<I18nProviderClient locale={locale}>
-							{children}
-							<Toaster richColors pauseWhenPageIsHidden />
+							<ReactQueryProvider>
+								{children}
+								<Toaster richColors pauseWhenPageIsHidden />
+							</ReactQueryProvider>
 						</I18nProviderClient>
 					</ThemeProvider>
 				</SessionProvider>

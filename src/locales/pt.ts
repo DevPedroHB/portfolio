@@ -4,6 +4,7 @@ export default {
 			"Sinta-se à vontade para explorar os projetos, serviços e links disponíveis, e não hesite em entrar em contato comigo para colaborações ou outras oportunidades. Estou sempre interessado em novos desafios e oportunidades de aprendizado.",
 		titles: {
 			home: "Início",
+			profile: "Perfil de {name}",
 		},
 	},
 	navbar: {
@@ -25,6 +26,7 @@ export default {
 				colors: "Cores",
 				"sign-in": "Entrar",
 				"sign-out": "Sair",
+				profile: "Perfil",
 			},
 			locales: {
 				en: "Inglês",
@@ -85,6 +87,10 @@ export default {
 				"Sair da sua conta encerrará sua sessão. Você poderá fazer login novamente a qualquer momento.",
 			"cancel-button": "Cancelar",
 			"sign-out-button": "Sair",
+		},
+		"user-hover-card": {
+			name: "Sem nome",
+			info: "{role} desde {createdAt}",
 		},
 	},
 	home: {
@@ -166,5 +172,31 @@ export default {
 				subtitle: "Fale comigo",
 			},
 		},
+	},
+	roles: {
+		OWNER: "Dono",
+		CLIENT: "Cliente",
+		MEMBER: "Membro",
+	},
+	settings: {
+		title: "Editar perfil",
+		description:
+			"Faça alterações no seu perfil aqui. Clique em salvar quando terminar.",
+		tabs: {
+			profile: {
+				label: "Perfil",
+				fields: {
+					name: {
+						label: "Nome",
+						placeholder: "Digite seu nome",
+					},
+					birthdate: {
+						label: "Data de nascimento",
+						placeholder: "Informe sua data de nascimento",
+					},
+				},
+			},
+		},
+		"save-button": "Salvar alterações",
 	},
 } as const;

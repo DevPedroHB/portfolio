@@ -66,6 +66,13 @@ export const useColorThemeStore = create<IColorThemeStore>()(
 	),
 );
 
+/**
+ * Converts a color from Hexadecimal to HSL format.
+ *
+ * @param color - The color to convert in Hexadecimal format.
+ *
+ * @returns The color in HSL format as a string. The format is "h, s%, l%", where h is the hue (0-360), s is the saturation (0-100%), and l is the lightness (0-100%).
+ **/
 export function getHsl(color: string) {
 	const chromaColor = chroma(color);
 	const hsl = chromaColor.css("hsl").replace(/^hsl\(|\)$/g, "");
