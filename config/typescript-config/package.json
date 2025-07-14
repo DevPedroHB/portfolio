@@ -1,12 +1,12 @@
 {
-  "name": "@repo/typescript-config",
-  "version": "0.0.0",
-  "private": true,
-  "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "devDependencies": {
-    "@tsconfig/node24": "^24.0.1"
-  }
+	"devDependencies": {
+		"@tsconfig/node24": "^24.0.1"
+	},
+	"license": "MIT",
+	"name": "@portfolio/typescript-config",
+	"private": true,
+	"publishConfig": {
+		"access": "public"
+	},
+	"version": "1.0.0"
 }
