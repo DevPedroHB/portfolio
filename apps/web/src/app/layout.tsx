@@ -1,3 +1,5 @@
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import type { ReactNode } from "react";
@@ -29,7 +31,12 @@ export default function RootLayout({ children }: Readonly<IRootLayout>) {
 			className={`${poppins.variable} antialiased scroll-smooth`}
 			suppressHydrationWarning
 		>
-			<body>{children}</body>
+			<body>
+				<ThemeProvider>
+					{children}
+					<Toaster visibleToasts={9} closeButton richColors />
+				</ThemeProvider>
+			</body>
 		</html>
 	);
 }
