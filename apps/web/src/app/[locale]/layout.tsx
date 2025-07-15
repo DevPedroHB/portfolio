@@ -27,6 +27,8 @@ interface IRootLayout {
 		locale: Locale;
 	}>;
 	children: ReactNode;
+	dialog: ReactNode;
+	sheet: ReactNode;
 }
 
 export async function generateMetadata({
@@ -47,6 +49,8 @@ export async function generateMetadata({
 export default async function RootLayout({
 	params,
 	children,
+	dialog,
+	sheet,
 }: Readonly<IRootLayout>) {
 	const { locale } = await params;
 
@@ -71,6 +75,8 @@ export default async function RootLayout({
 				<NextIntlClientProvider>
 					<ThemeProvider>
 						{children}
+						{dialog}
+						{sheet}
 						<ScrollToTop />
 						<Toaster visibleToasts={9} closeButton richColors />
 					</ThemeProvider>
