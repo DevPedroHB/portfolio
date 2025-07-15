@@ -59,7 +59,12 @@ export default async function RootLayout({
 	return (
 		<html
 			lang={locale}
-			className={cn("antialiased scroll-smooth", poppins.variable)}
+			className={cn(
+				"antialiased scroll-smooth",
+				"scrollbar-thin scrollbar-thumb-primary scrollbar-track-card scrollbar-thumb-rounded-full scrollbar-track-rounded-full",
+				"scrollbar-hover:scrollbar-thumb-primary/90 scrollbar-active:scrollbar-thumb-primary/90",
+				poppins.variable,
+			)}
 			suppressHydrationWarning
 		>
 			<body>

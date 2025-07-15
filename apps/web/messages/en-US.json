@@ -61,5 +61,10 @@
 			},
 			"title": "Perfil de {name}"
 		}
+	},
+	"components": {
+		"scroll_to_top": {
+			"tooltip_content": "Voltar ao topo"
+		}
 	}
 }
