@@ -132,7 +132,19 @@
 }
 
 @layer components {
-	.main {
-		@apply mx-auto container;
+	.main__container {
+		@apply mx-auto px-6 max-w-[calc(48rem-3rem)] min-h-screen;
 	}
+
+  .container__section {
+    @apply pt-8 md:pt-24 pb-16 md:pb-8;
+  }
+
+  .section__title {
+    @apply font-semibold text-2xl md:text-4xl text-center;
+  }
+
+  .section__subtitle {
+    @apply mb-12 md:mb-16 text-muted-foreground md:text-sm text-center;
+  }
 }
