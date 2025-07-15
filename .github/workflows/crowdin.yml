@@ -1,0 +1,32 @@
+name: Ação Crowdin
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "apps/web/**"
+
+jobs:
+  synchronize-with-crowdin:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Ação Crowdin
+        uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: true
+          download_translations: true
+          localization_branch_name: l10n_crowdin_translations
+          create_pull_request: true
+          pull_request_title: "Novas traduções do Crowdin"
+          pull_request_body: "Novas traduções via [Crowdin GH Action](https://github.com/crowdin/github-action)"
+          pull_request_base_branch_name: 'main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
