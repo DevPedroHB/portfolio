@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 @plugin "tailwind-scrollbar" {
-  nocompatible: true;
+	nocompatible: true;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -43,6 +43,10 @@
 	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-poppins);
+	--shadow-header: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 :root {
@@ -127,6 +131,10 @@
 	@apply flex justify-center items-center;
 }
 
+@utility flex-between {
+	@apply flex justify-between items-center;
+}
+
 @utility col-center {
 	@apply flex flex-col justify-center items-center;
 }
@@ -137,18 +145,18 @@
 
 @layer components {
 	.main__container {
-		@apply mx-auto px-6 max-w-[calc(48rem-3rem)] min-h-screen;
+		@apply mx-auto px-6 max-w-[calc(48rem+3rem)] min-h-screen;
 	}
 
-  .container__section {
-    @apply pt-8 md:pt-24 pb-16 md:pb-8;
-  }
+	.container__section {
+		@apply pt-8 md:pt-24 pb-16 md:pb-8;
+	}
 
-  .section__title {
-    @apply font-semibold text-2xl md:text-4xl text-center;
-  }
+	.section__title {
+		@apply font-semibold text-2xl md:text-4xl text-center;
+	}
 
-  .section__subtitle {
-    @apply mb-12 md:mb-16 text-muted-foreground md:text-sm text-center;
-  }
+	.section__subtitle {
+		@apply mb-12 md:mb-16 text-muted-foreground md:text-sm text-center;
+	}
 }

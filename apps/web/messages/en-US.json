@@ -69,8 +69,45 @@
 		}
 	},
 	"components": {
+		"header": {
+			"header_profile": {
+				"label": {
+					"guest_email": "Acesse sua conta",
+					"guest_name": "Convidado"
+				},
+				"language": "Idiomas",
+				"profile": "Perfil",
+				"sign_in": "Entrar",
+				"sign_out": "Sair",
+				"themes": {
+					"dark": "Escuro",
+					"light": "Claro",
+					"system": "Sistema",
+					"trigger": "Temas"
+				}
+			},
+			"navbar_links": {
+				"about_me": "Sobre",
+				"contact_me": "Contato",
+				"hero": "Início",
+				"portfolio": "Portfólio",
+				"services": "Serviços",
+				"skills": "Habilidades"
+			},
+			"title": "PedroHB"
+		},
 		"scroll_to_top": {
 			"tooltip_content": "Voltar ao topo"
+		},
+		"sign_out_alert_dialog": {
+			"buttons": {
+				"action": "Continuar",
+				"cancel": "Cancelar"
+			},
+			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
+			"error": "Ocorreu um erro ao encerrar a sessão.",
+			"success": "Sessão encerrada com sucesso!",
+			"title": "Você tem certeza absoluta?"
 		}
 	}
 }
