@@ -1,5 +1,6 @@
 {
 	"$schema": "https://turborepo.com/schema.json",
+	"globalEnv": ["AUTH_SECRET", "AUTH_GITHUB_ID", "AUTH_GITHUB_SECRET"],
 	"tasks": {
 		"build": {
 			"dependsOn": ["^build"],

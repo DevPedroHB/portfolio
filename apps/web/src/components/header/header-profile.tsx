@@ -2,6 +2,7 @@
 
 import { languages } from "@/constants/languages";
 import { themes } from "@/constants/themes";
+import { useSession } from "next-auth/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -27,15 +28,8 @@ import {
 } from "../ui/dropdown-menu";
 import { UserAvatar } from "../user-avatar";
 
-const session = {
-	user: {
-		name: "Pedro Henrique Bérgamo",
-		email: "pedroh.bergamo20@gmail.com",
-		avatarUrl: "https://github.com/DevPedroHB.png",
-	},
-};
-
 export function HeaderProfile() {
+	const { data: session } = useSession();
 	const router = useRouter();
 	const [dropdownMenu, setDropdownMenu] = useToggle(false);
 	const [signOutAlertDialog, setSignOutAlertDialog] = useToggle(false);
@@ -44,33 +38,33 @@ export function HeaderProfile() {
 	const { theme, setTheme } = useTheme();
 
 	useHotkeys("shift+p", () => router.push("/profile"), {
-		enabled: dropdownMenu && !!session,
+		enabled: dropdownMenu && !!session?.user,
 	});
 	useHotkeys("shift+e", () => router.push("/auth/sign-in"), {
-		enabled: dropdownMenu && !session,
+		enabled: dropdownMenu && !session?.user,
 	});
 	useHotkeys("shift+s", setSignOutAlertDialog, {
-		enabled: dropdownMenu && !!session,
+		enabled: dropdownMenu && !!session?.user,
 	});
 
 	return (
 		<DropdownMenu open={dropdownMenu} onOpenChange={setDropdownMenu}>
-			<DropdownMenuTrigger asChild>
+			<DropdownMenuTrigger className="rounded-md">
 				<UserAvatar
-					src={session?.user.avatarUrl ?? ""}
-					alt={session?.user.name ?? ""}
+					src={session?.user?.avatarUrl ?? undefined}
+					alt={session?.user?.name ?? undefined}
 				/>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
 				<DropdownMenuLabel className="flex flex-col">
 					<span className="truncate">
-						{session?.user.name ?? t("label.guest_name")}
+						{session?.user?.name ?? t("label.guest_name")}
 					</span>
 					<small className="font-normal text-muted-foreground text-xs truncate">
-						{session?.user.email ?? t("label.guest_email")}
+						{session?.user?.email ?? t("label.guest_email")}
 					</small>
 				</DropdownMenuLabel>
-				{session && (
+				{session?.user && (
 					<>
 						<DropdownMenuGroup>
 							<DropdownMenuItem asChild>
@@ -129,7 +123,7 @@ export function HeaderProfile() {
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
-					{session ? (
+					{session?.user ? (
 						<DropdownMenuItem
 							variant="destructive"
 							onSelect={(e) => e.preventDefault()}

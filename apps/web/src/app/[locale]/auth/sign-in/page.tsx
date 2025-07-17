@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { SignInForm } from "./_components/sign-in-form";
 
 interface ISignIn {
 	params: Promise<{
@@ -26,6 +27,7 @@ export default async function SignIn({ params }: ISignIn) {
 			<section id="profile" className="container__section">
 				<h2 className="section__title">{t("title")}</h2>
 				<p className="section__subtitle">{t("title")}</p>
+				<SignInForm />
 			</section>
 		</main>
 	);

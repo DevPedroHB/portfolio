@@ -1,5 +1,6 @@
 "use client";
 
+import { signOut } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 import {
@@ -27,6 +28,10 @@ export function SignOutAlertDialog({
 }: ISignOutAlertDialog) {
 	const t = useTranslations("components.sign_out_alert_dialog");
 
+	async function handleSignOut() {
+		await signOut();
+	}
+
 	return (
 		<AlertDialog open={open} onOpenChange={onOpenChange}>
 			<AlertDialogTrigger {...props} />
@@ -37,7 +42,7 @@ export function SignOutAlertDialog({
 				</AlertDialogHeader>
 				<AlertDialogFooter>
 					<AlertDialogCancel>{t("buttons.cancel")}</AlertDialogCancel>
-					<AlertDialogAction variant="destructive">
+					<AlertDialogAction variant="destructive" onClick={handleSignOut}>
 						{t("buttons.action")}
 					</AlertDialogAction>
 				</AlertDialogFooter>

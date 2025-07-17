@@ -4,6 +4,7 @@ import { cn } from "@/functions/cn";
 import { routing } from "@/i18n/routing";
 import { ThemeProvider } from "@/providers/theme-provider";
 import type { Metadata } from "next";
+import { SessionProvider } from "next-auth/react";
 import { hasLocale, type Locale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Poppins } from "next/font/google";
@@ -72,15 +73,17 @@ export default async function RootLayout({
 			suppressHydrationWarning
 		>
 			<body>
-				<NextIntlClientProvider>
-					<ThemeProvider>
-						{children}
-						{dialog}
-						{sheet}
-						<ScrollToTop />
-						<Toaster visibleToasts={9} closeButton richColors />
-					</ThemeProvider>
-				</NextIntlClientProvider>
+				<SessionProvider>
+					<NextIntlClientProvider>
+						<ThemeProvider>
+							{children}
+							{dialog}
+							{sheet}
+							<ScrollToTop />
+							<Toaster visibleToasts={9} closeButton richColors />
+						</ThemeProvider>
+					</NextIntlClientProvider>
+				</SessionProvider>
 			</body>
 		</html>
 	);

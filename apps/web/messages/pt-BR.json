@@ -106,8 +106,13 @@
 			},
 			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
 			"error": "Ocorreu um erro ao encerrar a sessão.",
-			"success": "Sessão encerrada com sucesso!",
+			"success": "Sessão encerrada com sucesso.",
 			"title": "Você tem certeza absoluta?"
+		}
+	},
+	"libs": {
+		"safe_action": {
+			"server_error": "Algo deu errado ao executar a operação."
 		}
 	}
 }
