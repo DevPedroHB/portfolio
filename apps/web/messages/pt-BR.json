@@ -69,6 +69,16 @@
 		}
 	},
 	"components": {
+		"footer": {
+			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
+			"footer_links": {
+				"new_project": "Novo Projeto",
+				"qualifications": "Qualificações",
+				"testimonials": "Depoimentos"
+			},
+			"subtitle": "Engenheiro de software",
+			"title": "PedroHB"
+		},
 		"header": {
 			"header_profile": {
 				"label": {
@@ -108,6 +118,9 @@
 			"error": "Ocorreu um erro ao encerrar a sessão.",
 			"success": "Sessão encerrada com sucesso.",
 			"title": "Você tem certeza absoluta?"
+		},
+		"svgl_icon": {
+			"error": "Ícone não encontrado."
 		}
 	},
 	"libs": {

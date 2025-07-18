@@ -20,7 +20,6 @@ export default auth(async (request) => {
 	const response = nextIntlMiddleware(request);
 
 	if (!response.ok) {
-		console.log("if (!response.ok) {");
 		return response;
 	}
 
@@ -35,7 +34,6 @@ export default auth(async (request) => {
 	const isAlwaysPublic = alwaysPublicRegex.test(pathname);
 
 	if (isAlwaysPublic) {
-		console.log("if (isAlwaysPublic) {");
 		if (lastPublicPath !== pathname) {
 			response.cookies.set(keys.LAST_PUBLIC_PATH, pathname);
 		}
@@ -52,9 +50,7 @@ export default auth(async (request) => {
 	const session = request.auth;
 
 	if (isPublic) {
-		console.log("if (isPublic) {");
 		if (session) {
-			console.log("if (session) {");
 			return NextResponse.redirect(new URL(lastPrivatePath, request.url));
 		}
 
@@ -66,7 +62,6 @@ export default auth(async (request) => {
 	}
 
 	if (!session) {
-		console.log("if (!session) {");
 		return NextResponse.redirect(new URL(lastPublicPath, request.url));
 	}
 

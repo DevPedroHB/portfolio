@@ -44,8 +44,8 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 
-  --font-sans: var(--font-poppins);
-  --font-mono: var(--font-poppins);
+	--font-sans: var(--font-poppins);
+	--font-mono: var(--font-poppins);
 	--shadow-header: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -123,7 +123,7 @@
 		@apply border-border outline-ring/50 antialiased scroll-smooth;
 	}
 	body {
-		@apply bg-background text-foreground antialiased scroll-smooth;
+		@apply bg-background min-h-screen text-foreground antialiased scroll-smooth;
 	}
 }
 
@@ -145,7 +145,7 @@
 
 @layer components {
 	.main__container {
-		@apply mx-auto px-6 max-w-[calc(48rem+3rem)] min-h-screen;
+		@apply mx-auto px-6 max-w-[calc(48rem+3rem)];
 	}
 
 	.container__section {
