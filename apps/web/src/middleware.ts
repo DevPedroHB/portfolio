@@ -1,33 +1,78 @@
 import createMiddleware from "next-intl/middleware";
+import { NextResponse } from "next/server";
 import { auth } from "./auth";
+import { keys } from "./constants/keys";
+import { createLocalizedPathRegex } from "./functions/create-localized-path-regex";
 import { routing } from "./i18n/routing";
 
-const PUBLIC_PATHS = [
-	"/auth/sign-in",
-	"/auth/sign-up",
-	"/terms-of-service",
-	"/privacy-policy",
-	"/dashboard/sign-in",
-];
-const PUBLIC_REGEX = new RegExp(
-	`^\\/(?:${routing.locales.join("|")})?(?:${PUBLIC_PATHS.join("|")})?$`,
+const ALWAYS_PUBLIC_PATHS = ["/", "/email/verify"];
+const PUBLIC_PATHS = ["/auth/*", "/terms-of-service", "/privacy-policy"];
+
+const alwaysPublicRegex = createLocalizedPathRegex(
+	routing.locales,
+	ALWAYS_PUBLIC_PATHS,
 );
+const publicRegex = createLocalizedPathRegex(routing.locales, PUBLIC_PATHS);
 
 const nextIntlMiddleware = createMiddleware(routing);
 
 export default auth(async (request) => {
 	const response = nextIntlMiddleware(request);
 
-	if (response && !response.ok) {
+	if (!response.ok) {
+		console.log("if (!response.ok) {");
 		return response;
 	}
 
+	const lastPublicPath =
+		request.cookies.get(keys.LAST_PUBLIC_PATH)?.value ?? ALWAYS_PUBLIC_PATHS[0];
+	const lastPrivatePath =
+		request.cookies.get(keys.LAST_PRIVATE_PATH)?.value ??
+		ALWAYS_PUBLIC_PATHS[0];
+
 	const { pathname } = request.nextUrl;
+
+	const isAlwaysPublic = alwaysPublicRegex.test(pathname);
+
+	if (isAlwaysPublic) {
+		console.log("if (isAlwaysPublic) {");
+		if (lastPublicPath !== pathname) {
+			response.cookies.set(keys.LAST_PUBLIC_PATH, pathname);
+		}
+
+		if (lastPrivatePath !== pathname) {
+			response.cookies.set(keys.LAST_PRIVATE_PATH, pathname);
+		}
+
+		return response;
+	}
+
+	const isPublic = publicRegex.test(pathname);
+
 	const session = request.auth;
 
-	const isPublic = PUBLIC_REGEX.test(pathname);
+	if (isPublic) {
+		console.log("if (isPublic) {");
+		if (session) {
+			console.log("if (session) {");
+			return NextResponse.redirect(new URL(lastPrivatePath, request.url));
+		}
 
-	console.log("Middleware", JSON.stringify({ session, isPublic }, null, 2));
+		if (lastPublicPath !== pathname) {
+			response.cookies.set(keys.LAST_PUBLIC_PATH, pathname);
+		}
+
+		return response;
+	}
+
+	if (!session) {
+		console.log("if (!session) {");
+		return NextResponse.redirect(new URL(lastPublicPath, request.url));
+	}
+
+	if (lastPrivatePath !== pathname) {
+		response.cookies.set(keys.LAST_PRIVATE_PATH, pathname);
+	}
 
 	return response;
 });

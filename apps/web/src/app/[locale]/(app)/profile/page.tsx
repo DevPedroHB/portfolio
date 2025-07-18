@@ -33,7 +33,7 @@ export default async function Profile({ params }: IProfile) {
 				<p className="section__subtitle">{t("components.profile.subtitle")}</p>
 				<Card>
 					<CardContent>
-						<pre>
+						<pre className="flex flex-col gap-4">
 							<code>{JSON.stringify(session, null, 2)}</code>
 						</pre>
 					</CardContent>

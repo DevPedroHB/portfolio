@@ -1,33 +1,42 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { Link as NextLink, usePathname } from "@/i18n/navigation";
 import { Link, type LinkProps } from "react-scroll";
 
 interface IScrollLink extends Omit<LinkProps, "ref"> {}
 
 export function ScrollLink({
 	to,
-	href,
+	href = to,
 	activeClass = "text-primary",
+	className,
+	children,
 	...props
 }: IScrollLink) {
-	const router = useRouter();
-	const hash = to.split("#")[1];
+	const pathname = usePathname();
+	const [path, hash] = to.split("#");
 
-	function handleNavigation() {
-		router.push(to ?? href);
+	if (pathname !== path) {
+		return (
+			<NextLink href={href} className={className}>
+				{children}
+			</NextLink>
+		);
 	}
 
 	return (
 		<Link
 			to={hash}
-			href={to ?? href}
+			href={href}
 			activeClass={activeClass}
-			onClick={handleNavigation}
-			isDynamic
+			className={className}
 			hashSpy
+			isDynamic
+			smooth
 			spy
 			{...props}
-		/>
+		>
+			{children}
+		</Link>
 	);
 }

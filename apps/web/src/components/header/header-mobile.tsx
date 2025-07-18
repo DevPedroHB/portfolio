@@ -1,7 +1,7 @@
 import { navbarLinks } from "@/constants/navbar-links";
+import { Link } from "@/i18n/navigation";
 import { LayoutGrid, X } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import { ScrollLink } from "../scroll-link";
 import {
 	Drawer,

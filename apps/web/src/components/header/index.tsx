@@ -1,6 +1,6 @@
 import { navbarLinks } from "@/constants/navbar-links";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
-import Link from "next/link";
 import { ScrollLink } from "../scroll-link";
 import { HeaderContainer } from "./header-container";
 import { HeaderMobile } from "./header-mobile";

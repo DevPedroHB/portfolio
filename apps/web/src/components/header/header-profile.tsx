@@ -2,11 +2,10 @@
 
 import { languages } from "@/constants/languages";
 import { themes } from "@/constants/themes";
+import { Link, useRouter } from "@/i18n/navigation";
 import { useSession } from "next-auth/react";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
-import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useHotkeys } from "react-hotkeys-hook";
 import { useToggle } from "react-use";
 import { LocaleLink } from "../locale-link";

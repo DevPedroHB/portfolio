@@ -123,7 +123,7 @@
 		@apply border-border outline-ring/50 antialiased scroll-smooth;
 	}
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground antialiased scroll-smooth;
 	}
 }
 

@@ -1,4 +1,4 @@
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useCallback, useEffect, useRef } from "react";
 
 export function useInterceptingRoutes(fallbackPath = "/") {
