@@ -1,7 +1,11 @@
 project_id_env: CROWDIN_PROJECT_ID
 api_token_env: CROWDIN_PERSONAL_TOKEN
 base_path: .
+<<<<<<< HEAD
 preserve_hierarchy: true
+=======
+preserve_hierarchy: 
+>>>>>>> 6cf2ff5b6ba92cd2b7a5bd2a6dd46fb6411e80ff
 files:
   - source: apps/web/messages/pt-BR.json
     translation: '%original_path%/%locale%.%file_extension%'
