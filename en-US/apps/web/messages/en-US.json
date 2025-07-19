@@ -1,0 +1,131 @@
+{
+	"app": {
+		"description": "Portfólio pessoal de Pedro Henrique Bérgamo.",
+		"home": {
+			"components": {
+				"about_me": {
+					"subtitle": "Minha introdução",
+					"title": "Sobre Mim"
+				},
+				"contact_me": {
+					"subtitle": "Entre em contato",
+					"title": "Fale Comigo"
+				},
+				"hero": {
+					"subtitle": "Engenheiro de software",
+					"title": "Olá, eu sou o Pedro"
+				},
+				"new_project": {
+					"subtitle": "Fale comigo agora e receba 30% de desconto no seu novo projeto.",
+					"title": "Tem um novo projeto?"
+				},
+				"portfolio": {
+					"subtitle": "Trabalhos mais recentes",
+					"title": "Portfólio"
+				},
+				"qualifications": {
+					"subtitle": "Minha trajetória profissional",
+					"title": "Qualificações"
+				},
+				"services": {
+					"subtitle": "O que eu ofereço",
+					"title": "Serviços"
+				},
+				"skills": {
+					"subtitle": "Meu nível técnico",
+					"title": "Habilidades"
+				},
+				"testimonials": {
+					"subtitle": "O que dizem meus clientes",
+					"title": "Depoimentos"
+				}
+			},
+			"title": "Início"
+		},
+		"profile": {
+			"components": {
+				"profile": {
+					"subtitle": "Visualize e edite suas informações pessoais",
+					"title": "Meu Perfil"
+				}
+			},
+			"title": "Perfil"
+		},
+		"sign_in": {
+			"title": "Entrar"
+		},
+		"sign_up": {
+			"title": "Inscrever-se"
+		},
+		"title": "PedroHB",
+		"user_profile": {
+			"components": {
+				"user_profile": {
+					"subtitle": "Veja as informações e atividades de {name}",
+					"title": "Perfil de {name}"
+				}
+			},
+			"title": "Perfil de {name}"
+		}
+	},
+	"components": {
+		"footer": {
+			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
+			"footer_links": {
+				"new_project": "Novo Projeto",
+				"qualifications": "Qualificações",
+				"testimonials": "Depoimentos"
+			},
+			"subtitle": "Engenheiro de software",
+			"title": "PedroHB"
+		},
+		"header": {
+			"header_profile": {
+				"label": {
+					"guest_email": "Acesse sua conta",
+					"guest_name": "Convidado"
+				},
+				"language": "Idiomas",
+				"profile": "Perfil",
+				"sign_in": "Entrar",
+				"sign_out": "Sair",
+				"themes": {
+					"dark": "Escuro",
+					"light": "Claro",
+					"system": "Sistema",
+					"trigger": "Temas"
+				}
+			},
+			"navbar_links": {
+				"about_me": "Sobre",
+				"contact_me": "Contato",
+				"hero": "Início",
+				"portfolio": "Portfólio",
+				"services": "Serviços",
+				"skills": "Habilidades"
+			},
+			"title": "PedroHB"
+		},
+		"scroll_to_top": {
+			"tooltip_content": "Voltar ao topo"
+		},
+		"sign_out_alert_dialog": {
+			"buttons": {
+				"action": "Continuar",
+				"cancel": "Cancelar"
+			},
+			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
+			"error": "Ocorreu um erro ao encerrar a sessão.",
+			"success": "Sessão encerrada com sucesso.",
+			"title": "Você tem certeza absoluta?"
+		},
+		"svgl_icon": {
+			"error": "Ícone não encontrado."
+		}
+	},
+	"libs": {
+		"safe_action": {
+			"server_error": "Algo deu errado ao executar a operação."
+		}
+	}
+}
