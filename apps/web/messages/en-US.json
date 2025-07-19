@@ -1,74 +1,94 @@
 {
 	"app": {
-		"description": "Personal portfolio of Pedro Henrique Bérgamo.",
+		"description": "Portfólio pessoal de Pedro Henrique Bérgamo.",
 		"home": {
 			"components": {
 				"about_me": {
-					"subtitle": "My introduction",
-					"title": "About Me"
+					"subtitle": "Minha introdução",
+					"title": "Sobre Mim"
 				},
 				"contact_me": {
-					"subtitle": "Get in touch",
-					"title": "Talk to me"
+					"subtitle": "Entre em contato",
+					"title": "Fale Comigo"
 				},
 				"hero": {
-					"subtitle": "Software engineer",
-					"title": "Hello, I'm Pedro"
+					"subtitle": "Engenheiro de software",
+					"title": "Olá, eu sou o Pedro"
 				},
 				"new_project": {
-					"subtitle": "Talk to me now and get 30% off your new project.",
-					"title": "Do you have a new project?"
+					"subtitle": "Fale comigo agora e receba 30% de desconto no seu novo projeto.",
+					"title": "Tem um novo projeto?"
 				},
 				"portfolio": {
-					"subtitle": "Most recent works",
-					"title": "Portfolio"
+					"subtitle": "Trabalhos mais recentes",
+					"title": "Portfólio"
 				},
 				"qualifications": {
-					"subtitle": "My professional trajectory",
-					"title": "Qualifications"
+					"subtitle": "Minha trajetória profissional",
+					"title": "Qualificações"
 				},
 				"services": {
-					"subtitle": "What I offer",
-					"title": "Services"
+					"subtitle": "O que eu ofereço",
+					"title": "Serviços"
 				},
 				"skills": {
-					"subtitle": "My technical level",
-					"title": "Skills"
+					"subtitle": "Meu nível técnico",
+					"title": "Habilidades"
 				},
 				"testimonials": {
-					"subtitle": "What my clients say",
-					"title": "Testimonials"
+					"subtitle": "O que dizem meus clientes",
+					"title": "Depoimentos"
 				}
 			},
-			"title": "Home"
+			"title": "Início"
 		},
 		"profile": {
 			"components": {
 				"profile": {
-					"subtitle": "View and edit your personal information",
-					"title": "My Profile"
+					"subtitle": "Visualize e edite suas informações pessoais",
+					"title": "Meu Perfil"
 				}
 			},
-			"title": "Profile"
+			"title": "Perfil"
 		},
 		"sign_in": {
-			"title": "Sign In"
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
+				},
+				"forgot_password": "Esqueceu sua senha?",
+				"password": {
+					"label": "Senha",
+					"placeholder": "*********"
+				},
+				"sign_in_social": "Ou continue com",
+				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
+				"submit": "Entrar",
+				"subtitle": "Faça login na sua conta",
+				"success": "Seja bem-vindo de volta! :)",
+				"title": "Bem-vindo de volta"
+			},
+			"title": "Entrar"
 		},
 		"sign_up": {
-			"title": "Sign Up"
+			"title": "Inscrever-se"
 		},
 		"title": "PedroHB",
 		"user_profile": {
 			"components": {
 				"user_profile": {
-					"subtitle": "View {name}'s information and activities",
-					"title": "{name}'s profile"
+					"subtitle": "Veja as informações e atividades de {name}",
+					"title": "Perfil de {name}"
 				}
 			},
-			"title": "{name}'s profile"
+			"title": "Perfil de {name}"
 		}
 	},
 	"components": {
+		"auth": {
+			"terms_and_polices": "Ao continuar você concorda com nossos <terms_of_service>Termos de Serviço</terms_of_service> e <privacy_policy>Política de Privacidade</privacy_policy>."
+		},
 		"footer": {
 			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
 			"footer_links": {
@@ -82,42 +102,42 @@
 		"header": {
 			"header_profile": {
 				"label": {
-					"guest_email": "Access your account",
-					"guest_name": "Guest"
+					"guest_email": "Acesse sua conta",
+					"guest_name": "Convidado"
 				},
-				"language": "Languages",
-				"profile": "Profile",
-				"sign_in": "Sign In",
-				"sign_out": "Sign Out",
+				"language": "Idiomas",
+				"profile": "Perfil",
+				"sign_in": "Entrar",
+				"sign_out": "Sair",
 				"themes": {
-					"dark": "Dark",
-					"light": "Light",
-					"system": "System",
-					"trigger": "Themes"
+					"dark": "Escuro",
+					"light": "Claro",
+					"system": "Sistema",
+					"trigger": "Temas"
 				}
 			},
 			"navbar_links": {
-				"about_me": "About",
-				"contact_me": "Contact",
-				"hero": "Home",
-				"portfolio": "Portfolio",
-				"services": "Services",
-				"skills": "Skills"
+				"about_me": "Sobre",
+				"contact_me": "Contato",
+				"hero": "Início",
+				"portfolio": "Portfólio",
+				"services": "Serviços",
+				"skills": "Habilidades"
 			},
 			"title": "PedroHB"
 		},
 		"scroll_to_top": {
-			"tooltip_content": "Back to top"
+			"tooltip_content": "Voltar ao topo"
 		},
 		"sign_out_alert_dialog": {
 			"buttons": {
-				"action": "Continue",
-				"cancel": "Cancel"
+				"action": "Continuar",
+				"cancel": "Cancelar"
 			},
-			"description": "Are you sure you want to log out? Your current session will be deleted and you will be redirected to the home page.",
-			"error": "An error occurred while closing the session.",
-			"success": "Session ended successfully.",
-			"title": "Are you absolutely sure?"
+			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
+			"error": "Ocorreu um erro ao encerrar a sessão.",
+			"success": "Sessão encerrada com sucesso.",
+			"title": "Você tem certeza absoluta?"
 		},
 		"svgl_icon": {
 			"error": "Ícone não encontrado."
@@ -125,7 +145,7 @@
 	},
 	"libs": {
 		"safe_action": {
-			"server_error": "Something went wrong while executing the operation."
+			"server_error": "Algo deu errado ao executar a operação."
 		}
 	}
 }

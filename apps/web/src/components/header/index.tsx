@@ -11,7 +11,7 @@ export async function Header() {
 
 	return (
 		<HeaderContainer>
-			<nav className="flex-between gap-4 mx-auto px-6 max-w-[calc(60.5rem+3rem)] h-12 md:h-[4.5rem]">
+			<nav className="flex__between gap-4 mx-auto px-6 max-w-[calc(60.5rem+3rem)] h-12 md:h-[4.5rem]">
 				<Link
 					href="/"
 					className="font-medium hover:text-primary transition-all"
@@ -31,7 +31,7 @@ export async function Header() {
 						);
 					})}
 				</div>
-				<div className="flex-center gap-4">
+				<div className="flex__center gap-4">
 					<HeaderProfile />
 					<HeaderMobile />
 				</div>

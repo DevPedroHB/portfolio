@@ -52,6 +52,23 @@
 			"title": "Perfil"
 		},
 		"sign_in": {
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
+				},
+				"forgot_password": "Esqueceu sua senha?",
+				"password": {
+					"label": "Senha",
+					"placeholder": "*********"
+				},
+				"sign_in_social": "Ou continue com",
+				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
+				"submit": "Entrar",
+				"subtitle": "Faça login na sua conta",
+				"success": "Seja bem-vindo de volta! :)",
+				"title": "Bem-vindo de volta"
+			},
 			"title": "Entrar"
 		},
 		"sign_up": {
@@ -69,6 +86,9 @@
 		}
 	},
 	"components": {
+		"auth": {
+			"terms_and_polices": "Ao continuar você concorda com nossos <terms_of_service>Termos de Serviço</terms_of_service> e <privacy_policy>Política de Privacidade</privacy_policy>."
+		},
 		"footer": {
 			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
 			"footer_links": {

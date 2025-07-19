@@ -1,4 +1,4 @@
-import { getSession } from "next-auth/react";
+import { auth } from "@/auth";
 import { getTranslations } from "next-intl/server";
 import { createMiddleware, createSafeActionClient } from "next-safe-action";
 import { z } from "zod/v4";
@@ -21,7 +21,7 @@ const loggingMiddleware = createMiddleware().define(
 );
 
 const sessionMiddleware = createMiddleware().define(async ({ next }) => {
-	const session = await getSession();
+	const session = await auth();
 
 	return next({
 		ctx: {
@@ -40,7 +40,11 @@ export const actionClient = createSafeActionClient({
 	async handleServerError(error) {
 		const t = await getTranslations("libs.safe_action");
 
-		console.error("Action error:", error);
+		if (error instanceof TypeError) {
+			return error.message;
+		}
+
+		console.error("Action error", JSON.stringify(error, null, 2));
 
 		return t("server_error");
 	},

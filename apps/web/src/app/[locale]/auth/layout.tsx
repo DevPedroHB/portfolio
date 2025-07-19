@@ -5,5 +5,5 @@ interface IAuthLayout {
 }
 
 export default function AuthLayout({ children }: Readonly<IAuthLayout>) {
-	return <>{children}</>;
+	return <div className="p-6 md:p-10 min-h-screen col__center">{children}</div>;
 }

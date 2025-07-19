@@ -28,7 +28,7 @@ export async function HeaderMobile() {
 							<DrawerClose key={link.key} asChild>
 								<ScrollLink
 									to={link.path}
-									className="font-medium hover:text-primary text-sm transition-all cursor-pointer col-center"
+									className="font-medium hover:text-primary text-sm transition-all cursor-pointer col__center"
 								>
 									<Icon className="size-4" />
 									{t(`navbar_links.${link.key}`)}
@@ -37,14 +37,14 @@ export async function HeaderMobile() {
 						);
 					})}
 				</div>
-				<div className="flex-between gap-4 mx-auto px-6 w-full max-w-[calc(60.5rem+3rem)] h-12">
+				<div className="flex__between gap-4 mx-auto px-6 w-full max-w-[calc(60.5rem+3rem)] h-12">
 					<Link
 						href="/"
 						className="font-medium hover:text-primary transition-all"
 					>
 						{t("title")}
 					</Link>
-					<div className="flex-center gap-4">
+					<div className="flex__center gap-4">
 						<HeaderProfile />
 						<DrawerClose asChild>
 							<X className="size-5" />
