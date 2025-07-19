@@ -1,0 +1,131 @@
+{
+	"app": {
+		"description": "Personal portfolio of Pedro Henrique Bérgamo.",
+		"home": {
+			"components": {
+				"about_me": {
+					"subtitle": "My introduction",
+					"title": "About Me"
+				},
+				"contact_me": {
+					"subtitle": "Get in touch",
+					"title": "Talk to me"
+				},
+				"hero": {
+					"subtitle": "Software Engineer",
+					"title": "Hello, I'm Pedro"
+				},
+				"new_project": {
+					"subtitle": "Talk to me now and get 30% off your new project.",
+					"title": "Do you have a new project?"
+				},
+				"portfolio": {
+					"subtitle": "Most recent works",
+					"title": "Portfolio"
+				},
+				"qualifications": {
+					"subtitle": "My professional trajectory",
+					"title": "Qualifications"
+				},
+				"services": {
+					"subtitle": "What I offer",
+					"title": "Services"
+				},
+				"skills": {
+					"subtitle": "My technical level",
+					"title": "Skills"
+				},
+				"testimonials": {
+					"subtitle": "What my clients say",
+					"title": "Testimonials"
+				}
+			},
+			"title": "Home"
+		},
+		"profile": {
+			"components": {
+				"profile": {
+					"subtitle": "View and edit your personal information",
+					"title": "My Profile"
+				}
+			},
+			"title": "Profile"
+		},
+		"sign_in": {
+			"title": "Sign In"
+		},
+		"sign_up": {
+			"title": "Sign Up"
+		},
+		"title": "PedroHB",
+		"user_profile": {
+			"components": {
+				"user_profile": {
+					"subtitle": "View {name}'s information and activities",
+					"title": "{name}'s profile"
+				}
+			},
+			"title": "{name}'s profile"
+		}
+	},
+	"components": {
+		"footer": {
+			"copyright": "© {year} <link>PedroHB</link>. All rights reserved.",
+			"footer_links": {
+				"new_project": "New Project",
+				"qualifications": "Qualifications",
+				"testimonials": "Testimonials"
+			},
+			"subtitle": "Software Engineer",
+			"title": "PedroHB"
+		},
+		"header": {
+			"header_profile": {
+				"label": {
+					"guest_email": "Access your account",
+					"guest_name": "Guest"
+				},
+				"language": "Languages",
+				"profile": "Profile",
+				"sign_in": "Sign In",
+				"sign_out": "Sign Out",
+				"themes": {
+					"dark": "Dark",
+					"light": "Light",
+					"system": "System",
+					"trigger": "Themes"
+				}
+			},
+			"navbar_links": {
+				"about_me": "About",
+				"contact_me": "Contact",
+				"hero": "Home",
+				"portfolio": "Portfolio",
+				"services": "Services",
+				"skills": "Skills"
+			},
+			"title": "PedroHB"
+		},
+		"scroll_to_top": {
+			"tooltip_content": "Back to top"
+		},
+		"sign_out_alert_dialog": {
+			"buttons": {
+				"action": "Continue",
+				"cancel": "Cancel"
+			},
+			"description": "Are you sure you want to log out? Your current session will be deleted and you will be redirected to the home page.",
+			"error": "An error occurred while closing the session.",
+			"success": "Session ended successfully.",
+			"title": "Are you absolutely sure?"
+		},
+		"svgl_icon": {
+			"error": "Icon not found."
+		}
+	},
+	"libs": {
+		"safe_action": {
+			"server_error": "Something went wrong while performing the operation."
+		}
+	}
+}
