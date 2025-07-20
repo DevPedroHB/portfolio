@@ -1,14 +1,17 @@
 {
 	"author": "Pedro Henrique Bérgamo",
 	"dependencies": {
-		"@t3-oss/env-core": "^0.13.8",
+		"@prisma/client": "^6.12.0",
+		"@prisma/extension-accelerate": "^2.0.2",
 		"zod": "^4.0.5"
 	},
-	"description": "Package for environment variables",
+	"description": "Package for database with prisma",
 	"devDependencies": {
 		"@portfolio/typescript-config": "workspace:*",
-		"@types/node": "^20.19.7",
+		"@types/node": "^24.0.15",
 		"dotenv-cli": "^8.0.0",
+		"prisma": "^6.12.0",
+		"prisma-zod-generator": "0.8.14-beta.0",
 		"tsup": "^8.5.0",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
@@ -19,14 +22,20 @@
 		}
 	},
 	"keywords": [
-		"environment",
-		"env"
+		"database",
+		"db",
+		"prisma",
+		"postgresql"
 	],
 	"license": "MIT",
 	"main": "src/index.ts",
-	"name": "@portfolio/env",
+	"name": "@portfolio/db",
 	"packageManager": "pnpm@10.11.1",
 	"scripts": {
+		"db:deploy": "prisma migrate deploy",
+		"db:generate": "prisma generate",
+		"db:migrate": "pnpm env:load prisma migrate dev --skip-generate",
+		"dev": "pnpm env:load prisma studio",
 		"env:load": "dotenv -e ../../.env --"
 	},
 	"types": "src/index.ts",

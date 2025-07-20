@@ -1,0 +1,8 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"_version": "24.0.0",
+	"extends": "@portfolio/typescript-config/library.json",
+  "compilerOptions": {
+    "exactOptionalPropertyTypes": true
+  }
+}

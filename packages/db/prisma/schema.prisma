@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+generator zod {
+  provider = "prisma-zod-generator"
+  output   = "../generated/zod"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  MEMBER
+  ADMIN
+  OWNER
+}
+
+model User {
+  id              String    @id @default(cuid())
+  name            String?
+  email           String    @unique
+  passwordHash    String?   @map("password_hash")
+  avatarUrl       String?   @map("avatar_url")
+  bio             String?
+  birthDate       DateTime? @map("birth_date")
+  emailVerifiedAt DateTime? @map("email_verified_at")
+  settings        Json?
+  role            Role      @default(MEMBER)
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime? @updatedAt @map("updated_at")
+
+  accounts       Account[]
+  sessions       Session[]
+  authenticators Authenticator[]
+
+  @@map("users")
+}
+
+model Account {
+  provider          String
+  providerAccountId String    @map("provider_account_id")
+  type              String
+  refreshToken      String?   @map("refresh_token")
+  accessToken       String?   @map("access_token")
+  expiresAt         Int?      @map("expires_at")
+  tokenType         String?   @map("token_type")
+  scope             String?
+  idToken           String?   @map("id_token")
+  sessionState      String?   @map("session_state")
+  createdAt         DateTime  @default(now()) @map("created_at")
+  updatedAt         DateTime? @updatedAt @map("updated_at")
+  userId            String    @map("user_id")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@id([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  sessionToken String    @unique @map("session_token")
+  expiresAt    DateTime  @map("expires_at")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime? @updatedAt @map("updated_at")
+  userId       String    @map("user_id")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@map("sessions")
+}
+
+model Token {
+  identifier String
+  token      String
+  expiresAt  DateTime @map("expires_at")
+
+  @@id([identifier, token])
+  @@map("tokens")
+}
+
+model Authenticator {
+  credentialId         String  @unique @map("credential_id")
+  providerAccountId    String  @map("provider_account_id")
+  credentialPublicKey  String  @map("credential_public_key")
+  counter              Int
+  credentialDeviceType String  @map("credential_device_type")
+  credentialBackedUp   Boolean @map("credential_backed_up")
+  transports           String?
+  userId               String  @map("user_id")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@id([userId, credentialId])
+  @@map("authenticators")
+}
