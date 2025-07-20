@@ -12,7 +12,7 @@
 					"title": "Fale Comigo"
 				},
 				"hero": {
-					"subtitle": "Engenheiro de software",
+					"subtitle": "Engenheiro de Software",
 					"title": "Olá, eu sou o Pedro"
 				},
 				"new_project": {
@@ -52,6 +52,7 @@
 			"title": "Perfil"
 		},
 		"sign_in": {
+			"banner_alt": "Estação de trabalho noturna com notebook exibindo código, iluminação em tons de roxo e azul, transmitindo foco e modernidade para desenvolvedores.",
 			"form": {
 				"email": {
 					"label": "Email",
@@ -72,6 +73,27 @@
 			"title": "Entrar"
 		},
 		"sign_up": {
+			"banner_alt": "Ambiente de trabalho moderno com notebook exibindo código, iluminação suave em tons de roxo e azul, ideal para desenvolvedores.",
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
+				},
+				"name": {
+					"label": "Nome",
+					"placeholder": "John Doe"
+				},
+				"password": {
+					"label": "Senha",
+					"placeholder": "*********"
+				},
+				"sign_in": "Já tem uma conta? <sign_in>Entrar</sign_in>",
+				"sign_in_social": "Ou continue com",
+				"submit": "Inscrever-se",
+				"subtitle": "Crie sua conta",
+				"success": "Seja bem-vindo! :)",
+				"title": "Seja bem-vindo"
+			},
 			"title": "Inscrever-se"
 		},
 		"title": "PedroHB",
@@ -96,7 +118,7 @@
 				"qualifications": "Qualificações",
 				"testimonials": "Depoimentos"
 			},
-			"subtitle": "Engenheiro de software",
+			"subtitle": "Engenheiro de Software",
 			"title": "PedroHB"
 		},
 		"header": {

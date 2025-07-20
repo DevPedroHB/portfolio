@@ -37,3 +37,4 @@ yarn-error.log*
 .DS_Store
 *.pem
 *.d.json.ts
+commit_message.txt
