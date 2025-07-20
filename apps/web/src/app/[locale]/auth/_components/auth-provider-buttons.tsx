@@ -4,16 +4,18 @@ import { signInProviderAction } from "@/actions/sign-in-provider-action";
 import { SvglIcon } from "@/components/svgl-icon";
 import { Button } from "@/components/ui/button";
 import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
+import { useTranslations } from "next-intl";
 import { useAction } from "next-safe-action/hooks";
 import { toast } from "sonner";
 
 export function AuthProviderButtons() {
+	const t = useTranslations("components.auth.provider_buttons");
 	const { execute } = useAction(signInProviderAction, {
 		async onError({ error }) {
 			useActionErrorHandler(error);
 		},
 		async onSuccess() {
-			toast.success("Signed in successfully.");
+			toast.success(t("success"));
 		},
 	});
 

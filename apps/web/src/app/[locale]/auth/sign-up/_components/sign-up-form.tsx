@@ -47,6 +47,7 @@ export function SignUpForm({ className, children, ...props }: ISignUpForm) {
 				},
 				formProps: {
 					defaultValues: {
+						name: "",
 						email: "",
 						password: "",
 					},
@@ -63,7 +64,7 @@ export function SignUpForm({ className, children, ...props }: ISignUpForm) {
 				className={cn("flex flex-col gap-4 p-6 md:p-8", className)}
 				{...props}
 			>
-				<div className="col__center">
+				<div className="text-center col__center">
 					<h1 className="font-bold text-2xl">{t("title")}</h1>
 					<p className="text-muted-foreground text-balance">{t("subtitle")}</p>
 				</div>

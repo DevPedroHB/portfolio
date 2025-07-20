@@ -1,6 +1,6 @@
 "use client";
 
-import { signInCredentialsAction } from "@/actions/sign-in-credentials-action";
+import { forgotPasswordAction } from "@/actions/forgot-password-action-action";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { cn } from "@/functions/cn";
 import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
 import { Link, useRouter } from "@/i18n/navigation";
-import { signInCredentialsSchema } from "@/types/schemas/sign-in-credentials-schema";
+import { forgotPasswordSchema } from "@/types/schemas/forgot-password-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormAction } from "@next-safe-action/adapter-react-hook-form/hooks";
 import { useTranslations } from "next-intl";
@@ -22,37 +22,36 @@ import type { ComponentProps } from "react";
 import { toast } from "sonner";
 import { AuthProviderButtons } from "../../_components/auth-provider-buttons";
 
-interface ISignInForm extends ComponentProps<"form"> {}
+interface IForgotPasswordForm extends ComponentProps<"form"> {}
 
-export function SignInForm({ className, children, ...props }: ISignInForm) {
-	const t = useTranslations("app.sign_in.form");
+export function ForgotPasswordForm({
+	className,
+	children,
+	...props
+}: IForgotPasswordForm) {
+	const t = useTranslations("app.forgot_password.form");
 	const router = useRouter();
 
 	const { form, handleSubmitWithAction, resetFormAndAction } =
-		useHookFormAction(
-			signInCredentialsAction,
-			zodResolver(signInCredentialsSchema),
-			{
-				actionProps: {
-					async onError({ error }) {
-						useActionErrorHandler(error);
-					},
-					async onSuccess() {
-						toast.success(t("success"));
-
-						resetFormAndAction();
-
-						router.replace("/");
-					},
+		useHookFormAction(forgotPasswordAction, zodResolver(forgotPasswordSchema), {
+			actionProps: {
+				async onError({ error }) {
+					useActionErrorHandler(error);
 				},
-				formProps: {
-					defaultValues: {
-						email: "",
-						password: "",
-					},
+				async onSuccess() {
+					toast.success(t("success"));
+
+					resetFormAndAction();
+
+					router.replace("/");
 				},
 			},
-		);
+			formProps: {
+				defaultValues: {
+					email: "",
+				},
+			},
+		});
 
 	const { isSubmitting } = form.formState;
 
@@ -85,33 +84,6 @@ export function SignInForm({ className, children, ...props }: ISignInForm) {
 						</FormItem>
 					)}
 				/>
-				<FormField
-					control={form.control}
-					name="password"
-					render={({ field }) => (
-						<FormItem>
-							<FormLabel className="justify-between">
-								{t("password.label")}{" "}
-								<Link
-									href="/auth/forgot-password"
-									className="hover:underline hover:underline-offset-2"
-									replace
-								>
-									{t("forgot_password")}
-								</Link>
-							</FormLabel>
-							<FormControl>
-								<Input
-									type="password"
-									placeholder={t("password.placeholder")}
-									required
-									{...field}
-								/>
-							</FormControl>
-							<FormMessage />
-						</FormItem>
-					)}
-				/>
 				<Button type="submit" disabled={isSubmitting} className="w-full">
 					{t("submit")}
 				</Button>
@@ -122,10 +94,10 @@ export function SignInForm({ className, children, ...props }: ISignInForm) {
 				</div>
 				<AuthProviderButtons />
 				<div className="text-sm text-center">
-					{t.rich("sign_up", {
-						sign_up: (chunks) => (
+					{t.rich("sign_in", {
+						sign_in: (chunks) => (
 							<Link
-								href="/auth/sign-up"
+								href="/auth/sign-in"
 								className="hover:text-primary underline underline-offset-4 transition-all"
 								replace
 							>

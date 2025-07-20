@@ -1,6 +1,22 @@
 {
 	"app": {
 		"description": "Portfólio pessoal de Pedro Henrique Bérgamo.",
+		"forgot_password": {
+			"banner_alt": "Mesa minimalista com notebook exibindo código, iluminação suave e foco em tons escuros, transmitindo concentração e introspecção.",
+			"form": {
+				"email": {
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
+				},
+				"sign_in": "Lembrou sua senha? <sign_in>Entrar</sign_in>",
+				"sign_in_social": "Ou continue com",
+				"submit": "Enviar link de recuperação",
+				"subtitle": "Digite seu e-mail para recuperar o acesso",
+				"success": "Se encontrarmos uma conta com esse e-mail, enviaremos um link para redefinir sua senha.",
+				"title": "Esqueceu sua senha?"
+			},
+			"title": "Recuperar senha"
+		},
 		"home": {
 			"components": {
 				"about_me": {
@@ -66,11 +82,11 @@
 				"sign_in_social": "Ou continue com",
 				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
 				"submit": "Entrar",
-				"subtitle": "Faça login na sua conta",
-				"success": "Seja bem-vindo de volta! :)",
+				"subtitle": "Acesse sua conta para continuar",
+				"success": "Login realizado com sucesso! :)",
 				"title": "Bem-vindo de volta"
 			},
-			"title": "Entrar"
+			"title": "Login"
 		},
 		"sign_up": {
 			"banner_alt": "Ambiente de trabalho moderno com notebook exibindo código, iluminação suave em tons de roxo e azul, ideal para desenvolvedores.",
@@ -81,7 +97,7 @@
 				},
 				"name": {
 					"label": "Nome",
-					"placeholder": "John Doe"
+					"placeholder": "João da Silva"
 				},
 				"password": {
 					"label": "Senha",
@@ -89,12 +105,12 @@
 				},
 				"sign_in": "Já tem uma conta? <sign_in>Entrar</sign_in>",
 				"sign_in_social": "Ou continue com",
-				"submit": "Inscrever-se",
-				"subtitle": "Crie sua conta",
-				"success": "Seja bem-vindo! :)",
-				"title": "Seja bem-vindo"
+				"submit": "Criar conta",
+				"subtitle": "Preencha os dados para começar",
+				"success": "Conta criada com sucesso! :)",
+				"title": "Criar conta"
 			},
-			"title": "Inscrever-se"
+			"title": "Cadastro"
 		},
 		"title": "PedroHB",
 		"user_profile": {
@@ -109,6 +125,9 @@
 	},
 	"components": {
 		"auth": {
+			"provider_buttons": {
+				"success": "Login realizado com sucesso! :)"
+			},
 			"terms_and_polices": "Ao continuar você concorda com nossos <terms_of_service>Termos de Serviço</terms_of_service> e <privacy_policy>Política de Privacidade</privacy_policy>."
 		},
 		"footer": {
