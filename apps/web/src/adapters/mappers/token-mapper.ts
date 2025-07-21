@@ -2,17 +2,20 @@ import type { VerificationToken } from "@auth/core/adapters";
 import type { Prisma, Token } from "@portfolio/db";
 
 export class TokenMapper {
-	static toAdapter(token: Token): VerificationToken {
+	static toAdapter({ expiresAt, ...token }: Token): VerificationToken {
 		return {
 			...token,
-			expires: token.expiresAt,
+			expires: expiresAt,
 		};
 	}
 
-	static toPrisma(token: VerificationToken): Prisma.TokenUncheckedCreateInput {
+	static toPrisma({
+		expires,
+		...token
+	}: VerificationToken): Prisma.TokenUncheckedCreateInput {
 		return {
 			...token,
-			expiresAt: token.expires,
+			expiresAt: expires,
 		};
 	}
 }

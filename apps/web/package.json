@@ -6,6 +6,7 @@
 		"@next-safe-action/adapter-react-hook-form": "^2.0.0",
 		"@portfolio/db": "workspace:*",
 		"@portfolio/env": "workspace:*",
+		"@prisma/client": "^6.12.0",
 		"@radix-ui/react-alert-dialog": "^1.1.14",
 		"@radix-ui/react-avatar": "^1.1.10",
 		"@radix-ui/react-dialog": "^1.1.14",

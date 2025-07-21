@@ -2,17 +2,20 @@ import type { AdapterSession } from "@auth/core/adapters";
 import type { Prisma, Session } from "@portfolio/db";
 
 export class SessionMapper {
-	static toAdapter(session: Session): AdapterSession {
+	static toAdapter({ expiresAt, ...session }: Session): AdapterSession {
 		return {
 			...session,
-			expires: session.expiresAt,
+			expires: expiresAt,
 		};
 	}
 
-	static toPrisma(session: AdapterSession): Prisma.SessionUncheckedCreateInput {
+	static toPrisma({
+		expires,
+		...session
+	}: AdapterSession): Prisma.SessionUncheckedCreateInput {
 		return {
 			...session,
-			expiresAt: session.expires,
+			expiresAt: expires,
 		};
 	}
 }

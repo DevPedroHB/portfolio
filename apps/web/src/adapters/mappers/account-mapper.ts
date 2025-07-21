@@ -2,25 +2,39 @@ import type { AdapterAccount } from "@auth/core/adapters";
 import type { Account, Prisma } from "@portfolio/db";
 
 export class AccountMapper {
-	static toAdapter(account: Account): AdapterAccount {
+	static toAdapter({
+		refreshToken,
+		accessToken,
+		expiresAt,
+		tokenType,
+		idToken,
+		...account
+	}: Account): AdapterAccount {
 		return {
 			...account,
-			refresh_token: account.refreshToken,
-			access_token: account.accessToken,
-			expires_at: account.expiresAt,
-			token_type: account.tokenType,
-			id_token: account.idToken,
+			refresh_token: refreshToken,
+			access_token: accessToken,
+			expires_at: expiresAt,
+			token_type: tokenType,
+			id_token: idToken,
 		} as unknown as AdapterAccount;
 	}
 
-	static toPrisma(account: AdapterAccount): Prisma.AccountUncheckedCreateInput {
+	static toPrisma({
+		refresh_token,
+		access_token,
+		expires_at,
+		token_type,
+		id_token,
+		...account
+	}: AdapterAccount): Prisma.AccountUncheckedCreateInput {
 		return {
 			...account,
-			refreshToken: account.refresh_token,
-			accessToken: account.access_token,
-			expiresAt: account.expires_at,
-			tokenType: account.token_type,
-			idToken: account.id_token,
+			refreshToken: refresh_token,
+			accessToken: access_token,
+			expiresAt: expires_at,
+			tokenType: token_type,
+			idToken: id_token,
 		};
 	}
 }

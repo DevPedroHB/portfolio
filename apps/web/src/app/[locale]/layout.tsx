@@ -1,4 +1,3 @@
-import { auth } from "@/auth";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/functions/cn";
@@ -62,8 +61,6 @@ export default async function RootLayout({
 
 	setRequestLocale(locale);
 
-	const session = await auth();
-
 	return (
 		<html
 			lang={locale}
@@ -76,7 +73,7 @@ export default async function RootLayout({
 			suppressHydrationWarning
 		>
 			<body>
-				<SessionProvider session={session}>
+				<SessionProvider>
 					<NextIntlClientProvider>
 						<ThemeProvider>
 							{children}

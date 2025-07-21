@@ -2,22 +2,24 @@ import type { AdapterUser } from "@auth/core/adapters";
 import type { Prisma, User } from "@portfolio/db";
 
 export class UserMapper {
-	static toAdapter(user: User): AdapterUser {
+	static toAdapter({ avatarUrl, emailVerifiedAt, ...user }: User): AdapterUser {
 		return {
 			...user,
-			image: user.avatarUrl,
-			emailVerified: user.emailVerifiedAt,
+			image: avatarUrl,
+			emailVerified: emailVerifiedAt,
 		};
 	}
 
 	static toPrisma({
 		id,
+		image,
+		emailVerified,
 		...user
 	}: AdapterUser): Prisma.UserUncheckedCreateInput {
 		return {
 			...user,
-			avatarUrl: user.image,
-			emailVerifiedAt: user.emailVerified,
+			avatarUrl: image,
+			emailVerifiedAt: emailVerified,
 		};
 	}
 }

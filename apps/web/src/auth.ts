@@ -8,11 +8,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 	providers: [GitHub],
 	callbacks: {
 		async session({ session }) {
+			const { image, emailVerified, ...user } = session.user;
+
 			return {
 				...session,
 				user: {
-					...session.user,
-					avatarUrl: session.user.image,
+					...user,
+					avatarUrl: image,
+					emailVerifiedAt: emailVerified,
 				},
 			};
 		},
