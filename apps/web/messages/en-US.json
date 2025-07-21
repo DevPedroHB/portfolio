@@ -1,173 +1,192 @@
 {
 	"app": {
-		"description": "Portfólio pessoal de Pedro Henrique Bérgamo.",
+		"description": "Personal portfolio of Pedro Henrique Bérgamo.",
+		"forgot_password": {
+			"banner_alt": "Minimalist desk with laptop displaying code, soft lighting and focus on dark tones, conveying concentration and introspection.",
+			"form": {
+				"email": {
+					"label": "E-mail",
+					"placeholder": "email@example.com"
+				},
+				"sign_in": "Remembered your password? <sign_in>Sign in</sign_in>",
+				"sign_in_social": "Or continue with",
+				"submit": "Send recovery link",
+				"subtitle": "Enter your email to regain access",
+				"success": "If we find an account with that email, we'll send you a link to reset your password.",
+				"title": "Forgot your password?"
+			},
+			"title": "Recover password"
+		},
 		"home": {
 			"components": {
 				"about_me": {
-					"subtitle": "Minha introdução",
-					"title": "Sobre Mim"
+					"subtitle": "My introduction",
+					"title": "About Me"
 				},
 				"contact_me": {
-					"subtitle": "Entre em contato",
-					"title": "Fale Comigo"
+					"subtitle": "Get in touch",
+					"title": "Talk to me"
 				},
 				"hero": {
-					"subtitle": "Engenheiro de Software",
-					"title": "Olá, eu sou o Pedro"
+					"subtitle": "Software Engineer",
+					"title": "Hello, I'm Pedro"
 				},
 				"new_project": {
-					"subtitle": "Fale comigo agora e receba 30% de desconto no seu novo projeto.",
-					"title": "Tem um novo projeto?"
+					"subtitle": "Talk to me now and get 30% off your new project.",
+					"title": "Do you have a new project?"
 				},
 				"portfolio": {
-					"subtitle": "Trabalhos mais recentes",
-					"title": "Portfólio"
+					"subtitle": "Most recent works",
+					"title": "Portfolio"
 				},
 				"qualifications": {
-					"subtitle": "Minha trajetória profissional",
-					"title": "Qualificações"
+					"subtitle": "My professional trajectory",
+					"title": "Qualifications"
 				},
 				"services": {
-					"subtitle": "O que eu ofereço",
-					"title": "Serviços"
+					"subtitle": "What I offer",
+					"title": "Services"
 				},
 				"skills": {
-					"subtitle": "Meu nível técnico",
-					"title": "Habilidades"
+					"subtitle": "My technical level",
+					"title": "Skills"
 				},
 				"testimonials": {
-					"subtitle": "O que dizem meus clientes",
-					"title": "Depoimentos"
+					"subtitle": "What my clients say",
+					"title": "Testimonials"
 				}
 			},
-			"title": "Início"
+			"title": "Home"
 		},
 		"profile": {
 			"components": {
 				"profile": {
-					"subtitle": "Visualize e edite suas informações pessoais",
-					"title": "Meu Perfil"
+					"subtitle": "View and edit your personal information",
+					"title": "My Profile"
 				}
 			},
-			"title": "Perfil"
+			"title": "Profile"
 		},
 		"sign_in": {
-			"banner_alt": "Estação de trabalho noturna com notebook exibindo código, iluminação em tons de roxo e azul, transmitindo foco e modernidade para desenvolvedores.",
+			"banner_alt": "Nighttime workstation with laptop displaying code, purple and blue lighting, conveying focus and modernity for developers.",
 			"form": {
 				"email": {
-					"label": "Email",
-					"placeholder": "email@exemplo.com"
+					"label": "E-mail",
+					"placeholder": "email@example.com"
 				},
-				"forgot_password": "Esqueceu sua senha?",
+				"forgot_password": "Forgot your password?",
 				"password": {
-					"label": "Senha",
+					"label": "Password",
 					"placeholder": "*********"
 				},
-				"sign_in_social": "Ou continue com",
-				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
-				"submit": "Entrar",
-				"subtitle": "Faça login na sua conta",
-				"success": "Seja bem-vindo de volta! :)",
-				"title": "Bem-vindo de volta"
+				"sign_in_social": "Or continue with",
+				"sign_up": "Don't have an account? <sign_up>Sign Up</sign_up>",
+				"submit": "Sign In",
+				"subtitle": "Log in to your account to continue",
+				"success": "Login successful! :)",
+				"title": "Welcome back"
 			},
-			"title": "Entrar"
+			"title": "Login"
 		},
 		"sign_up": {
-			"banner_alt": "Ambiente de trabalho moderno com notebook exibindo código, iluminação suave em tons de roxo e azul, ideal para desenvolvedores.",
+			"banner_alt": "Modern workspace with laptop displaying code, soft purple and blue lighting, ideal for developers.",
 			"form": {
 				"email": {
-					"label": "Email",
-					"placeholder": "email@exemplo.com"
+					"label": "E-mail",
+					"placeholder": "email@example.com"
 				},
 				"name": {
-					"label": "Nome",
+					"label": "Name",
 					"placeholder": "John Doe"
 				},
 				"password": {
-					"label": "Senha",
+					"label": "Password",
 					"placeholder": "*********"
 				},
-				"sign_in": "Já tem uma conta? <sign_in>Entrar</sign_in>",
-				"sign_in_social": "Ou continue com",
-				"submit": "Inscrever-se",
-				"subtitle": "Crie sua conta",
-				"success": "Seja bem-vindo! :)",
-				"title": "Seja bem-vindo"
+				"sign_in": "Already have an account? <sign_in>Sign in</sign_in>",
+				"sign_in_social": "Or continue with",
+				"submit": "Create account",
+				"subtitle": "Fill in the details to get started",
+				"success": "Account created successfully! :)",
+				"title": "Create account"
 			},
-			"title": "Inscrever-se"
+			"title": "Register"
 		},
 		"title": "PedroHB",
 		"user_profile": {
 			"components": {
 				"user_profile": {
-					"subtitle": "Veja as informações e atividades de {name}",
-					"title": "Perfil de {name}"
+					"subtitle": "View {name}'s information and activities",
+					"title": "{name}'s profile"
 				}
 			},
-			"title": "Perfil de {name}"
+			"title": "{name}'s profile"
 		}
 	},
 	"components": {
 		"auth": {
-			"terms_and_polices": "Ao continuar você concorda com nossos <terms_of_service>Termos de Serviço</terms_of_service> e <privacy_policy>Política de Privacidade</privacy_policy>."
+			"provider_buttons": {
+				"success": "Login successful! :)"
+			},
+			"terms_and_polices": "By continuing you agree to our <terms_of_service>Terms of Service</terms_of_service> and <privacy_policy>Privacy Policy</privacy_policy>."
 		},
 		"footer": {
-			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
+			"copyright": "© {year} <link>PedroHB</link>. All rights reserved.",
 			"footer_links": {
-				"new_project": "Novo Projeto",
-				"qualifications": "Qualificações",
-				"testimonials": "Depoimentos"
+				"new_project": "New Project",
+				"qualifications": "Qualifications",
+				"testimonials": "Testimonials"
 			},
-			"subtitle": "Engenheiro de Software",
+			"subtitle": "Software Engineer",
 			"title": "PedroHB"
 		},
 		"header": {
 			"header_profile": {
 				"label": {
-					"guest_email": "Acesse sua conta",
-					"guest_name": "Convidado"
+					"guest_email": "Access your account",
+					"guest_name": "Guest"
 				},
-				"language": "Idiomas",
-				"profile": "Perfil",
-				"sign_in": "Entrar",
-				"sign_out": "Sair",
+				"language": "Languages",
+				"profile": "Profile",
+				"sign_in": "Sign In",
+				"sign_out": "Sign Out",
 				"themes": {
-					"dark": "Escuro",
-					"light": "Claro",
-					"system": "Sistema",
-					"trigger": "Temas"
+					"dark": "Dark",
+					"light": "Light",
+					"system": "System",
+					"trigger": "Themes"
 				}
 			},
 			"navbar_links": {
-				"about_me": "Sobre",
-				"contact_me": "Contato",
-				"hero": "Início",
-				"portfolio": "Portfólio",
-				"services": "Serviços",
-				"skills": "Habilidades"
+				"about_me": "About",
+				"contact_me": "Contact",
+				"hero": "Home",
+				"portfolio": "Portfolio",
+				"services": "Services",
+				"skills": "Skills"
 			},
 			"title": "PedroHB"
 		},
 		"scroll_to_top": {
-			"tooltip_content": "Voltar ao topo"
+			"tooltip_content": "Back to top"
 		},
 		"sign_out_alert_dialog": {
 			"buttons": {
-				"action": "Continuar",
-				"cancel": "Cancelar"
+				"action": "Continue",
+				"cancel": "Cancel"
 			},
-			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
-			"error": "Ocorreu um erro ao encerrar a sessão.",
-			"success": "Sessão encerrada com sucesso.",
-			"title": "Você tem certeza absoluta?"
+			"description": "Are you sure you want to log out? Your current session will be deleted and you will be redirected to the home page.",
+			"error": "An error occurred while closing the session.",
+			"success": "Session ended successfully.",
+			"title": "Are you absolutely sure?"
 		},
 		"svgl_icon": {
-			"error": "Ícone não encontrado."
+			"error": "Icon not found."
 		}
 	},
 	"libs": {
 		"safe_action": {
-			"server_error": "Algo deu errado ao executar a operação."
+			"server_error": "Something went wrong while performing the operation."
 		}
 	}
 }
