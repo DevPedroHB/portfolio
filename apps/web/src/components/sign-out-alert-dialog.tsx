@@ -1,8 +1,11 @@
 "use client";
 
-import { signOut } from "next-auth/react";
+import { signOutAction } from "@/actions/account/sign-out-action";
+import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
 import { useTranslations } from "next-intl";
+import { useAction } from "next-safe-action/hooks";
 import type { ComponentProps } from "react";
+import { toast } from "sonner";
 import {
 	AlertDialog,
 	AlertDialogAction,
@@ -28,9 +31,18 @@ export function SignOutAlertDialog({
 }: ISignOutAlertDialog) {
 	const t = useTranslations("components.sign_out_alert_dialog");
 
-	async function handleSignOut() {
-		await signOut();
-	}
+	const { execute, reset } = useAction(signOutAction, {
+		onError({ error }) {
+			useActionErrorHandler(error);
+		},
+		onNavigation() {
+			toast.success(t("success"));
+
+			reset();
+
+			window.location.reload();
+		},
+	});
 
 	return (
 		<AlertDialog open={open} onOpenChange={onOpenChange}>
@@ -42,7 +54,7 @@ export function SignOutAlertDialog({
 				</AlertDialogHeader>
 				<AlertDialogFooter>
 					<AlertDialogCancel>{t("buttons.cancel")}</AlertDialogCancel>
-					<AlertDialogAction variant="destructive" onClick={handleSignOut}>
+					<AlertDialogAction variant="destructive" onClick={() => execute()}>
 						{t("buttons.action")}
 					</AlertDialogAction>
 				</AlertDialogFooter>

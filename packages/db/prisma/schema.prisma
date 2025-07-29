@@ -10,12 +10,14 @@ generator client {
 // }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
 }
 
 enum Role {
-  MEMBER
+  USER
+  CLIENT
   ADMIN
   OWNER
 }
@@ -30,7 +32,7 @@ model User {
   birthDate       DateTime? @map("birth_date")
   emailVerifiedAt DateTime? @map("email_verified_at")
   settings        Json?
-  role            Role      @default(MEMBER)
+  role            Role      @default(USER)
   createdAt       DateTime  @default(now()) @map("created_at")
   updatedAt       DateTime? @updatedAt @map("updated_at")
 

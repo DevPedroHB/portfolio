@@ -1,6 +1,6 @@
 "use client";
 
-import { signInCredentialsAction } from "@/actions/sign-in-credentials-action";
+import { signInCredentialsAction } from "@/actions/account/sign-in-credentials-action";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { cn } from "@/functions/cn";
 import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { signInCredentialsSchema } from "@/types/schemas/sign-in-credentials-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormAction } from "@next-safe-action/adapter-react-hook-form/hooks";
@@ -26,7 +26,6 @@ interface ISignInForm extends ComponentProps<"form"> {}
 
 export function SignInForm({ className, children, ...props }: ISignInForm) {
 	const t = useTranslations("app.sign_in.form");
-	const router = useRouter();
 
 	const { form, handleSubmitWithAction, resetFormAndAction } =
 		useHookFormAction(
@@ -34,15 +33,15 @@ export function SignInForm({ className, children, ...props }: ISignInForm) {
 			zodResolver(signInCredentialsSchema),
 			{
 				actionProps: {
-					async onError({ error }) {
+					onError({ error }) {
 						useActionErrorHandler(error);
 					},
-					async onSuccess() {
+					onNavigation() {
 						toast.success(t("success"));
 
 						resetFormAndAction();
 
-						router.replace("/");
+						window.location.reload();
 					},
 				},
 				formProps: {

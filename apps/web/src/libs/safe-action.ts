@@ -1,3 +1,4 @@
+import { BaseAppError } from "@/actions/errors/base-app-error";
 import { auth } from "@/auth";
 import { getTranslations } from "next-intl/server";
 import { createMiddleware, createSafeActionClient } from "next-safe-action";
@@ -40,11 +41,16 @@ export const actionClient = createSafeActionClient({
 	async handleServerError(error) {
 		const t = await getTranslations("libs.safe_action");
 
-		if (error instanceof TypeError) {
+		if (error instanceof BaseAppError) {
+			// @ts-ignore
+			return error.message || t(`errors.${error.translationKey}`);
+		}
+
+		if (error instanceof TypeError || error instanceof Error) {
 			return error.message;
 		}
 
-		console.error("Action error", JSON.stringify(error, null, 2));
+		console.error("Action error", error);
 
 		return t("server_error");
 	},

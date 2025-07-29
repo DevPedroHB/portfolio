@@ -1,8 +1,8 @@
 -- CreateEnum
-CREATE TYPE "Role" AS ENUM ('MEMBER', 'ADMIN', 'OWNER');
+CREATE TYPE "public"."Role" AS ENUM ('USER', 'CLIENT', 'ADMIN', 'OWNER');
 
 -- CreateTable
-CREATE TABLE "users" (
+CREATE TABLE "public"."users" (
     "id" TEXT NOT NULL,
     "name" TEXT,
     "email" TEXT NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE "users" (
     "birth_date" TIMESTAMP(3),
     "email_verified_at" TIMESTAMP(3),
     "settings" JSONB,
-    "role" "Role" NOT NULL DEFAULT 'MEMBER',
+    "role" "public"."Role" NOT NULL DEFAULT 'USER',
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3),
 
@@ -20,7 +20,7 @@ CREATE TABLE "users" (
 );
 
 -- CreateTable
-CREATE TABLE "accounts" (
+CREATE TABLE "public"."accounts" (
     "provider" TEXT NOT NULL,
     "provider_account_id" TEXT NOT NULL,
     "type" TEXT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE "accounts" (
 );
 
 -- CreateTable
-CREATE TABLE "sessions" (
+CREATE TABLE "public"."sessions" (
     "session_token" TEXT NOT NULL,
     "expires_at" TIMESTAMP(3) NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -48,7 +48,7 @@ CREATE TABLE "sessions" (
 );
 
 -- CreateTable
-CREATE TABLE "tokens" (
+CREATE TABLE "public"."tokens" (
     "identifier" TEXT NOT NULL,
     "token" TEXT NOT NULL,
     "expires_at" TIMESTAMP(3) NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE "tokens" (
 );
 
 -- CreateTable
-CREATE TABLE "authenticators" (
+CREATE TABLE "public"."authenticators" (
     "credential_id" TEXT NOT NULL,
     "provider_account_id" TEXT NOT NULL,
     "credential_public_key" TEXT NOT NULL,
@@ -71,19 +71,19 @@ CREATE TABLE "authenticators" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
+CREATE UNIQUE INDEX "users_email_key" ON "public"."users"("email");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "sessions_session_token_key" ON "sessions"("session_token");
+CREATE UNIQUE INDEX "sessions_session_token_key" ON "public"."sessions"("session_token");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "authenticators_credential_id_key" ON "authenticators"("credential_id");
+CREATE UNIQUE INDEX "authenticators_credential_id_key" ON "public"."authenticators"("credential_id");
 
 -- AddForeignKey
-ALTER TABLE "accounts" ADD CONSTRAINT "accounts_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "public"."accounts" ADD CONSTRAINT "accounts_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "sessions" ADD CONSTRAINT "sessions_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "public"."sessions" ADD CONSTRAINT "sessions_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "authenticators" ADD CONSTRAINT "authenticators_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "public"."authenticators" ADD CONSTRAINT "authenticators_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE CASCADE ON UPDATE CASCADE;

@@ -74,6 +74,7 @@
 					"label": "Email",
 					"placeholder": "email@exemplo.com"
 				},
+				"error_email_exists_social": "Este e-mail já está vinculado a uma conta social. Faça login por meio do provedor utilizado.",
 				"forgot_password": "Esqueceu sua senha?",
 				"password": {
 					"label": "Senha",
@@ -83,7 +84,7 @@
 				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
 				"submit": "Entrar",
 				"subtitle": "Acesse sua conta para continuar",
-				"success": "Login realizado com sucesso! :)",
+				"success": "Login realizado com sucesso.",
 				"title": "Bem-vindo de volta"
 			},
 			"title": "Login"
@@ -95,6 +96,7 @@
 					"label": "Email",
 					"placeholder": "email@exemplo.com"
 				},
+				"error_email_exists_social": "Este e-mail já está vinculado a uma conta social. Faça login por meio do provedor utilizado.",
 				"name": {
 					"label": "Nome",
 					"placeholder": "João da Silva"
@@ -107,7 +109,7 @@
 				"sign_in_social": "Ou continue com",
 				"submit": "Criar conta",
 				"subtitle": "Preencha os dados para começar",
-				"success": "Conta criada com sucesso! :)",
+				"success": "Conta criada com sucesso.",
 				"title": "Criar conta"
 			},
 			"title": "Cadastro"
@@ -176,7 +178,6 @@
 				"cancel": "Cancelar"
 			},
 			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
-			"error": "Ocorreu um erro ao encerrar a sessão.",
 			"success": "Sessão encerrada com sucesso.",
 			"title": "Você tem certeza absoluta?"
 		},
@@ -186,6 +187,12 @@
 	},
 	"libs": {
 		"safe_action": {
+			"errors": {
+				"already_exists": "Já existe um recurso com as mesmas características. Verifique os dados informados e tente novamente.",
+				"invalid_credentials": "As credenciais informadas são inválidas. Por favor, revise seus dados e tente novamente.",
+				"not_allowed": "Você não possui permissão para executar esta operação. Caso acredite que isso é um engano, entre em contato com o desenvolvedor do sistema.",
+				"resource_not_found": "O recurso solicitado não foi encontrado ou não está mais disponível. Verifique a URL ou os parâmetros informados."
+			},
 			"server_error": "Algo deu errado ao executar a operação."
 		}
 	}

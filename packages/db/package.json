@@ -35,7 +35,7 @@
 		"db:deploy": "prisma migrate deploy",
 		"db:deploy:dev": "pnpm env:load prisma migrate deploy",
 		"db:generate": "prisma generate --no-engine",
-		"db:migrate": "pnpm env:load prisma migrate dev --skip-generate",
+		"db:migrate": "pnpm env:load prisma migrate dev",
 		"dev": "pnpm env:load prisma studio",
 		"env:load": "dotenv -e ../../.env --"
 	},

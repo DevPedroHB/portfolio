@@ -1,6 +1,6 @@
 "use client";
 
-import { forgotPasswordAction } from "@/actions/forgot-password-action-action";
+import { forgotPasswordAction } from "@/actions/account/forgot-password-action";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -35,10 +35,10 @@ export function ForgotPasswordForm({
 	const { form, handleSubmitWithAction, resetFormAndAction } =
 		useHookFormAction(forgotPasswordAction, zodResolver(forgotPasswordSchema), {
 			actionProps: {
-				async onError({ error }) {
+				onError({ error }) {
 					useActionErrorHandler(error);
 				},
-				async onSuccess() {
+				onSuccess() {
 					toast.success(t("success"));
 
 					resetFormAndAction();

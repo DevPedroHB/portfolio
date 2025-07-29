@@ -1,192 +1,199 @@
 {
 	"app": {
-		"description": "Personal portfolio of Pedro Henrique Bérgamo.",
+		"description": "Portfólio pessoal de Pedro Henrique Bérgamo.",
 		"forgot_password": {
-			"banner_alt": "Minimalist desk with laptop displaying code, soft lighting and focus on dark tones, conveying concentration and introspection.",
+			"banner_alt": "Mesa minimalista com notebook exibindo código, iluminação suave e foco em tons escuros, transmitindo concentração e introspecção.",
 			"form": {
 				"email": {
-					"label": "E-mail",
-					"placeholder": "email@example.com"
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
 				},
-				"sign_in": "Remembered your password? <sign_in>Sign in</sign_in>",
-				"sign_in_social": "Or continue with",
-				"submit": "Send recovery link",
-				"subtitle": "Enter your email to regain access",
-				"success": "If we find an account with that email, we'll send you a link to reset your password.",
-				"title": "Forgot your password?"
+				"sign_in": "Lembrou sua senha? <sign_in>Entrar</sign_in>",
+				"sign_in_social": "Ou continue com",
+				"submit": "Enviar link de recuperação",
+				"subtitle": "Digite seu e-mail para recuperar o acesso",
+				"success": "Se encontrarmos uma conta com esse e-mail, enviaremos um link para redefinir sua senha.",
+				"title": "Esqueceu sua senha?"
 			},
-			"title": "Recover password"
+			"title": "Recuperar senha"
 		},
 		"home": {
 			"components": {
 				"about_me": {
-					"subtitle": "My introduction",
-					"title": "About Me"
+					"subtitle": "Minha introdução",
+					"title": "Sobre Mim"
 				},
 				"contact_me": {
-					"subtitle": "Get in touch",
-					"title": "Talk to me"
+					"subtitle": "Entre em contato",
+					"title": "Fale Comigo"
 				},
 				"hero": {
-					"subtitle": "Software Engineer",
-					"title": "Hello, I'm Pedro"
+					"subtitle": "Engenheiro de Software",
+					"title": "Olá, eu sou o Pedro"
 				},
 				"new_project": {
-					"subtitle": "Talk to me now and get 30% off your new project.",
-					"title": "Do you have a new project?"
+					"subtitle": "Fale comigo agora e receba 30% de desconto no seu novo projeto.",
+					"title": "Tem um novo projeto?"
 				},
 				"portfolio": {
-					"subtitle": "Most recent works",
-					"title": "Portfolio"
+					"subtitle": "Trabalhos mais recentes",
+					"title": "Portfólio"
 				},
 				"qualifications": {
-					"subtitle": "My professional trajectory",
-					"title": "Qualifications"
+					"subtitle": "Minha trajetória profissional",
+					"title": "Qualificações"
 				},
 				"services": {
-					"subtitle": "What I offer",
-					"title": "Services"
+					"subtitle": "O que eu ofereço",
+					"title": "Serviços"
 				},
 				"skills": {
-					"subtitle": "My technical level",
-					"title": "Skills"
+					"subtitle": "Meu nível técnico",
+					"title": "Habilidades"
 				},
 				"testimonials": {
-					"subtitle": "What my clients say",
-					"title": "Testimonials"
+					"subtitle": "O que dizem meus clientes",
+					"title": "Depoimentos"
 				}
 			},
-			"title": "Home"
+			"title": "Início"
 		},
 		"profile": {
 			"components": {
 				"profile": {
-					"subtitle": "View and edit your personal information",
-					"title": "My Profile"
+					"subtitle": "Visualize e edite suas informações pessoais",
+					"title": "Meu Perfil"
 				}
 			},
-			"title": "Profile"
+			"title": "Perfil"
 		},
 		"sign_in": {
-			"banner_alt": "Nighttime workstation with laptop displaying code, purple and blue lighting, conveying focus and modernity for developers.",
+			"banner_alt": "Estação de trabalho noturna com notebook exibindo código, iluminação em tons de roxo e azul, transmitindo foco e modernidade para desenvolvedores.",
 			"form": {
 				"email": {
-					"label": "E-mail",
-					"placeholder": "email@example.com"
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
 				},
-				"forgot_password": "Forgot your password?",
+				"error_email_exists_social": "Este e-mail já está vinculado a uma conta social. Faça login por meio do provedor utilizado.",
+				"forgot_password": "Esqueceu sua senha?",
 				"password": {
-					"label": "Password",
+					"label": "Senha",
 					"placeholder": "*********"
 				},
-				"sign_in_social": "Or continue with",
-				"sign_up": "Don't have an account? <sign_up>Sign Up</sign_up>",
-				"submit": "Sign In",
-				"subtitle": "Log in to your account to continue",
-				"success": "Login successful! :)",
-				"title": "Welcome back"
+				"sign_in_social": "Ou continue com",
+				"sign_up": "Não tem uma conta? <sign_up>Inscrever-se</sign_up>",
+				"submit": "Entrar",
+				"subtitle": "Acesse sua conta para continuar",
+				"success": "Login realizado com sucesso.",
+				"title": "Bem-vindo de volta"
 			},
 			"title": "Login"
 		},
 		"sign_up": {
-			"banner_alt": "Modern workspace with laptop displaying code, soft purple and blue lighting, ideal for developers.",
+			"banner_alt": "Ambiente de trabalho moderno com notebook exibindo código, iluminação suave em tons de roxo e azul, ideal para desenvolvedores.",
 			"form": {
 				"email": {
-					"label": "E-mail",
-					"placeholder": "email@example.com"
+					"label": "Email",
+					"placeholder": "email@exemplo.com"
 				},
+				"error_email_exists_social": "Este e-mail já está vinculado a uma conta social. Faça login por meio do provedor utilizado.",
 				"name": {
-					"label": "Name",
-					"placeholder": "John Doe"
+					"label": "Nome",
+					"placeholder": "João da Silva"
 				},
 				"password": {
-					"label": "Password",
+					"label": "Senha",
 					"placeholder": "*********"
 				},
-				"sign_in": "Already have an account? <sign_in>Sign in</sign_in>",
-				"sign_in_social": "Or continue with",
-				"submit": "Create account",
-				"subtitle": "Fill in the details to get started",
-				"success": "Account created successfully! :)",
-				"title": "Create account"
+				"sign_in": "Já tem uma conta? <sign_in>Entrar</sign_in>",
+				"sign_in_social": "Ou continue com",
+				"submit": "Criar conta",
+				"subtitle": "Preencha os dados para começar",
+				"success": "Conta criada com sucesso.",
+				"title": "Criar conta"
 			},
-			"title": "Register"
+			"title": "Cadastro"
 		},
 		"title": "PedroHB",
 		"user_profile": {
 			"components": {
 				"user_profile": {
-					"subtitle": "View {name}'s information and activities",
-					"title": "{name}'s profile"
+					"subtitle": "Veja as informações e atividades de {name}",
+					"title": "Perfil de {name}"
 				}
 			},
-			"title": "{name}'s profile"
+			"title": "Perfil de {name}"
 		}
 	},
 	"components": {
 		"auth": {
 			"provider_buttons": {
-				"success": "Login successful! :)"
+				"success": "Login realizado com sucesso! :)"
 			},
-			"terms_and_polices": "By continuing you agree to our <terms_of_service>Terms of Service</terms_of_service> and <privacy_policy>Privacy Policy</privacy_policy>."
+			"terms_and_polices": "Ao continuar você concorda com nossos <terms_of_service>Termos de Serviço</terms_of_service> e <privacy_policy>Política de Privacidade</privacy_policy>."
 		},
 		"footer": {
-			"copyright": "© {year} <link>PedroHB</link>. All rights reserved.",
+			"copyright": "© {year} <link>PedroHB</link>. Todos os direitos reservados.",
 			"footer_links": {
-				"new_project": "New Project",
-				"qualifications": "Qualifications",
-				"testimonials": "Testimonials"
+				"new_project": "Novo Projeto",
+				"qualifications": "Qualificações",
+				"testimonials": "Depoimentos"
 			},
-			"subtitle": "Software Engineer",
+			"subtitle": "Engenheiro de Software",
 			"title": "PedroHB"
 		},
 		"header": {
 			"header_profile": {
 				"label": {
-					"guest_email": "Access your account",
-					"guest_name": "Guest"
+					"guest_email": "Acesse sua conta",
+					"guest_name": "Convidado"
 				},
-				"language": "Languages",
-				"profile": "Profile",
-				"sign_in": "Sign In",
-				"sign_out": "Sign Out",
+				"language": "Idiomas",
+				"profile": "Perfil",
+				"sign_in": "Entrar",
+				"sign_out": "Sair",
 				"themes": {
-					"dark": "Dark",
-					"light": "Light",
-					"system": "System",
-					"trigger": "Themes"
+					"dark": "Escuro",
+					"light": "Claro",
+					"system": "Sistema",
+					"trigger": "Temas"
 				}
 			},
 			"navbar_links": {
-				"about_me": "About",
-				"contact_me": "Contact",
-				"hero": "Home",
-				"portfolio": "Portfolio",
-				"services": "Services",
-				"skills": "Skills"
+				"about_me": "Sobre",
+				"contact_me": "Contato",
+				"hero": "Início",
+				"portfolio": "Portfólio",
+				"services": "Serviços",
+				"skills": "Habilidades"
 			},
 			"title": "PedroHB"
 		},
 		"scroll_to_top": {
-			"tooltip_content": "Back to top"
+			"tooltip_content": "Voltar ao topo"
 		},
 		"sign_out_alert_dialog": {
 			"buttons": {
-				"action": "Continue",
-				"cancel": "Cancel"
+				"action": "Continuar",
+				"cancel": "Cancelar"
 			},
-			"description": "Are you sure you want to log out? Your current session will be deleted and you will be redirected to the home page.",
-			"error": "An error occurred while closing the session.",
-			"success": "Session ended successfully.",
-			"title": "Are you absolutely sure?"
+			"description": "Tem certeza de que deseja sair? Sua sessão atual será apagada e você será redirecionado para a página inicial.",
+			"success": "Sessão encerrada com sucesso.",
+			"title": "Você tem certeza absoluta?"
 		},
 		"svgl_icon": {
-			"error": "Icon not found."
+			"error": "Ícone não encontrado."
 		}
 	},
 	"libs": {
 		"safe_action": {
-			"server_error": "Something went wrong while performing the operation."
+			"errors": {
+				"already_exists": "Já existe um recurso com as mesmas características. Verifique os dados informados e tente novamente.",
+				"invalid_credentials": "As credenciais informadas são inválidas. Por favor, revise seus dados e tente novamente.",
+				"not_allowed": "Você não possui permissão para executar esta operação. Caso acredite que isso é um engano, entre em contato com o desenvolvedor do sistema.",
+				"resource_not_found": "O recurso solicitado não foi encontrado ou não está mais disponível. Verifique a URL ou os parâmetros informados."
+			},
+			"server_error": "Algo deu errado ao executar a operação."
 		}
 	}
 }

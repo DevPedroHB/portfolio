@@ -1,6 +1,6 @@
 "use client";
 
-import { signUpCredentialsAction } from "@/actions/sign-up-credentials-action";
+import { signUpCredentialsAction } from "@/actions/account/sign-up-credentials-action";
 import { Button } from "@/components/ui/button";
 import {
 	Form,
@@ -34,15 +34,15 @@ export function SignUpForm({ className, children, ...props }: ISignUpForm) {
 			zodResolver(signUpCredentialsSchema),
 			{
 				actionProps: {
-					async onError({ error }) {
+					onError({ error }) {
 						useActionErrorHandler(error);
 					},
-					async onSuccess() {
+					onSuccess() {
 						toast.success(t("success"));
 
 						resetFormAndAction();
 
-						router.replace("/");
+						router.replace("/auth/sign-in");
 					},
 				},
 				formProps: {
