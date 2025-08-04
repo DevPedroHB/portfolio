@@ -84,7 +84,7 @@ export function ForgotPasswordForm({
 						</FormItem>
 					)}
 				/>
-				<Button type="submit" disabled={isSubmitting} className="w-full">
+				<Button type="submit" isLoading={isSubmitting} className="w-full">
 					{t("submit")}
 				</Button>
 				<div className="after:top-1/2 after:z-0 after:absolute relative after:inset-0 after:flex after:items-center after:border-t after:border-border text-sm text-center">

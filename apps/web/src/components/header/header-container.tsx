@@ -13,7 +13,7 @@ export function HeaderContainer({ className, ...props }: IHeaderContainer) {
 		<header
 			data-scroll={y > 0}
 			className={cn(
-				"md:top-0 not-md:bottom-0 z-50 fixed inset-x-0 bg-background",
+				"md:top-0 not-md:bottom-0 z-50 fixed inset-x-0 bg-transparent backdrop-blur-xl",
 				"data-[scroll=true]:shadow-header",
 				className,
 			)}

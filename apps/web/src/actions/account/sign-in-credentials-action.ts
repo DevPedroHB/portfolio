@@ -7,7 +7,6 @@ import { prisma } from "@portfolio/db";
 import { compare } from "bcryptjs";
 import { getTranslations } from "next-intl/server";
 import { InvalidCredentialsError } from "../errors/invalid-credentials-error";
-import { ResourceNotFoundError } from "../errors/resource-not-found-error";
 
 export const signInCredentialsAction = actionClient
 	.metadata({ actionName: "signInCredentialsAction" })
@@ -19,7 +18,7 @@ export const signInCredentialsAction = actionClient
 		});
 
 		if (!user) {
-			throw new ResourceNotFoundError();
+			throw new InvalidCredentialsError();
 		}
 
 		if (!user.passwordHash) {
