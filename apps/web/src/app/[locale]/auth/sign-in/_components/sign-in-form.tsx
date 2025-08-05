@@ -10,15 +10,17 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Input, InputWrapper } from "@/components/ui/input";
 import { cn } from "@/functions/cn";
 import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
 import { Link } from "@/i18n/navigation";
 import { signInCredentialsSchema } from "@/types/schemas/sign-in-credentials-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormAction } from "@next-safe-action/adapter-react-hook-form/hooks";
+import { Eye, EyeClosed } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
+import { useToggle } from "react-use";
 import { toast } from "sonner";
 import { AuthProviderButtons } from "../../_components/auth-provider-buttons";
 
@@ -26,6 +28,7 @@ interface ISignInForm extends ComponentProps<"form"> {}
 
 export function SignInForm({ className, children, ...props }: ISignInForm) {
 	const t = useTranslations("app.sign_in.form");
+	const [isVisiblePassword, toggle] = useToggle(false);
 
 	const { form, handleSubmitWithAction, resetFormAndAction } =
 		useHookFormAction(
@@ -89,7 +92,7 @@ export function SignInForm({ className, children, ...props }: ISignInForm) {
 					name="password"
 					render={({ field }) => (
 						<FormItem>
-							<FormLabel className="justify-between">
+							<FormLabel className="flex__between">
 								{t("password.label")}{" "}
 								<Link
 									href="/auth/forgot-password"
@@ -100,12 +103,23 @@ export function SignInForm({ className, children, ...props }: ISignInForm) {
 								</Link>
 							</FormLabel>
 							<FormControl>
-								<Input
-									type="password"
-									placeholder={t("password.placeholder")}
-									required
-									{...field}
-								/>
+								<InputWrapper>
+									<Input
+										type={isVisiblePassword ? "text" : "password"}
+										placeholder={t("password.placeholder")}
+										{...field}
+									/>
+									<Button
+										type="button"
+										variant="dim"
+										mode="icon"
+										size="sm"
+										className="-me-0.5 size-5"
+										onClick={toggle}
+									>
+										{isVisiblePassword ? <Eye /> : <EyeClosed />}
+									</Button>
+								</InputWrapper>
 							</FormControl>
 							<FormMessage />
 						</FormItem>

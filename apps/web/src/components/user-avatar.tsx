@@ -1,34 +1,41 @@
 "use client";
 
 import { cn } from "@/functions/cn";
-import { User2 } from "lucide-react";
 import type { ComponentProps } from "react";
 import { useIdle, useNetworkState } from "react-use";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { UserIcon } from "./animate-ui/icons/user";
+import {
+	Avatar,
+	AvatarFallback,
+	AvatarImage,
+	AvatarIndicator,
+	AvatarStatus,
+} from "./ui/avatar";
 
 interface IUserAvatar extends ComponentProps<typeof AvatarImage> {}
 
-export function UserAvatar(props: IUserAvatar) {
+export function UserAvatar({ className, ...props }: IUserAvatar) {
 	const idle = useIdle();
 	const { online } = useNetworkState();
 
 	const isPresent = (online ?? true) && !idle;
 
 	return (
-		<div className="relative">
-			<Avatar className="rounded-md">
-				<AvatarImage {...props} />
-				<AvatarFallback className="rounded-md">
-					<User2 className="size-4 text-muted-foreground" />
-				</AvatarFallback>
-			</Avatar>
-			<div
-				data-online={isPresent}
-				className={cn(
-					"-top-1 absolute bg-muted border-2 border-background rounded-full size-3 -end-1",
-					"data-[online=false]:bg-red-500 data-[online=true]:bg-green-500",
-				)}
-			/>
-		</div>
+		<Avatar className="size-7">
+			<AvatarImage className={cn("rounded-md", className)} {...props} />
+			<AvatarFallback className="rounded-md">
+				<UserIcon
+					className="size-4 text-muted-foreground"
+					animateOnHover
+					loop
+				/>
+			</AvatarFallback>
+			<AvatarIndicator className="-top-1 size-2.5 -end-1">
+				<AvatarStatus
+					variant={isPresent ? "online" : "offline"}
+					className="size-full"
+				/>
+			</AvatarIndicator>
+		</Avatar>
 	);
 }

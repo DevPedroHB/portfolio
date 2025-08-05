@@ -1,5 +1,5 @@
 import { auth } from "@/auth";
-import { Card, CardContent } from "@/components/ui/card";
+import { Code } from "@/components/ui/code";
 import type { Metadata } from "next";
 import type { Locale } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -31,13 +31,7 @@ export default async function Profile({ params }: IProfile) {
 			<section id="profile" className="container__section">
 				<h2 className="section__title">{t("components.profile.title")}</h2>
 				<p className="section__subtitle">{t("components.profile.subtitle")}</p>
-				<Card>
-					<CardContent>
-						<pre className="flex flex-col gap-4">
-							<code>{JSON.stringify(session, null, 2)}</code>
-						</pre>
-					</CardContent>
-				</Card>
+				<Code showCopyButton>{JSON.stringify(session, null, 2)}</Code>
 			</section>
 		</main>
 	);

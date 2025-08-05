@@ -1,3 +1,4 @@
+import { StarsBackground } from "@/components/animate-ui/backgrounds/stars";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/functions/cn";
@@ -76,11 +77,13 @@ export default async function RootLayout({
 				<SessionProvider>
 					<NextIntlClientProvider>
 						<ThemeProvider>
-							{children}
-							{dialog}
-							{sheet}
-							<ScrollToTop />
-							<Toaster visibleToasts={9} closeButton richColors />
+							<StarsBackground>
+								{children}
+								{dialog}
+								{sheet}
+								<ScrollToTop />
+								<Toaster visibleToasts={9} closeButton richColors />
+							</StarsBackground>
 						</ThemeProvider>
 					</NextIntlClientProvider>
 				</SessionProvider>

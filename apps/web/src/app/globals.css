@@ -47,6 +47,26 @@
 	--font-sans: var(--font-poppins);
 	--font-mono: var(--font-poppins);
 	--shadow-header: 0 -1px 4px rgba(0, 0, 0, 0.15);
+	--animate-marquee: marquee var(--duration) infinite linear;
+	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
+		}
+	}
 }
 
 :root {
@@ -123,6 +143,10 @@
 		@apply border-border outline-ring/50 antialiased scroll-smooth;
 	}
 
+	*:focus-visible {
+		@apply shadow-none rounded-xs outline-2 outline-ring outline-offset-3 transition-none!;
+	}
+
 	body {
 		@apply bg-background min-h-screen text-foreground antialiased scroll-smooth;
 	}
@@ -156,4 +180,8 @@
 	.section__subtitle {
 		@apply mb-12 md:mb-16 text-muted-foreground md:text-sm text-center;
 	}
+}
+
+html {
+	scroll-behavior: smooth;
 }

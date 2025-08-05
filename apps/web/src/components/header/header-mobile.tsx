@@ -1,7 +1,8 @@
 import { navbarLinks } from "@/constants/navbar-links";
 import { Link } from "@/i18n/navigation";
-import { LayoutGrid, X } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import { XIcon } from "../animate-ui/icons/x";
 import { ScrollLink } from "../scroll-link";
 import {
 	Drawer,
@@ -47,7 +48,7 @@ export async function HeaderMobile() {
 					<div className="flex__center gap-4">
 						<HeaderProfile />
 						<DrawerClose asChild>
-							<X className="size-5" />
+							<XIcon className="size-5" animateOnHover />
 						</DrawerClose>
 					</div>
 				</div>

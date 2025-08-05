@@ -23,13 +23,19 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			},
 			"complexity": {
 				"noStaticOnlyClass": "off"
 			},
 			"correctness": {
 				"useHookAtTopLevel": "off"
 			},
-			"recommended": true
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "off"
+			}
 		}
 	},
 	"vcs": {

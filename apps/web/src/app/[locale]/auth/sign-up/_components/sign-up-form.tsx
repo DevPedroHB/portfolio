@@ -10,15 +10,17 @@ import {
 	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
+import { Input, InputWrapper } from "@/components/ui/input";
 import { cn } from "@/functions/cn";
 import { useActionErrorHandler } from "@/hooks/use-action-error-handler";
 import { Link, useRouter } from "@/i18n/navigation";
 import { signUpCredentialsSchema } from "@/types/schemas/sign-up-credentials-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useHookFormAction } from "@next-safe-action/adapter-react-hook-form/hooks";
+import { Eye, EyeClosed } from "lucide-react";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
+import { useToggle } from "react-use";
 import { toast } from "sonner";
 import { AuthProviderButtons } from "../../_components/auth-provider-buttons";
 
@@ -27,6 +29,7 @@ interface ISignUpForm extends ComponentProps<"form"> {}
 export function SignUpForm({ className, children, ...props }: ISignUpForm) {
 	const t = useTranslations("app.sign_up.form");
 	const router = useRouter();
+	const [isVisiblePassword, toggle] = useToggle(false);
 
 	const { form, handleSubmitWithAction, resetFormAndAction } =
 		useHookFormAction(
@@ -113,12 +116,23 @@ export function SignUpForm({ className, children, ...props }: ISignUpForm) {
 								{t("password.label")}
 							</FormLabel>
 							<FormControl>
-								<Input
-									type="password"
-									placeholder={t("password.placeholder")}
-									required
-									{...field}
-								/>
+								<InputWrapper>
+									<Input
+										type={isVisiblePassword ? "text" : "password"}
+										placeholder={t("password.placeholder")}
+										{...field}
+									/>
+									<Button
+										type="button"
+										variant="dim"
+										mode="icon"
+										size="sm"
+										className="-me-0.5 size-5"
+										onClick={toggle}
+									>
+										{isVisiblePassword ? <Eye /> : <EyeClosed />}
+									</Button>
+								</InputWrapper>
 							</FormControl>
 							<FormMessage />
 						</FormItem>

@@ -28,13 +28,13 @@ import {
 import { UserAvatar } from "../user-avatar";
 
 export function HeaderProfile() {
-	const { data: session } = useSession();
+	const t = useTranslations("components.header.header_profile");
 	const router = useRouter();
+	const locale = useLocale();
+	const { data: session } = useSession();
+	const { theme, setTheme } = useTheme();
 	const [dropdownMenu, setDropdownMenu] = useToggle(false);
 	const [signOutAlertDialog, setSignOutAlertDialog] = useToggle(false);
-	const t = useTranslations("components.header.header_profile");
-	const locale = useLocale();
-	const { theme, setTheme } = useTheme();
 
 	useHotkeys("shift+p", () => router.push("/profile"), {
 		enabled: dropdownMenu && !!session?.user,
@@ -48,7 +48,7 @@ export function HeaderProfile() {
 
 	return (
 		<DropdownMenu open={dropdownMenu} onOpenChange={setDropdownMenu}>
-			<DropdownMenuTrigger className="rounded-md">
+			<DropdownMenuTrigger>
 				<UserAvatar
 					src={session?.user?.avatarUrl ?? undefined}
 					alt={session?.user?.name ?? undefined}
@@ -56,10 +56,10 @@ export function HeaderProfile() {
 			</DropdownMenuTrigger>
 			<DropdownMenuContent>
 				<DropdownMenuLabel className="flex flex-col">
-					<span className="truncate">
+					<span className="text-foreground text-xs truncate">
 						{session?.user?.name ?? t("label.guest_name")}
 					</span>
-					<small className="font-normal text-muted-foreground text-xs truncate">
+					<small className="font-normal truncate">
 						{session?.user?.email ?? t("label.guest_email")}
 					</small>
 				</DropdownMenuLabel>
@@ -89,7 +89,7 @@ export function HeaderProfile() {
 											<DropdownMenuRadioItem value={language.key}>
 												{language.name}
 												<DropdownMenuShortcut>
-													<Flag />
+													<Flag className="size-4" />
 												</DropdownMenuShortcut>
 											</DropdownMenuRadioItem>
 										</LocaleLink>
@@ -111,7 +111,7 @@ export function HeaderProfile() {
 										<DropdownMenuRadioItem key={theme.key} value={theme.key}>
 											{t(`themes.${theme.key}`)}
 											<DropdownMenuShortcut>
-												<Icon />
+												<Icon className="size-4" />
 											</DropdownMenuShortcut>
 										</DropdownMenuRadioItem>
 									);
